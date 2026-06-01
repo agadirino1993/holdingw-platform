@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoldingW Analytics | AI-Driven E-Commerce Intelligence</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111827;
+            --accent-color: #3b82f6;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --success: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .btn-trial {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 6px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .btn-trial:hover {
+            background-color: #2563eb;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Core Scanner Section (The Feature) */
+        .scanner-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background-color: var(--card-bg);
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .search-box input {
+            flex: 1;
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            padding: 15px;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent-color);
+        }
+
+        .btn-scan {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-scan:hover {
+            background-color: #2563eb;
+        }
+
+        /* Status / Live Analytics Demo */
+        .status-panel {
+            background-color: #0b0f19;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .status-header {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pulse {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--success);
+            border-radius: 50%;
+            margin-right: 5px;
+            box-shadow: 0 0 8px var(--success);
+        }
+
+        .product-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #111827;
+        }
+
+        .product-info h4 {
+            font-size: 15px;
+            color: #fff;
+        }
+
+        .product-info p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .trend-badge {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Legal Footer */
+        footer {
+            margin-top: 100px;
+            background-color: #070a12;
+            padding: 40px 8%;
+            border-top: 1px solid #1e293b;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            color: #4b5563;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Holding<span>W</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Winning Products</a></li>
+                <li><a href="#">Spy Tool</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn-trial">Request Demo</a>
+    </header>
+
+    <section class="hero">
+        <h1>Discover Next-Gen Winning Products Driven by AI Analytics</h1>
+        <p>Analyze thousands of social media ads in real-time. Uncover high-margin dropshipping products before they scale.</p>
+    </section>
+
+    <div class="scanner-container">
+        <div class="search-box">
+            <input type="text" id="scanInput" value="Viral Gadget" placeholder="Enter keyword or product niche...">
+            <button class="btn-scan" onclick="startScan()">Analyze Market</button>
+        </div>
+
+        <div class="status-panel">
+            <div class="status-header">
+                <div><span class="pulse"></span> Live Platform Status: Connected to Data Stream</div>
+                <div>Global Filters: Active</div>
+            </div>
+            
+            <div id="resultsBox">
+                <div class="product-row">
+                    <div class="product-info">
+                        <h4>Portable Neck Fan V2</h4>
+                        <p>Niche: Gadgets & Electronics • Verified Supplier Available</p>
+                    </div>
+                    <div class="trend-badge">Growth +342%</div>
+                </div>
+                <div class="product-row">
+                    <div class="product-info">
+                        <h4>Ultrasonic Pet Training Tool</h4>
+                        <p>Niche: Pet Supplies • High Engagement Ads Detected</p>
+                    </div>
+                    <div class="trend-badge">Growth +189%</div>
+                </div>
+                <div class="product-row">
+                    <div class="product-info">
+                        <h4>Anti-Fatigue Ergonomic Pillow</h4>
+                        <p>Niche: Home & Health • Low Saturation</p>
+                    </div>
+                    <div class="trend-badge">Growth +95%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Support: contact@holdingw.com</a>
+        </div>
+        <p class="copyright">&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function startScan() {
+            const query = document.getElementById('scanInput').value || 'Product';
+            const btn = document.querySelector('.btn-scan');
+            btn.innerText = "Analyzing...";
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                const results = document.getElementById('resultsBox');
+                results.innerHTML = `
+                    <div class="product-row" style="animation: fadeIn 0.5s;">
+                        <div class="product-info">
+                            <h4>Trending: ${query} Smart Version</h4>
+                            <p>Targeting: US, UK, EU • Margin: 72% • High Demand</p>
+                        </div>
+                        <div class="trend-badge" style="background-color: rgba(59, 130, 246, 0.2); color: #3b82f6;">Trending Now</div>
+                    </div>
+                ` + results.innerHTML;
+                btn.innerText = "Analyze Market";
+                btn.disabled = false;
+            }, 1200);
+        }
+    </script>
+</body>
+</html>

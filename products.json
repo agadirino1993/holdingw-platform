@@ -1,1 +1,52 @@
-
+[
+    {
+        "id": 1,
+        "title": "Wireless Magnetic Power Bank 10000mAh (Fast Charging)",
+        "image": "https://images.unsplash.com/photo-1609592424083-0498db2579df?w=500",
+        "platform": "Amazon",
+        "country": "US",
+        "category": "Physical",
+        "rating": "4.8",
+        "url": "https://www.amazon.com"
+    },
+    {
+        "id": 2,
+        "title": "Ultimate 2026 Digital Planner for GoodNotes & iPad",
+        "image": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=500",
+        "platform": "Etsy",
+        "country": "US",
+        "category": "Digital",
+        "rating": "4.9",
+        "url": "https://www.etsy.com"
+    },
+    {
+        "id": 3,
+        "title": "Refurbished iPhone 14 Pro Max 128GB - Factory Unlocked",
+        "image": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500",
+        "platform": "eBay",
+        "country": "US",
+        "category": "Physical",
+        "rating": "4.6",
+        "url": "https://www.ebay.com"
+    },
+    {
+        "id": 4,
+        "title": "AI Prompt Engineering Masterclass (Complete E-Book Bundle)",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
+        "platform": "Amazon",
+        "country": "UK",
+        "category": "Digital",
+        "rating": "5.0",
+        "url": "https://www.amazon.com"
+    },
+    {
+        "id": 5,
+        "title": "Handmade Vintage Leather Journal & Writing Notebook",
+        "image": "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=500",
+        "platform": "Etsy",
+        "country": "US",
+        "category": "Physical",
+        "rating": "4.7",
+        "url": "https://www.etsy.com"
+    }
+]

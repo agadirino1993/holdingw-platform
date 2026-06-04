@@ -1,7 +1,6 @@
 import streamlit as st
 import sqlite3
 import json
-import urllib.parse
 
 # 1. إعداد الصفحة والـ Title
 st.set_page_config(
@@ -29,15 +28,29 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 🧠 دالة ذكية: كتقلب على تصويرة نقية بالسمية د البرودوي إلا كانت الصورة الأصلية خاسرة
-def get_auto_image(product_title):
-    try:
-        # كنستعملو محرك بحث Unsplash المفتوح والمجاني كيعطي تصاور ناضيين بالسمية
-        query = urllib.parse.quote(product_title)
-        search_url = f"https://source.unsplash.com/featured/500x500/?{query}"
-        return search_url
-    except:
-        return "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500"
+# 📦 قاموس الصور المأمنة والعالية الدقة (مستحيل تتبلوك)
+FALLBACK_IMAGES = {
+    "digital": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=600",
+    "planner": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=600",
+    "book": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600",
+    "e-book": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600",
+    "lamp": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600",
+    "phone": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=600",
+    "iphone": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=600",
+    "power": "https://images.unsplash.com/photo-1609592424083-0498db2579df?w=600",
+    "gadget": "https://images.unsplash.com/photo-1609592424083-0498db2579df?w=600",
+    "leather": "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600",
+    "journal": "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600"
+}
+
+def get_secure_image(title):
+    # كيدور فـ السميّة د البرودوي ويشوف آينا وحدة كاتناسبو
+    title_lower = title.lower()
+    for key, url in FALLBACK_IMAGES.items():
+        if key in title_lower:
+            return url
+    # صورة عامة احترافية للـ E-com إلا مالقا حتى كلمة
+    return "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600"
 
 # 3. جلب الداتا وتحديث الـ JSON لـ Netlify
 def get_and_sync_products():
@@ -57,13 +70,11 @@ def get_and_sync_products():
             title = prod[0]
             plat = prod[1] if prod[1] else "Amazon"
             count = prod[2] if prod[2] else "US"
-            img_url = prod[3]
             src = prod[4]
             engage = prod[5]
             
-            # 🔍 فحص وتأمين الصورة: إلا كانت خاوية ولا مكتساليش بـ رابط صحيح، الروبو كايجيب وحدة بالسمية
-            if not img_url or "http" not in img_url or len(img_url) < 10:
-                img_url = get_auto_image(title)
+            # تأمين الصورة داخلياً 100% بالذكاء
+            img_url = get_secure_image(title)
             
             final_data.append((title, plat, count, img_url, src, engage))
             
@@ -73,7 +84,7 @@ def get_and_sync_products():
                 "platform": plat,
                 "country": count,
                 "category": "Digital" if "book" in title.lower() or "planner" in title.lower() or "digital" in title.lower() else "Physical",
-                "rating": "4.8",
+                "rating": "4.9",
                 "image": img_url,
                 "url": src
             })
@@ -83,13 +94,13 @@ def get_and_sync_products():
             
         return final_data
     except Exception as e:
-        # داتا احتياطية مأمنة بالتصاور في حالة طاح السيرفر كامل
+        # داتا تجريبية مأمنة تماماً في حالة البلوك الكلي لقاعدة البيانات
         fallback_data = [
-            ("Wireless Magnetic Power Bank 10000mAh", "Amazon", "US", "https://images.unsplash.com/photo-1609592424083-0498db2579df?w=500", "https://www.amazon.com", "Growth +340%"),
-            ("Ultimate 2026 Digital Planner for iPad", "Etsy", "US", "https://images.unsplash.com/photo-1517842645767-c639042777db?w=500", "https://www.etsy.com", "Growth +410%"),
-            ("Refurbished iPhone 14 Pro Max 128GB", "eBay", "US", "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500", "https://www.ebay.com", "Growth +195%"),
-            ("AI Prompt Engineering Complete E-Book", "Amazon", "UK", "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500", "https://www.amazon.com", "Growth +520%"),
-            ("Handmade Vintage Leather Journal", "Etsy", "US", "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=500", "https://www.etsy.com", "Growth +120%")
+            ("Wireless Magnetic Power Bank 10000mAh", "Amazon", "US", "https://images.unsplash.com/photo-1609592424083-0498db2579df?w=600", "https://www.amazon.com", "Growth +340%"),
+            ("Ultimate 2026 Digital Planner for iPad", "Etsy", "US", "https://images.unsplash.com/photo-1517842645767-c639042777db?w=600", "https://www.etsy.com", "Growth +410%"),
+            ("Refurbished iPhone 14 Pro Max 128GB", "eBay", "US", "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=600", "https://www.ebay.com", "Growth +195%"),
+            ("AI Prompt Engineering Complete E-Book", "Amazon", "UK", "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600", "https://www.amazon.com", "Growth +520%"),
+            ("Handmade Vintage Leather Journal", "Etsy", "US", "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600", "https://www.etsy.com", "Growth +120%")
         ]
         return fallback_data
 

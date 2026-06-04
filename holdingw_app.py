@@ -1,5 +1,4 @@
 import streamlit as st
-import json
 
 # 1. إعداد الصفحة والـ Title
 st.set_page_config(
@@ -27,35 +26,14 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 3. دالة جلب البيانات وتحديث الـ JSON لـ Netlify ديريكت (مأمنة ومضمونة)
-def get_and_sync_verified_products():
-    # داتا احترافية ونقية 100% مخلطة ديجيتال وملموس وبتصاور مستحيل يتسدّو
-    verified_data = [
-        ("Wireless Magnetic Power Bank 10000mAh", "Amazon", "US", "https://images.unsplash.com/photo-1609592424083-0498db2579df?w=600", "https://www.amazon.com", "Growth +340%"),
-        ("Ultimate 2026 Digital Planner for iPad", "Etsy", "US", "https://images.unsplash.com/photo-1517842645767-c639042777db?w=600", "https://www.etsy.com", "Growth +410%"),
-        ("Refurbished iPhone 14 Pro Max 128GB", "eBay", "US", "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=600", "https://www.ebay.com", "Growth +195%"),
-        ("AI Prompt Engineering Complete E-Book", "Amazon", "UK", "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600", "https://www.amazon.com", "Growth +520%"),
-        ("Handmade Vintage Leather Journal", "Etsy", "US", "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600", "https://www.etsy.com", "Growth +120%")
-    ]
-    
-    # صناعة ملف JSON نقي باش نيتليفي يقراه فالبلاصة
-    json_products = []
-    for index, prod in enumerate(verified_data):
-        json_products.append({
-            "id": index + 1,
-            "title": prod[0],
-            "platform": prod[1],
-            "country": prod[2],
-            "category": "Digital" if "planner" in prod[0].lower() or "book" in prod[0].lower() else "Physical",
-            "rating": "4.9",
-            "image": prod[3],
-            "url": prod[4]
-        })
-        
-    with open('products.json', 'w', encoding='utf-8') as f:
-        json.dump(json_products, f, ensure_ascii=False, indent=4)
-        
-    return verified_data
+# 3. داتا احترافية ونقية 100% مخلطة ديجيتال وملموس وبتصاور من Unsplash مستحيل يتسدّو
+verified_data = [
+    ("Wireless Magnetic Power Bank 10000mAh", "Amazon", "US", "https://images.unsplash.com/photo-1609592424083-0498db2579df?w=600", "https://www.amazon.com", "Growth +340%"),
+    ("Ultimate 2026 Digital Planner for iPad", "Etsy", "US", "https://images.unsplash.com/photo-1517842645767-c639042777db?w=600", "https://www.etsy.com", "Growth +410%"),
+    ("Refurbished iPhone 14 Pro Max 128GB", "eBay", "US", "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=600", "https://www.ebay.com", "Growth +195%"),
+    ("AI Prompt Engineering Complete E-Book", "Amazon", "UK", "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600", "https://www.amazon.com", "Growth +520%"),
+    ("Handmade Vintage Leather Journal", "Etsy", "US", "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600", "https://www.etsy.com", "Growth +120%")
+]
 
 # 4. الواجهة الرئيسية
 st.title("HoldingW Analytics 🚀")
@@ -63,12 +41,9 @@ st.subheader("Find Winning Trending Products For Free - AI Market Intelligence")
 st.markdown("<p style='text-align:center; color:#6b7280;'>Real-time trending data from Amazon, eBay, and Etsy Top Charts.</p>", unsafe_allow_html=True)
 st.markdown("---")
 
-# تشغيل الدالة المأمنة
-products_list = get_and_sync_verified_products()
-
-# عرض المنتجات الـ 5 النقيين
+# عرض المنتجات الـ 5 النقيين بتوزيع الأعمدة
 cols = st.columns(2)
-for index, prod in enumerate(products_list):
+for index, prod in enumerate(verified_data):
     title, plat, count, img_url, src, engage = prod
     
     with cols[index % 2]:
@@ -92,5 +67,5 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-cpa_url = "https://www.google.com" # <-- حط رابط الـ CPA Locker ديالك هنا ملي تجيبو
+cpa_url = "https://www.google.com" # <-- حط رابط الـ CPA Locker ديالك هنا
 st.link_button("🚀 Show More Products", cpa_url, use_container_width=True, type="primary")

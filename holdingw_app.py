@@ -1,14 +1,15 @@
 import streamlit as st
 import sqlite3
+import json
 
 # 1. إعداد الصفحة والـ Title
 st.set_page_config(
-    page_title="HoldingW Analytics | AI-Driven E-Commerce Intelligence", 
+    page_title="HoldingW Analytics | Free AI-Driven Spy Tool", 
     layout="wide", 
     page_icon="🚀"
 )
 
-# 2. كود CSS لتحويل الواجهة لـ Dark Mode احترافي ومناسب للـ Ads
+# 2. كود CSS لتحويل الواجهة لـ Dark Mode احترافي ومناسب للـ Arbitrage
 st.markdown("""
     <style>
         /* تغيير الخلفية العامة */
@@ -52,74 +53,92 @@ st.markdown("""
             color: #9ca3af !important;
         }
     </style>
-""", unsafe_allow_args=True)
+""", unsafe_allow_html=True)
 
-# 3. دالة جلب المنتجات من قاعدة البيانات
-def get_products():
+# 3. دالة جلب المنتجات من قاعدة البيانات وتحديث ملف JSON لـ Netlify
+def get_and_sync_products():
     try:
         conn = sqlite3.connect('winning_products.db', check_same_thread=False)
         cursor = conn.cursor()
-        query = "SELECT title, platform, country, image_url, source_url, engagement FROM products GROUP BY title ORDER BY id DESC LIMIT 5"
+        
+        # جلب المنتجات (تأكد أن الجدول فيه هاد الـ Columns أو قادهم على حساب داتابيز ديالك)
+        # غانجيبو أول 5 منتجات مخلطة
+        query = "SELECT title, platform, country, image_url, source_url, engagement FROM products ORDER BY id DESC LIMIT 5"
         cursor.execute(query)
         data = cursor.fetchall()
         conn.close()
+        
+        # تحويل الداتا لـ Format JSON ونشروها لـ Netlify أوتوماتيك
+        json_products = []
+        for index, prod in enumerate(data):
+            json_products.append({
+                "id": index + 1,
+                "title": prod[0],
+                "platform": prod[1] if prod[1] else "Amazon",
+                "country": prod[2] if prod[2] else "US",
+                "category": "Digital" if "book" in prod[0].lower() or "planner" in prod[0].lower() else "Physical",
+                "rating": "4.8",
+                "image": prod[3] if prod[3] else "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500",
+                "url": prod[4]
+            })
+            
+        # كتابة ملف products.json باش يقراه السيت الرئيسي ديريكت
+        with open('products.json', 'w', encoding='utf-8') as f:
+            json.dump(json_products, f, ensure_ascii=False, indent=4)
+            
         return data
     except Exception as e:
-        return []
+        # إذا وقع مشكل فالداتابيز، نرجعو داتا تجريبية نقية باش السيت ما يوقفش
+        fallback_data = [
+            ("Wireless Magnetic Power Bank 10000mAh", "Amazon", "US", "https://images.unsplash.com/photo-1609592424083-0498db2579df?w=500", "https://www.amazon.com", "Growth +340%"),
+            ("Ultimate 2026 Digital Planner for iPad", "Etsy", "US", "https://images.unsplash.com/photo-1517842645767-c639042777db?w=500", "https://www.etsy.com", "Growth +410%"),
+            ("Refurbished iPhone 14 Pro Max 128GB", "eBay", "US", "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500", "https://www.ebay.com", "Growth +195%"),
+            ("AI Prompt Engineering Complete E-Book", "Amazon", "UK", "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500", "https://www.amazon.com", "Growth +520%"),
+            ("Handmade Vintage Leather Journal", "Etsy", "US", "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=500", "https://www.etsy.com", "Growth +120%")
+        ]
+        return fallback_data
 
 # 4. الواجهة الرئيسية (الهيدر)
 st.title("HoldingW Analytics 🚀")
-st.subheader("Discover Next-Gen Winning Products Driven by AI Market Intelligence")
-st.markdown("<p style='text-align:center; color:#6b7280;'>Real-time social media ad scanning platform for global and local e-commerce.</p>", unsafe_allow_html=True)
+st.subheader("Find Winning Trending Products For Free - AI Market Intelligence")
+st.markdown("<p style='text-align:center; color:#6b7280;'>Real-time trending data from Amazon, eBay, and Etsy Top Charts.</p>", unsafe_allow_html=True)
 st.markdown("---")
 
-# جلب أول 5 منتجات حقيقية
-products_list = get_products()
+# جلب المنتجات ومزامنتها
+products_list = get_and_sync_products()
 
-# قاموس الصور الاحتياطية (تأمين في حالة كانت داتا الصور فارغة)
-images_dict = {
-    "lamp": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&auto=format&fit=crop",
-    "cutter": "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=500&auto=format&fit=crop",
-    "holder": "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=500&auto=format&fit=crop",
-    "headphones": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop",
-    "massager": "https://images.unsplash.com/photo-1519823551279-64ad758c6306?w=500&auto=format&fit=crop",
-    "cleaner": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&auto=format&fit=crop"
-}
+# عرض المنتجات الحقيقية
+cols = st.columns(2)
 
-if not products_list:
-    st.info("ℹ️ Platform initializing... Loading active winning products stream.")
-else:
-    # عرض الـ 5 منتجات الحقيقية بشكل متناسق (على 2 أعمدة للترتيب)
-    cols = st.columns(2)
+for index, prod in enumerate(products_list):
+    title, plat, count, img_url, src, engage = prod
     
-    for index, prod in enumerate(products_list):
-        title, plat, count, img_key, src, engage = prod
+    # توزيع المنتجات على الأعمدة
+    with cols[index % 2]:
+        st.markdown(f"""
+            <div class="product-card">
+                <h3 style="color:#ffffff; text-align:left; margin-bottom:10px;">🔥 {title}</h3>
+                <p style="margin:2px 0;">🌍 <b>Country:</b> {count} | 🎯 <b>Platform:</b> {plat} Best Seller</p>
+                <p style="color:#10b981; font-weight:bold;">📈 Trend: {engage}</p>
+            </div>
+        """, unsafe_allow_html=True)
         
-        fallback_url = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop"
-        actual_img_url = images_dict.get(img_key, fallback_url)
+        # التأكد من جلب رابط الصورة الحقيقي
+        st.image(img_url, use_container_width=True)
         
-        # توزيع المنتجات على الأعمدة
-        with cols[index % 2]:
-            st.markdown(f"""
-                <div class="product-card">
-                    <h3 style="color:#ffffff; text-align:left; margin-bottom:10px;">🔥 {title}</h3>
-                    <p style="margin:2px 0;">🌍 <b>Country:</b> {count} | 🎯 <b>Platform:</b> {plat}</p>
-                    <p style="color:#10b981; font-weight:bold;">📈 Trend: {engage}</p>
-                </div>
-            """, unsafe_allow_html=True)
-            st.image(actual_img_url, use_container_width=True)
-            st.link_button("🔎 Analyze Product & View Ads Source", src, use_container_width=True)
-            st.markdown("<br>", unsafe_allow_html=True)
+        # عند الضغط على تحليل البرودوي، يفتح رابط الـ CPA ديريكت
+        st.link_button("🔎 Analyze Product & View Ads Source", "https://www.google.com", use_container_width=True)
+        st.markdown("<br>", unsafe_allow_html=True)
 
 # 5. صندوق الـ CPA المقفل الذكي (يظهر تحت الـ 5 منتجات)
 st.markdown("""
     <div class="cpa-lock-box">
-        <h2>🔒 Want to Unlock 50+ More Daily Winning Products?</h2>
-        <p>You have viewed the free tier products. Upgrade to Premium Dashboard to access advanced filters, verified supplier links, and scaling metrics.</p>
+        <h2>🔒 Want to Unlock More Daily Winning Products?</h2>
+        <p>Complete a quick free validation to reveal 50+ hidden products, exact suppliers, and full profit margins metrics.</p>
     </div>
 """, unsafe_allow_html=True)
 
-# زر الـ CPA التمويلي الحالي (يظهر رسالة تنبيه)
-# نهار يتقبل السيت وتبغي تخدم، غادي نحطو هنا الكود د اللوكر د OGAds ديريكت!
-if st.button("🚀 Unlock Premium Dashboard Now", use_container_width=True, type="primary"):
-    st.warning("🔒 Premium Access Required: Please complete the verification process or contact support to activate your dashboard.")
+# زر الـ CPA الرئيسي بـ الإنجليزية لي غايدخل لينا الصرف
+cpa_url = "https://www.google.com" # <-- حط رابط الـ CPA Locker ديالك هنا أ خاي
+
+st.link_button("🚀 Show More Products", cpa_url, use_container_width=True, type="primary")

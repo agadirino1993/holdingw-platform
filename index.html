@@ -73,7 +73,6 @@
         .close-modal { position: absolute; top: 15px; right: 20px; font-size: 28px; color: #9ca3af; cursor: pointer; font-weight: bold; }
         .close-modal:hover { color: #fff; }
 
-        /* ستايل مبيعات وهمية لـ AdSense */
         .chart-box { background: #070a12; border: 1px solid #1e293b; border-radius: 6px; padding: 15px; margin: 15px 0; display: flex; justify-content: space-around; text-align: center; }
         .chart-stat { font-size: 20px; font-weight: bold; color: var(--success); }
     </style>
@@ -100,7 +99,7 @@
     <div class="scanner-container">
         
         <div class="products-grid">
-            <img class="product-img" src="https://images.pexels.com/photos/4000074/pexels-photo-4000074.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Magnetic Power Bank">
+            <img class="product-img" src="https://images.unsplash.com/photo-1622445262465-2481c4574875?w=400" alt="Magnetic Power Bank">
             <div class="product-details">
                 <h3>🔥 Wireless Magnetic Power Bank 10000mAh</h3>
                 <p>Target: Dropship • Country: US • Rating: 4.8 ⭐</p>
@@ -166,7 +165,6 @@
         <p>&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
     </footer>
 
-    <!-- 📊 نافذة التحليل الوهمية المقنعة لـ AdSense -->
     <div id="analysisModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
@@ -185,7 +183,6 @@
         </div>
     </div>
 
-    <!-- 1️⃣ Privacy Policy Modal -->
     <div id="privacyModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
@@ -202,7 +199,6 @@
         </div>
     </div>
 
-    <!-- 2️⃣ Terms of Service Modal -->
     <div id="termsModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
@@ -219,7 +215,6 @@
         </div>
     </div>
 
-    <!-- 3️⃣ Contact Us Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
@@ -231,7 +226,6 @@
     </div>
 
     <script>
-        // دالة فتح نافذة التحليل المقنعة لـ AdSense فاش يكليكي المستخدم
         function openAnalysis(productName) {
             document.getElementById('analysisTitle').innerText = productName + ' - Performance Analysis';
             document.getElementById('analysisModal').style.display = "flex";

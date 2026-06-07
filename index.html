@@ -125,7 +125,7 @@
                 <li><a href="#">Trends</a></li>
             </ul>
         </nav>
-        <div class="btn-trial" onclick="openAnalysis('General System Dashboard')">Live Dashboard</div>
+        <div class="btn-trial" onclick="openAnalysis('General Dashboard')">Live Dashboard</div>
     </header>
 
     <section class="hero">
@@ -135,7 +135,7 @@
 
     <div class="scanner-container">
         
-        <!-- 1. المُنْتَجْ الجْدِيدْ: HUD Car Dashboard Display (تصويرة داخل طوموبيل احترافية ومضمونة) -->
+        <!-- 1. HUD Car Display -->
         <div class="products-grid">
             <div class="img-container">
                 <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=300&auto=format&fit=crop&q=80" alt="Universal Car HUD Dashboard">
@@ -148,7 +148,7 @@
                     <span class="platform-badge">AliExpress Hot Demand</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('Universal Car HUD Display')" class="btn-link">Analyze Product</button></div>
+            <div><button onclick="openAnalysis('hud')" class="btn-link">Analyze Product</button></div>
         </div>
 
         <!-- 2. Ultimate 2026 Digital Planner -->
@@ -164,7 +164,7 @@
                     <span class="platform-badge">Etsy Top Trend</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('Ultimate 2026 Digital Planner')" class="btn-link">Analyze Product</button></div>
+            <div><button onclick="openAnalysis('planner')" class="btn-link">Analyze Product</button></div>
         </div>
 
         <!-- 3. Refurbished iPhone 14 Pro Max -->
@@ -180,10 +180,10 @@
                     <span class="platform-badge">eBay Hot Demand</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('Refurbished iPhone 14 Pro Max')" class="btn-link">Analyze Product</button></div>
+            <div><button onclick="openAnalysis('iphone')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 4. Orthopedic Memory Foam Knee Pillow -->
+        <!-- 4. Orthopedic Knee Pillow -->
         <div class="products-grid">
             <div class="img-container">
                 <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=300&auto=format&fit=crop&q=80" alt="Orthopedic Knee Pillow">
@@ -196,7 +196,7 @@
                     <span class="platform-badge">Amazon Hot Seller</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('Orthopedic Knee Pillow')" class="btn-link">Analyze Product</button></div>
+            <div><button onclick="openAnalysis('pillow')" class="btn-link">Analyze Product</button></div>
         </div>
 
         <!-- 5. Handmade Vintage Leather Journal Notebook -->
@@ -212,13 +212,13 @@
                     <span class="platform-badge">Etsy Handmade</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('Handmade Vintage Leather Journal')" class="btn-link">Analyze Product</button></div>
+            <div><button onclick="openAnalysis('journal')" class="btn-link">Analyze Product</button></div>
         </div>
 
         <div class="cpa-lock-box">
             <h3 style="color:#fff;">📈 Deep Analytics Scanner Activated</h3>
             <p>Our platform scans live e-commerce API metrics every 6 hours to structure demand charts, competition indexes, and growth rates.</p>
-            <button class="btn-unlock" onclick="openAnalysis('Premium Analytical Cloud')">🚀 View Market Overview</button>
+            <button class="btn-unlock" onclick="openAnalysis('premium')">🚀 View Market Overview</button>
         </div>
 
     </div>
@@ -237,16 +237,16 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
             <h2 id="analysisTitle">Product Deep Analysis</h2>
-            <p>Here are the calculated algorithmic performance metrics extracted dynamically from worldwide marketplaces charts:</p>
+            <p id="analysisDesc">Here are the calculated algorithmic performance metrics extracted dynamically from worldwide marketplaces charts:</p>
             
             <div class="chart-box">
-                <div><p style="font-size:12px; color:var(--text-muted);">Demand Index</p><p class="chart-stat">94.2%</p></div>
-                <div><p style="font-size:12px; color:var(--text-muted);">Competition</p><p class="chart-stat" style="color:var(--warning);">Medium</p></div>
-                <div><p style="font-size:12px; color:var(--text-muted);">Margin Est.</p><p class="chart-stat">+68%</p></div>
+                <div><p style="font-size:12px; color:var(--text-muted);">Demand Index</p><p class="chart-stat" id="statDemand">94.2%</p></div>
+                <div><p style="font-size:12px; color:var(--text-muted);">Competition</p><p class="chart-stat" id="statComp" style="color:var(--warning);">Medium</p></div>
+                <div><p style="font-size:12px; color:var(--text-muted);">Margin Est.</p><p class="chart-stat" id="statMargin">+68%</p></div>
             </div>
 
             <h3>Market Saturation Insights</h3>
-            <p>This asset demonstrates high engagement rates across tier-1 countries (US, UK, CA) with a low refund ratio.</p>
+            <p id="saturationText">This asset demonstrates high engagement rates across tier-1 countries (US, UK, CA) with a low refund ratio.</p>
         </div>
     </div>
 
@@ -260,11 +260,75 @@
         <div class="modal-content"><span class="close-modal" onclick="closeModal('contactModal')">&times;</span><h2>Contact Us</h2><p>📧 Support: contact@holdingw.com</p></div>
     </div>
 
+    <!-- السكريبت المطور لتبديل البيانات الذكية -->
     <script>
-        function openAnalysis(productName) {
-            document.getElementById('analysisTitle').innerText = productName + ' - Performance Analysis';
-            document.getElementById('analysisModal').style.display = "flex";
+        // داتابيز صغيرة وسط الكود فيها معلومات كل منتج بوحدو
+        const productData = {
+            hud: {
+                title: "HUD GPS Speedometer - Performance Analysis",
+                demand: "91.4%",
+                comp: "Low",
+                compColor: "#10b981", // أخضر حيت الـ Competition هابطة
+                margin: "+74%",
+                text: "Automotive niche signals extreme viral push on TikTok. Orders are mostly scaling across US, DE, and Australia with high saturation resistance."
+            },
+            planner: {
+                title: "Ultimate 2026 Digital Planner - Performance Analysis",
+                demand: "96.8%",
+                comp: "High",
+                compColor: "#ef4444", // أحمر حيت الـ Competition طالعة
+                margin: "+88%",
+                text: "Etsy digital downloads are hitting record-high margins. Zero shipping costs allow massive ROI for scalable digital arbitrage campaigns."
+            },
+            iphone: {
+                title: "Refurbished iPhone 14 Pro Max - Performance Analysis",
+                demand: "88.2%",
+                comp: "Medium",
+                compColor: "#f59e0b", // ليموني حيت متوسطة
+                margin: "+35%",
+                text: "High-ticket volume trend steady on eBay. Tech category has high conversion rates but requires strict customer trust patterns."
+            },
+            pillow: {
+                title: "Orthopedic Knee Pillow - Performance Analysis",
+                demand: "93.5%",
+                comp: "Medium",
+                compColor: "#f59e0b",
+                margin: "+62%",
+                text: "Health & comfort catalog product with massive repeat-purchase stability on Amazon. Best performing scale target for Facebook/Meta video Ads."
+            },
+            journal: {
+                title: "Handmade Vintage Leather Journal - Performance Analysis",
+                demand: "84.1%",
+                comp: "Low",
+                compColor: "#10b981",
+                margin: "+55%",
+                text: "Premium gift product sub-category. High perceived value offers great opportunity to scale personalized landing pages for Q4."
+            },
+            premium: {
+                title: "Premium Analytical Cloud - Global Overview",
+                demand: "95.0%",
+                comp: "System Live",
+                compColor: "#3b82f6",
+                margin: "+65% Avg",
+                text: "Global database aggregated telemetry. Live system monitors 14,000 active winning listings to feed algorithmic predictions metrics."
+            }
+        };
+
+        function openAnalysis(prodKey) {
+            const data = productData[prodKey];
+            if (data) {
+                // تبديل الداتا ديناميكياً وسط الـ Modal
+                document.getElementById('analysisTitle').innerText = data.title;
+                document.getElementById('statDemand').innerText = data.demand;
+                document.getElementById('statComp').innerText = data.comp;
+                document.getElementById('statComp').style.color = data.compColor;
+                document.getElementById('statMargin').innerText = data.margin;
+                document.getElementById('saturationText').innerText = data.text;
+                
+                document.getElementById('analysisModal').style.display = "flex";
+            }
         }
+
         function openModal(modalId) { document.getElementById(modalId).style.display = "flex"; }
         function closeModal(modalId) { document.getElementById(modalId).style.display = "none"; }
         window.onclick = function(event) { if (event.target.classList.contains('modal')) { event.target.style.display = "none"; } }

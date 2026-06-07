@@ -4,115 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HoldingW Analytics | AI-Driven E-Commerce Intelligence</title>
-    <style>
-        :root {
-            --bg-color: #0b0f19;
-            --card-bg: #111827;
-            --accent-color: #3b82f6;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --success: #10b981;
-            --warning: #f59e0b;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
-
-        header {
-            display: flex; justify-content: space-between; align-items: center; padding: 20px 8%;
-            background-color: rgba(17, 24, 39, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #1e293b;
-        }
-        .logo { font-size: 24px; font-weight: bold; color: #fff; }
-        .logo span { color: var(--accent-color); }
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav ul li a { color: var(--text-muted); text-decoration: none; font-size: 15px; }
-
-        .btn-trial {
-            background-color: var(--accent-color); color: #fff; padding: 10px 20px;
-            border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; cursor: pointer;
-        }
-
-        .hero { text-align: center; padding: 60px 20px 30px 20px; max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-size: 40px; font-weight: 800; margin-bottom: 20px; color: #fff; }
-        .hero p { color: var(--text-muted); font-size: 17px; }
-
-        .scanner-container { max-width: 1000px; margin: 20px auto; background-color: var(--card-bg); border: 1px solid #1e293b; border-radius: 12px; padding: 30px; }
-        
-        .products-grid {
-            display: grid; 
-            grid-template-columns: 140px 1fr auto; 
-            gap: 25px; 
-            align-items: center;
-            padding: 20px; 
-            border-bottom: 1px solid #1e293b; 
-            background-color: #0d1321; 
-            margin-bottom: 15px; 
-            border-radius: 8px;
-            width: 100%;
-        }
-
-        .img-container { 
-            width: 140px; 
-            height: 100px; 
-            background-color: #1f2937; 
-            border-radius: 6px; 
-            border: 1px solid #374151; 
-            overflow: hidden;
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-        }
-        .img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        .products-grid:hover .img-container img {
-            transform: scale(1.08);
-        }
-
-        .product-details {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .product-details h3 { color: #fff; font-size: 18px; margin-bottom: 8px; font-weight: 600; }
-        .product-details p { color: var(--text-muted); font-size: 14px; margin-bottom: 8px; }
-        
-        .badge-container { display: flex; gap: 8px; flex-wrap: wrap; }
-        .trend-badge { background-color: rgba(16, 185, 129, 0.1); color: var(--success); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; }
-        .platform-badge { background-color: rgba(59, 130, 246, 0.1); color: var(--accent-color); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; }
-
-        .btn-link {
-            background-color: var(--accent-color); color: white; border: none; padding: 12px 20px;
-            border-radius: 6px; font-size: 14px; cursor: pointer; font-weight: bold; text-decoration: none; 
-            white-space: nowrap; transition: background 0.2s;
-        }
-        .btn-link:hover { background-color: #2563eb; }
-
-        .cpa-lock-box {
-            margin-top: 30px; text-align: center; background: linear-gradient(180deg, rgba(17,24,39,0) 0%, rgba(17,24,39,1) 100%);
-            padding: 30px; border-radius: 8px; border: 2px dashed #374151;
-        }
-        .btn-unlock { background-color: var(--warning); color: #000; border: none; padding: 12px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; width: 100%; font-size: 16px; margin-top: 15px; }
-
-        footer { margin-top: 60px; background-color: #070a12; padding: 40px 20px; border-top: 1px solid #1e293b; text-align: center; color: var(--text-muted); font-size: 13px; }
-        .footer-links { margin-bottom: 15px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .footer-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; cursor: pointer; }
-        .footer-links a:hover { color: var(--accent-color); }
-
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(5px); z-index: 1000; justify-content: center; align-items: center; padding: 20px; }
-        .modal-content { background-color: #111827; border: 1px solid #1e293b; padding: 30px; border-radius: 12px; max-width: 700px; width: 100%; max-height: 80vh; overflow-y: auto; position: relative; color: #f3f4f6; text-align: left; }
-        .modal-content h2 { color: #fff; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 10px; font-size: 22px; }
-        .modal-content h3 { color: #fff; margin: 15px 0 5px 0; font-size: 16px; }
-        .modal-content p { font-size: 14px; color: #9ca3af; margin-bottom: 15px; }
-        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 28px; color: #9ca3af; cursor: pointer; font-weight: bold; }
-        .close-modal:hover { color: #fff; }
-
-        .chart-box { background: #070a12; border: 1px solid #1e293b; border-radius: 6px; padding: 15px; margin: 15px 0; display: flex; justify-content: space-around; text-align: center; }
-        .chart-stat { font-size: 20px; font-weight: bold; color: var(--success); }
-    </style>
+    <!-- استدعاء ملف الديزاين الخارجي المقسم احترافياً -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -286,25 +179,23 @@
         <p>&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
     </footer>
 
-    <!-- 1. Modal Analysis (ديناميكي للمنتجات) -->
+    <!-- Modals Cloud Structural Templates -->
     <div id="analysisModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
             <h2 id="analysisTitle">Product Deep Analysis</h2>
             <p id="analysisDesc">Here are the calculated algorithmic performance metrics extracted dynamically from worldwide marketplaces charts:</p>
-            
             <div class="chart-box">
                 <div><p style="font-size:12px; color:var(--text-muted);">Demand Index</p><p class="chart-stat" id="statDemand">94.2%</p></div>
-                <div><p style="font-size:12px; color:var(--text-muted);">Competition</p><p class="chart-stat" id="statComp" style="color:var(--warning);">Medium</p></div>
+                <div><p style="font-size:12px; color:var(--text-muted);">Competition</p><p class="chart-stat" id="statComp">Medium</p></div>
                 <div><p style="font-size:12px; color:var(--text-muted);">Margin Est.</p><p class="chart-stat" id="statMargin">+68%</p></div>
             </div>
-
             <h3>Market Saturation Insights</h3>
-            <p id="saturationText">This asset demonstrates high engagement rates across tier-1 countries (US, UK, CA) with a low refund ratio.</p>
+            <p id="saturationText">This asset demonstrates high engagement rates across tier-1 countries with a low refund ratio.</p>
         </div>
     </div>
 
-    <!-- 2. Modal Privacy Policy -->
+    <!-- Privacy Modal -->
     <div id="privacyModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
@@ -312,115 +203,32 @@
             <p>At HoldingW Analytics, accessible from our main domain, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by HoldingW Analytics and how we use it.</p>
             <h3>Log Files</h3>
             <p>HoldingW Analytics follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this as part of hosting services' analytics. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks.</p>
-            <h3>Cookies and Web Beacons</h3>
-            <p>Like any other website, HoldingW Analytics uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
-            <h3>Third Party Privacy Policies</h3>
-            <p>HoldingW Analytics's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
         </div>
     </div>
 
-    <!-- 3. Modal Terms of Service -->
+    <!-- Terms Modal -->
     <div id="termsModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
             <h2>Terms of Service</h2>
             <h3>1. Terms</h3>
-            <p>By accessing the website at HoldingW Analytics, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
-            <h3>2. Use License</h3>
-            <p>Permission is granted to temporarily download one copy of the materials (information or software) on HoldingW Analytics' website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not modify or copy the materials, use the materials for any commercial purpose, or for any public display.</p>
-            <h3>3. Disclaimer</h3>
-            <p>The materials on HoldingW Analytics' website are provided on an 'as is' basis. HoldingW Analytics makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
-            <h3>4. Limitations</h3>
-            <p>In no event shall HoldingW Analytics or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on HoldingW Analytics' website.</p>
+            <p>By accessing the website at HoldingW Analytics, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p>
+            <h3>2. Disclaimer</h3>
+            <p>The materials on HoldingW Analytics' website are provided on an 'as is' basis. HoldingW Analytics makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability.</p>
         </div>
     </div>
 
-    <!-- 4. Modal Contact Us -->
+    <!-- Contact Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
             <h2>Contact Us</h2>
             <p>If you have any questions about our analytical dashboards, data synchronization, or enterprise intelligence tools, feel free to reach out to our optimization team.</p>
             <p style="margin-top: 15px;">📧 <strong>Official Email Support:</strong> contact@holdingw.com</p>
-            <p style="font-size: 12px; color: var(--text-muted); margin-top: 10px;">Our data operation desk typically responds within 24-48 business hours.</p>
         </div>
     </div>
 
-    <!-- سكريبت تبديل البيانات بذكاء وفصل النوافذ -->
-    <script>
-        const productData = {
-            hud: {
-                title: "HUD GPS Speedometer - Performance Analysis",
-                demand: "91.4%",
-                comp: "Low",
-                compColor: "#10b981",
-                margin: "+74%",
-                text: "Automotive niche signals extreme viral push on TikTok. Orders are mostly scaling across US, DE, and Australia with high saturation resistance."
-            },
-            planner: {
-                title: "Ultimate 2026 Digital Planner - Performance Analysis",
-                demand: "96.8%",
-                comp: "High",
-                compColor: "#ef4444",
-                margin: "+88%",
-                text: "Etsy digital downloads are hitting record-high margins. Zero shipping costs allow massive ROI for scalable digital arbitrage campaigns."
-            },
-            iphone: {
-                title: "Refurbished iPhone 14 Pro Max - Performance Analysis",
-                demand: "88.2%",
-                comp: "Medium",
-                compColor: "#f59e0b",
-                margin: "+35%",
-                text: "High-ticket volume trend steady on eBay. Tech category has high conversion rates but requires strict customer trust patterns."
-            },
-            pillow: {
-                title: "Orthopedic Knee Pillow - Performance Analysis",
-                demand: "93.5%",
-                comp: "Medium",
-                compColor: "#f59e0b",
-                margin: "+62%",
-                text: "Health & comfort catalog product with massive repeat-purchase stability on Amazon. Best performing scale target for Facebook/Meta video Ads."
-            },
-            journal: {
-                title: "Handmade Vintage Leather Journal - Performance Analysis",
-                demand: "84.1%",
-                comp: "Low",
-                compColor: "#10b981",
-                margin: "+55%",
-                text: "Premium gift product sub-category. High perceived value offers great opportunity to scale personalized landing pages for Q4."
-            },
-            premium: {
-                title: "Premium Analytical Cloud - Global Overview",
-                demand: "95.0%",
-                comp: "System Live",
-                compColor: "#3b82f6",
-                margin: "+65% Avg",
-                text: "Global database aggregated telemetry. Live system monitors 14,000 active winning listings to feed algorithmic predictions metrics."
-            }
-        };
-
-        function openAnalysis(prodKey) {
-            const data = productData[prodKey];
-            if (data) {
-                document.getElementById('analysisTitle').innerText = data.title;
-                document.getElementById('statDemand').innerText = data.demand;
-                document.getElementById('statComp').innerText = data.comp;
-                document.getElementById('statComp').style.color = data.compColor;
-                document.getElementById('statMargin').innerText = data.margin;
-                document.getElementById('saturationText').innerText = data.text;
-                document.getElementById('analysisModal').style.display = "flex";
-            }
-        }
-
-        function openModal(modalId) { document.getElementById(modalId).style.display = "flex"; }
-        function closeModal(modalId) { document.getElementById(modalId).style.display = "none"; }
-        
-        // إغلاق أي نافذة إذا ضغط المستخدم خارجها
-        window.onclick = function(event) { 
-            if (event.target.classList.contains('modal')) { 
-                event.target.style.display = "none"; 
-            } 
-        }
-    </script>
+    <!-- استدعاء ملف الجافا سكريبت الخارجي المقسم احترافياً -->
+    <script src="app.js"></script>
 </body>
 </html>

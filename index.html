@@ -39,11 +39,19 @@
         .scanner-container { max-width: 1000px; margin: 20px auto; background-color: var(--card-bg); border: 1px solid #1e293b; border-radius: 12px; padding: 30px; }
         
         .products-grid {
-            display: grid; grid-template-columns: 140px 1fr auto; gap: 20px; align-items: center;
-            padding: 20px; border-bottom: 1px solid #1e293b; background-color: #0d1321; margin-bottom: 15px; border-radius: 8px;
+            display: grid; 
+            grid-template-columns: 140px 1fr auto; 
+            gap: 25px; 
+            align-items: center;
+            padding: 20px; 
+            border-bottom: 1px solid #1e293b; 
+            background-color: #0d1321; 
+            margin-bottom: 15px; 
+            border-radius: 8px;
+            width: 100%;
         }
 
-        /* ستايل مخصص لحاوية الأيقونات الذكية */
+        /* حاوية التصاور قاديت الـ Background والـ Padding باش يبانو عامرين */
         .img-container { 
             width: 140px; 
             height: 100px; 
@@ -53,19 +61,28 @@
             display: flex; 
             justify-content: center; 
             align-items: center;
-            color: var(--accent-color);
         }
-        .img-container svg { width: 45px; height: 45px; fill: currentColor; }
+        /* الفيكس ديال الأيقونات باش يوليو Solid وواضحين وباينين وسط المربع */
+        .img-container svg { width: 45px; height: 45px; }
 
-        .product-details h3 { color: #fff; font-size: 18px; margin-bottom: 5px; }
-        .product-details p { color: var(--text-muted); font-size: 14px; }
-        .trend-badge { background-color: rgba(16, 185, 129, 0.1); color: var(--success); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-right: 8px; }
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .product-details h3 { color: #fff; font-size: 18px; margin-bottom: 8px; font-weight: 600; }
+        .product-details p { color: var(--text-muted); font-size: 14px; margin-bottom: 8px; }
+        
+        .badge-container { display: flex; gap: 8px; flex-wrap: wrap; }
+        .trend-badge { background-color: rgba(16, 185, 129, 0.1); color: var(--success); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; }
         .platform-badge { background-color: rgba(59, 130, 246, 0.1); color: var(--accent-color); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; }
 
         .btn-link {
-            background-color: var(--accent-color); color: white; border: none; padding: 10px 18px;
-            border-radius: 6px; font-size: 14px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block;
+            background-color: var(--accent-color); color: white; border: none; padding: 12px 20px;
+            border-radius: 6px; font-size: 14px; cursor: pointer; font-weight: bold; text-decoration: none; 
+            white-space: nowrap; transition: background 0.2s;
         }
+        .btn-link:hover { background-color: #2563eb; }
 
         .cpa-lock-box {
             margin-top: 30px; text-align: center; background: linear-gradient(180deg, rgba(17,24,39,0) 0%, rgba(17,24,39,1) 100%);
@@ -75,7 +92,7 @@
 
         footer { margin-top: 60px; background-color: #070a12; padding: 40px 20px; border-top: 1px solid #1e293b; text-align: center; color: var(--text-muted); font-size: 13px; }
         .footer-links { margin-bottom: 15px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .footer-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; cursor: pointer; transition: color 0.2s; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; cursor: pointer; }
         .footer-links a:hover { color: var(--accent-color); }
 
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(5px); z-index: 1000; justify-content: center; align-items: center; padding: 20px; }
@@ -111,67 +128,82 @@
 
     <div class="scanner-container">
         
-        <!-- 1. Wireless Magnetic Power Bank (أيقونة بطارية/شاحن متطورة) -->
+        <!-- 1. Wireless Magnetic Power Bank (أيقونة شاحن عامر وملون) -->
         <div class="products-grid">
-            <div class="img-container" style="color: #10b981;">
-                <svg viewBox="0 0 24 24"><path d="M16.67 4H15V2H9v2H7.33C6.6 4 6 4.6 6 5.33v15.33C6 21.4 6.6 22 7.33 22h9.33c.74 0 1.34-.6 1.34-1.33V5.33C18 4.6 17.4 4 16.67 4zM11 19v-4.5H9l4-7.5v4.5h2l-4 7.5z"/></svg>
+            <div class="img-container">
+                <svg viewBox="0 0 24 24" fill="#10b981"><path d="M16.67 4H15V2H9v2H7.33C6.6 4 6 4.6 6 5.33v15.33C6 21.4 6.6 22 7.33 22h9.33c.74 0 1.34-.6 1.34-1.33V5.33C18 4.6 17.4 4 16.67 4zM11 16H9l4-7v5h2l-4 8v-6z"/></svg>
             </div>
             <div class="product-details">
                 <h3>🔥 Wireless Magnetic Power Bank 10000mAh</h3>
                 <p>Target: Dropship • Country: US • Rating: 4.8 ⭐</p>
-                <span class="trend-badge">Growth +340%</span><span class="platform-badge">Amazon Best Seller</span>
+                <div class="badge-container">
+                    <span class="trend-badge">Growth +340%</span>
+                    <span class="platform-badge">Amazon Best Seller</span>
+                </div>
             </div>
             <div><button onclick="openAnalysis('Wireless Magnetic Power Bank')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 2. Ultimate 2026 Digital Planner (أيقونة مفكرة رقمية دقيقة) -->
+        <!-- 2. Ultimate 2026 Digital Planner (أيقونة كالوندرية/مفكرة معمرة وواضحة) -->
         <div class="products-grid">
-            <div class="img-container" style="color: #f59e0b;">
-                <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+            <div class="img-container">
+                <svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-5h5v5zm5-7H7V7h10v3z"/></svg>
             </div>
             <div class="product-details">
                 <h3>🔥 Ultimate 2026 Digital Planner for iPad</h3>
                 <p>Target: Resell • Country: US • Type: Digital Asset</p>
-                <span class="trend-badge">Growth +410%</span><span class="platform-badge">Etsy Top Trend</span>
+                <div class="badge-container">
+                    <span class="trend-badge">Growth +410%</span>
+                    <span class="platform-badge">Etsy Top Trend</span>
+                </div>
             </div>
             <div><button onclick="openAnalysis('Ultimate 2026 Digital Planner')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 3. Refurbished iPhone 14 Pro Max (أيقونة هاتف ذكي ناضية) -->
+        <!-- 3. Refurbished iPhone 14 Pro Max (أيقونة هاتف صوليد عامر) -->
         <div class="products-grid">
-            <div class="img-container" style="color: #3b82f6;">
-                <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+            <div class="img-container">
+                <svg viewBox="0 0 24 24" fill="#3b82f6"><path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm-5 20c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm4.25-4H7.75V4h8.5v13z"/></svg>
             </div>
             <div class="product-details">
                 <h3>🔥 Refurbished iPhone 14 Pro Max 128GB</h3>
                 <p>Target: E-Com • Country: Global • Condition: Unlocked</p>
-                <span class="trend-badge">Growth +195%</span><span class="platform-badge">eBay Hot Demand</span>
+                <div class="badge-container">
+                    <span class="trend-badge">Growth +195%</span>
+                    <span class="platform-badge">eBay Hot Demand</span>
+                </div>
             </div>
             <div><button onclick="openAnalysis('Refurbished iPhone 14 Pro Max')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 4. AI Prompt Engineering Masterclass E-Book (أيقونة كتاب ذكاء اصطناعي) -->
+        <!-- 4. AI Prompt Engineering Masterclass E-Book (أيقونة كتاب عامر) -->
         <div class="products-grid">
-            <div class="img-container" style="color: #a855f7;">
-                <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+            <div class="img-container">
+                <svg viewBox="0 0 24 24" fill="#a855f7"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4zm9 16H6V4h1v9l2.5-1.88L12 13V4h6v16z"/></svg>
             </div>
             <div class="product-details">
                 <h3>🔥 AI Prompt Engineering Masterclass E-Book</h3>
                 <p>Target: Info-Product • Country: UK • Format: PDF/EPUB</p>
-                <span class="trend-badge">Growth +520%</span><span class="platform-badge">Amazon Kindle</span>
+                <div class="badge-container">
+                    <span class="trend-badge">Growth +520%</span>
+                    <span class="platform-badge">Amazon Kindle</span>
+                </div>
             </div>
             <div><button onclick="openAnalysis('AI Prompt Engineering Masterclass')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 5. Handmade Vintage Leather Journal Notebook (أيقونة كتاب كلاسيكي نقي) -->
+        <!-- 5. Handmade Vintage Leather Journal Notebook (أيقونة كتاب كلاسيكي صوليد) -->
         <div class="products-grid">
-            <div class="img-container" style="color: #ec4899;">
-                <svg viewBox="0 0 24 24"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5-1.95 0-4.05.4-5.5 1.5v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 19.45 5.05 19 7 19c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.1-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.35-.75-2-1zM3 18.5V7c1.1-.35 2.3-.5 3.5-.5 1.45 0 3 .15 4.5.75v11.75c-1.5-.45-3-.6-4.5-.6-1.2 0-2.4.15-3.5.6zm18 0c-1.1-.45-2.3-.6-3.5-.6-1.5 0-3 .15-4.5.6V8.25c1.5-.6 3-.75 4.5-.75 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+            <div class="img-container">
+                <svg viewBox="0 0 24 24" fill="#ec4899"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
             </div>
             <div class="product-details">
                 <h3>🔥 Handmade Vintage Leather Journal Notebook</h3>
                 <p>Target: Premium Gift • Country: US • Rating: 4.9 ⭐</p>
-                <span class="trend-badge">Growth +120%</span><span class="platform-badge">Etsy Handmade</span>
+                <div class="badge-container">
+                    <span class="trend-badge">Growth +120%</span>
+                    <span class="platform-badge">Etsy Handmade</span>
+                </div>
             </div>
             <div><button onclick="openAnalysis('Handmade Vintage Leather Journal')" class="btn-link">Analyze Product</button></div>
         </div>
@@ -193,7 +225,7 @@
         <p>&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
     </footer>
 
-    <!-- 📊 Modal Analysis -->
+    <!-- Modals -->
     <div id="analysisModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
@@ -212,20 +244,11 @@
         </div>
     </div>
 
-    <!-- Legal Modals -->
     <div id="privacyModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
             <h2>Privacy Policy</h2>
-            <p>Welcome to HoldingW Analytics. We value your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and secure information when you use our platform.</p>
-            <h3>1. Information We Collect</h3>
-            <p>We may collect non-personal identification information about users whenever they interact with our site, including browser type, device type, and technical connection metrics to help optimize user performance.</p>
-            <h3>2. How We Use Collected Information</h3>
-            <p>HoldingW analytics uses the collected data to improve customer service, customize user experiences, analyze platform traffic, and deliver optimized digital insights or trending commercial data.</p>
-            <h3>3. Data Protection</h3>
-            <p>We adopt appropriate data collection, storage, and processing practices and security measures to protect against unauthorized access, alteration, disclosure, or destruction of any personal interactions.</p>
-            <h3>4. Third-Party Web Sites</h3>
-            <p>Users may find content or links on our platform that link to the sites and services of our partners, suppliers, or verification networks. We do not control the content or links that appear on these sites and are not responsible for practices employed by websites linked to or from our platform.</p>
+            <p>Welcome to HoldingW Analytics. We value your privacy and are committed to protecting your personal data.</p>
         </div>
     </div>
 
@@ -233,15 +256,7 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
             <h2>Terms of Service</h2>
-            <p>By accessing the website at HoldingW Analytics, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p>
-            <h3>1. Use License</h3>
-            <p>Permission is granted to temporarily view the public data charts and trending product logs on HoldingW Analytics for personal, non-commercial transitory viewing only.</p>
-            <h3>2. Disclaimer</h3>
-            <p>The materials on HoldingW Analytics are provided on an 'as is' basis. HoldingW Analytics makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of marketability or fitness for a particular purpose.</p>
-            <h3>3. Limitations</h3>
-            <p>In no event shall HoldingW Analytics or its suppliers be liable for any damages arising out of the use or inability to use the materials or analytical tools displayed on the dashboard.</p>
-            <h3>4. Revisions and Errata</h3>
-            <p>The materials appearing on the platform could include technical, typographical, or photographic errors. HoldingW Analytics does not warrant that any of the materials on its website are accurate, complete or current.</p>
+            <p>By accessing the website at HoldingW Analytics, you are agreeing to be bound by these terms of service.</p>
         </div>
     </div>
 
@@ -249,9 +264,7 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
             <h2>Contact Us</h2>
-            <p>If you have any questions about these Terms of Service, Privacy Policy, or the practices of this platform, please feel free to reach out to our administration team.</p>
-            <p style="margin-top: 20px; font-size: 16px;">📧 <strong>Official Email Support:</strong> contact@holdingw.com</p>
-            <p style="font-size: 14px; margin-top: 10px; color: var(--text-muted);">We aim to respond to all institutional and corporate inquiries within 24-48 business hours.</p>
+            <p>📧 <strong>Official Email Support:</strong> contact@holdingw.com</p>
         </div>
     </div>
 
@@ -260,20 +273,9 @@
             document.getElementById('analysisTitle').innerText = productName + ' - Performance Analysis';
             document.getElementById('analysisModal').style.display = "flex";
         }
-
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = "flex";
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = "none";
-            }
-        }
+        function openModal(modalId) { document.getElementById(modalId).style.display = "flex"; }
+        function closeModal(modalId) { document.getElementById(modalId).style.display = "none"; }
+        window.onclick = function(event) { if (event.target.classList.contains('modal')) { event.target.style.display = "none"; } }
     </script>
 </body>
 </html>

@@ -51,19 +51,27 @@
             width: 100%;
         }
 
-        /* حاوية التصاور قاديت الـ Background والـ Padding باش يبانو عامرين */
+        /* حاوية التصاور الحقيقية مع تأثير احترافي */
         .img-container { 
             width: 140px; 
             height: 100px; 
             background-color: #1f2937; 
             border-radius: 6px; 
             border: 1px solid #374151; 
+            overflow: hidden;
             display: flex; 
             justify-content: center; 
             align-items: center;
         }
-        /* الفيكس ديال الأيقونات باش يوليو Solid وواضحين وباينين وسط المربع */
-        .img-container svg { width: 45px; height: 45px; }
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* كتخلي الصورة تجي مقادة بلا ما تخسر */
+            transition: transform 0.3s ease;
+        }
+        .products-grid:hover .img-container img {
+            transform: scale(1.08); /* تأثير زووم خفيف ملي كيدوز الماوس */
+        }
 
         .product-details {
             display: flex;
@@ -128,10 +136,10 @@
 
     <div class="scanner-container">
         
-        <!-- 1. Wireless Magnetic Power Bank (أيقونة شاحن عامر وملون) -->
+        <!-- 1. Wireless Magnetic Power Bank -->
         <div class="products-grid">
             <div class="img-container">
-                <svg viewBox="0 0 24 24" fill="#10b981"><path d="M16.67 4H15V2H9v2H7.33C6.6 4 6 4.6 6 5.33v15.33C6 21.4 6.6 22 7.33 22h9.33c.74 0 1.34-.6 1.34-1.33V5.33C18 4.6 17.4 4 16.67 4zM11 16H9l4-7v5h2l-4 8v-6z"/></svg>
+                <img src="https://images.unsplash.com/photo-1622445262465-2481c4574875?w=300&auto=format&fit=crop&q=80" alt="Wireless Power Bank">
             </div>
             <div class="product-details">
                 <h3>🔥 Wireless Magnetic Power Bank 10000mAh</h3>
@@ -144,10 +152,10 @@
             <div><button onclick="openAnalysis('Wireless Magnetic Power Bank')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 2. Ultimate 2026 Digital Planner (أيقونة كالوندرية/مفكرة معمرة وواضحة) -->
+        <!-- 2. Ultimate 2026 Digital Planner -->
         <div class="products-grid">
             <div class="img-container">
-                <svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-5h5v5zm5-7H7V7h10v3z"/></svg>
+                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&auto=format&fit=crop&q=80" alt="Digital Planner iPad">
             </div>
             <div class="product-details">
                 <h3>🔥 Ultimate 2026 Digital Planner for iPad</h3>
@@ -160,10 +168,10 @@
             <div><button onclick="openAnalysis('Ultimate 2026 Digital Planner')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 3. Refurbished iPhone 14 Pro Max (أيقونة هاتف صوليد عامر) -->
+        <!-- 3. Refurbished iPhone 14 Pro Max -->
         <div class="products-grid">
             <div class="img-container">
-                <svg viewBox="0 0 24 24" fill="#3b82f6"><path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm-5 20c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm4.25-4H7.75V4h8.5v13z"/></svg>
+                <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=300&auto=format&fit=crop&q=80" alt="iPhone 14 Pro Max">
             </div>
             <div class="product-details">
                 <h3>🔥 Refurbished iPhone 14 Pro Max 128GB</h3>
@@ -176,10 +184,10 @@
             <div><button onclick="openAnalysis('Refurbished iPhone 14 Pro Max')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 4. AI Prompt Engineering Masterclass E-Book (أيقونة كتاب عامر) -->
+        <!-- 4. AI Prompt Engineering Masterclass E-Book -->
         <div class="products-grid">
             <div class="img-container">
-                <svg viewBox="0 0 24 24" fill="#a855f7"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4zm9 16H6V4h1v9l2.5-1.88L12 13V4h6v16z"/></svg>
+                <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?w=300&auto=format&fit=crop&q=80" alt="AI Concept E-Book">
             </div>
             <div class="product-details">
                 <h3>🔥 AI Prompt Engineering Masterclass E-Book</h3>
@@ -192,10 +200,10 @@
             <div><button onclick="openAnalysis('AI Prompt Engineering Masterclass')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 5. Handmade Vintage Leather Journal Notebook (أيقونة كتاب كلاسيكي صوليد) -->
+        <!-- 5. Handmade Vintage Leather Journal Notebook -->
         <div class="products-grid">
             <div class="img-container">
-                <svg viewBox="0 0 24 24" fill="#ec4899"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+                <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=300&auto=format&fit=crop&q=80" alt="Leather Journal">
             </div>
             <div class="product-details">
                 <h3>🔥 Handmade Vintage Leather Journal Notebook</h3>
@@ -239,33 +247,18 @@
             </div>
 
             <h3>Market Saturation Insights</h3>
-            <p>This asset demonstrates high engagement rates across tier-1 countries (US, UK, CA) with a low refund ratio. Recommended marketing channels include video-first contextual networks and standard programmatic search placements.</p>
-            <p style="font-size: 12px; color: var(--text-muted); border-top: 1px solid #1e293b; padding-top: 10px;">Data updated: Just Now (Real-time Cloud Sync)</p>
+            <p>This asset demonstrates high engagement rates across tier-1 countries (US, UK, CA) with a low refund ratio.</p>
         </div>
     </div>
 
     <div id="privacyModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
-            <h2>Privacy Policy</h2>
-            <p>Welcome to HoldingW Analytics. We value your privacy and are committed to protecting your personal data.</p>
-        </div>
+        <div class="modal-content"><span class="close-modal" onclick="closeModal('privacyModal')">&times;</span><h2>Privacy Policy</h2><p>Privacy data rules apply.</p></div>
     </div>
-
     <div id="termsModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
-            <h2>Terms of Service</h2>
-            <p>By accessing the website at HoldingW Analytics, you are agreeing to be bound by these terms of service.</p>
-        </div>
+        <div class="modal-content"><span class="close-modal" onclick="closeModal('termsModal')">&times;</span><h2>Terms of Service</h2><p>Terms and conditions apply.</p></div>
     </div>
-
     <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
-            <h2>Contact Us</h2>
-            <p>📧 <strong>Official Email Support:</strong> contact@holdingw.com</p>
-        </div>
+        <div class="modal-content"><span class="close-modal" onclick="closeModal('contactModal')">&times;</span><h2>Contact Us</h2><p>📧 Support: contact@holdingw.com</p></div>
     </div>
 
     <script>

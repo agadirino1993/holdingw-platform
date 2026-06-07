@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HoldingW Analytics | AI-Driven E-Commerce Intelligence</title>
-    <!-- استدعاء ملف الديزاين الخارجي المقسم احترافياً -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,9 +19,9 @@
             </ul>
         </nav>
         
-        <!-- سوتش اللغات الاحترافي ف الـ Navbar -->
+        <!-- سوتش اللغات الاحترافي ف الـ Navbar المخزن ف الـ LocalStorage -->
         <div style="display: flex; align-items: center; gap: 15px;">
-            <div style="font-size: 13px; font-weight: bold; background: #111827; padding: 5px 10px; border-radius: 4px; border: 1px solid #1e293b;">
+            <div style="font-size: 13px; font-weight: bold; background: #111827; padding: 5px 10px; border-radius: 4px; border: 1px solid #1e293b; user-select: none;">
                 <span id="lang-en" onclick="switchLang('en')" style="cursor:pointer; color:#3b82f6;">EN</span> | 
                 <span id="lang-fr" onclick="switchLang('fr')" style="cursor:pointer; color:#9ca3af;">FR</span>
             </div>
@@ -60,7 +59,7 @@
             </div>
             <div class="product-details">
                 <h3 data-i18n="p2Title">Ultimate 2026 Digital Planner for iPad</h3>
-                <p>Target: Resell • Country: US • Type: Digital Asset</p>
+                <p data-i18n="p2Target">Target: Resell • Country: US • Type: Digital Asset</p>
                 <div class="badge-container">
                     <span class="trend-badge" data-i18n="p2Badge1">Growth +410%</span>
                     <span class="platform-badge" data-i18n="p2Badge2">Etsy Top Trend</span>
@@ -117,6 +116,7 @@
             <div><button onclick="openAnalysis('journal')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
 
+        <!-- CPA Box -->
         <div class="cpa-lock-box">
             <h3 data-i18n="cpaTitle">📈 Deep Analytics Scanner Activated</h3>
             <p data-i18n="cpaDesc">Our platform scans live e-commerce API metrics every 6 hours to structure demand charts, competition indexes, and growth rates.</p>
@@ -178,24 +178,26 @@
 
     <footer>
         <div class="footer-links">
-            <a onclick="openModal('privacyModal')" data-i18n="footerPrivacy">Privacy Policy</a>
-            <a onclick="openModal('termsModal')" data-i18n="footerTerms">Terms of Service</a>
-            <a onclick="openModal('contactModal')" data-i18n="footerContact">Contact Us</a>
+            <a onclick="openModal('privacyModal')" data-i18n="footerPrivacy" style="cursor: pointer;">Privacy Policy</a>
+            <a onclick="openModal('termsModal')" data-i18n="footerTerms" style="cursor: pointer;">Terms of Service</a>
+            <a onclick="openModal('contactModal')" data-i18n="footerContact" style="cursor: pointer;">Contact Us</a>
         </div>
         <p data-i18n="footerRights">&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
     </footer>
 
-    <!-- Modals -->
+    <!-- ================= MODALS SECTION ================= -->
+    
+    <!-- الـ Modal المطور الخاص بالتحليلات القابل للترجمة الفورية -->
     <div id="analysisModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
             <h2 id="analysisTitle">Product Deep Analysis</h2>
             <div class="chart-box">
-                <div><p style="font-size:12px; color:var(--text-muted);">Demand Index</p><p class="chart-stat" id="statDemand">94.2%</p></div>
-                <div><p style="font-size:12px; color:var(--text-muted);">Competition</p><p class="chart-stat" id="statComp">Medium</p></div>
-                <div><p style="font-size:12px; color:var(--text-muted);">Margin Est.</p><p class="chart-stat" id="statMargin">+68%</p></div>
+                <div><p style="font-size:12px; color:var(--text-muted);" id="lbl-demand">Demand Index</p><p class="chart-stat" id="statDemand">94.2%</p></div>
+                <div><p style="font-size:12px; color:var(--text-muted);" id="lbl-comp">Competition</p><p class="chart-stat" id="statComp">Medium</p></div>
+                <div><p style="font-size:12px; color:var(--text-muted);" id="lbl-margin">Margin Est.</p><p class="chart-stat" id="statMargin">+68%</p></div>
             </div>
-            <h3>Market Saturation Insights</h3>
+            <h3 id="lbl-sat-title">Market Saturation Insights</h3>
             <p id="saturationText">Telemetry indicators update continuously.</p>
         </div>
     </div>

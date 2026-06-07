@@ -13,18 +13,26 @@
         <div class="logo">Holding<span>W</span></div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a onclick="openAnalysis('premium')" style="cursor: pointer;">Intelligence Dashboard</a></li>
-                <li><a onclick="openModal('privacyModal')" style="cursor: pointer;">Data Privacy</a></li>
-                <li><a onclick="openModal('contactModal')" style="cursor: pointer;">Enterprise Support</a></li>
+                <li><a href="#" data-i18n="navHome">Home</a></li>
+                <li><a onclick="openAnalysis('premium')" style="cursor: pointer;" data-i18n="navDashboard">Intelligence Dashboard</a></li>
+                <li><a onclick="openModal('privacyModal')" style="cursor: pointer;" data-i18n="navPrivacy">Data Privacy</a></li>
+                <li><a onclick="openModal('contactModal')" style="cursor: pointer;" data-i18n="navSupport">Enterprise Support</a></li>
             </ul>
         </nav>
-        <div class="btn-trial" onclick="openAnalysis('premium')">Live Dashboard</div>
+        
+        <!-- سوتش اللغات الاحترافي ف الـ Navbar -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="font-size: 13px; font-weight: bold; background: #111827; padding: 5px 10px; border-radius: 4px; border: 1px solid #1e293b;">
+                <span id="lang-en" onclick="switchLang('en')" style="cursor:pointer; color:#3b82f6;">EN</span> | 
+                <span id="lang-fr" onclick="switchLang('fr')" style="cursor:pointer; color:#9ca3af;">FR</span>
+            </div>
+            <div class="btn-trial" onclick="openAnalysis('premium')" data-i18n="btnLive">Live Dashboard</div>
+        </div>
     </header>
 
     <section class="hero">
-        <h1>Find Next-Gen Winning Products For Free</h1>
-        <p>Real-time updates filtered from Amazon, eBay, and Etsy Top Charts. Access premium digital and physical assets insights instantly.</p>
+        <h1 data-i18n="heroTitle">Find Next-Gen Winning Products For Free</h1>
+        <p data-i18n="heroDesc">Real-time updates filtered from Amazon, eBay, and Etsy Top Charts. Access premium digital and physical assets insights instantly.</p>
     </section>
 
     <div class="scanner-container">
@@ -35,14 +43,14 @@
                 <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=300&auto=format&fit=crop&q=80" alt="Universal Car HUD Dashboard">
             </div>
             <div class="product-details">
-                <h3>🔥 Universal Heads-Up Display (HUD) GPS Speedometer</h3>
+                <h3>Universal Heads-Up Display (HUD) GPS Speedometer</h3>
                 <p>Target: Dropship • Country: US/CA • Rating: 4.8 ⭐</p>
                 <div class="badge-container">
                     <span class="trend-badge">Growth +510%</span>
                     <span class="platform-badge">AliExpress Hot Demand</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('hud')" class="btn-link">Analyze Product</button></div>
+            <div><button onclick="openAnalysis('hud')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
 
         <!-- 2. Ultimate 2026 Digital Planner -->
@@ -51,14 +59,14 @@
                 <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&auto=format&fit=crop&q=80" alt="Digital Planner iPad">
             </div>
             <div class="product-details">
-                <h3>🔥 Ultimate 2026 Digital Planner for iPad</h3>
+                <h3>Ultimate 2026 Digital Planner for iPad</h3>
                 <p>Target: Resell • Country: US • Type: Digital Asset</p>
                 <div class="badge-container">
                     <span class="trend-badge">Growth +410%</span>
                     <span class="platform-badge">Etsy Top Trend</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('planner')" class="btn-link">Analyze Product</button></div>
+            <div><button onclick="openAnalysis('planner')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
 
         <!-- 3. Refurbished iPhone 14 Pro Max -->
@@ -67,14 +75,14 @@
                 <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=300&auto=format&fit=crop&q=80" alt="iPhone 14 Pro Max">
             </div>
             <div class="product-details">
-                <h3>🔥 Refurbished iPhone 14 Pro Max 128GB</h3>
+                <h3>Refurbished iPhone 14 Pro Max 128GB</h3>
                 <p>Target: E-Com • Country: Global • Condition: Unlocked</p>
                 <div class="badge-container">
                     <span class="trend-badge">Growth +195%</span>
                     <span class="platform-badge">eBay Hot Demand</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('iphone')" class="btn-link">Analyze Product</button></div>
+            <div><button onclick="openAnalysis('iphone')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
 
         <!-- 4. Orthopedic Knee Pillow -->
@@ -83,14 +91,14 @@
                 <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=300&auto=format&fit=crop&q=80" alt="Orthopedic Knee Pillow">
             </div>
             <div class="product-details">
-                <h3>🔥 Orthopedic Memory Foam Knee Pillow for Pain Relief</h3>
+                <h3>Orthopedic Memory Foam Knee Pillow for Pain Relief</h3>
                 <p>Target: E-Com • Country: EU/US • Format: Physical Asset</p>
                 <div class="badge-container">
                     <span class="trend-badge">Growth +290%</span>
                     <span class="platform-badge">Amazon Hot Seller</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('pillow')" class="btn-link">Analyze Product</button></div>
+            <div><button onclick="openAnalysis('pillow')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
 
         <!-- 5. Handmade Vintage Leather Journal Notebook -->
@@ -99,27 +107,27 @@
                 <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=300&auto=format&fit=crop&q=80" alt="Leather Journal">
             </div>
             <div class="product-details">
-                <h3>🔥 Handmade Vintage Leather Journal Notebook</h3>
+                <h3>Handmade Vintage Leather Journal Notebook</h3>
                 <p>Target: Premium Gift • Country: US • Rating: 4.9 ⭐</p>
                 <div class="badge-container">
                     <span class="trend-badge">Growth +120%</span>
                     <span class="platform-badge">Etsy Handmade</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('journal')" class="btn-link">Analyze Product</button></div>
+            <div><button onclick="openAnalysis('journal')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
 
         <div class="cpa-lock-box">
-            <h3 style="color:#fff;">📈 Deep Analytics Scanner Activated</h3>
-            <p>Our platform scans live e-commerce API metrics every 6 hours to structure demand charts, competition indexes, and growth rates.</p>
-            <button class="btn-unlock" onclick="openAnalysis('premium')">🚀 View Market Overview</button>
+            <h3 data-i18n="cpaTitle">📈 Deep Analytics Scanner Activated</h3>
+            <p data-i18n="cpaDesc">Our platform scans live e-commerce API metrics every 6 hours to structure demand charts, competition indexes, and growth rates.</p>
+            <button class="btn-unlock" onclick="openAnalysis('premium')" data-i18n="cpaBtn">🚀 View Market Overview</button>
         </div>
 
     </div>
 
-    <!-- ================= E-COMMERCE INTELLIGENCE & ARTICLES SECTION ================= -->
+    <!-- ================= SECTION المَقَالاتِ المُمَدَّدَة ================= -->
     <section class="insights-section" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
-        <h2 style="color: #fff; font-size: 26px; margin-bottom: 25px; border-bottom: 2px solid #1e293b; padding-bottom: 10px;">📊 E-Commerce Intelligence & Data Insights</h2>
+        <h2 data-i18n="secTitle" style="color: #fff; font-size: 26px; margin-bottom: 25px; border-bottom: 2px solid #1e293b; padding-bottom: 10px;">📊 E-Commerce Intelligence & Data Insights</h2>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
             
@@ -128,11 +136,8 @@
                 <div>
                     <span style="color: var(--accent-color); font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Predictive Analytics</span>
                     <h3 style="color: #fff; font-size: 18px; margin: 10px 0; font-weight: 600;">How Data Telemetry Identifies Micro-Trends Before Saturation</h3>
-                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 15px;">
-                        The traditional method of sourcing winning products relies heavily on historical order volume. However, by the time an asset hits peak volume figures on centralized marketplaces, the customer acquisition cost (CAC) has often scaled beyond sustainable margins. 
-                    </p>
                     <p style="color: var(--text-muted); font-size: 14px; line-height: 1.5;">
-                        To secure a real competitive edge, media buyers must track structural shifts in demand through early data telemetry. This involves cross-referencing localized ad-imprints, tracking velocity spikes in consumer engagement, and analyzing proxy supply levels.
+                        The traditional method of sourcing winning products relies heavily on historical order volume. However, by the time an asset hits peak volume figures on centralized marketplaces, the customer acquisition cost (CAC) has often scaled beyond sustainable margins. Moving early allows for optimized product mapping and clean scaling windows before market saturation hits the vertical.
                     </p>
                 </div>
                 <div style="margin-top: 15px; font-size: 12px; color: var(--text-muted);">March 2026 • By HoldingW Research</div>
@@ -143,7 +148,7 @@
                 <div>
                     <span style="color: var(--success); font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Digital Arbitrage</span>
                     <h3 style="color: #fff; font-size: 18px; margin: 10px 0; font-weight: 600;">The Unit Economics of Scaling Digital Assets on High-Margin Platforms</h3>
-                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 15px;">
+                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.5;">
                         Physical dropshipping carries structural liabilities: fluctuating freight rates, logistics bottlenecks, and variable return percentages. This is why high-volume digital arbitrage is seeing rapid institutional adoption. Assets like structured planners, programmatic templates, and design files feature near-zero cost of goods sold (COGS).
                     </p>
                 </div>
@@ -155,7 +160,7 @@
                 <div>
                     <span style="color: var(--warning); font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Market Mechanics</span>
                     <h3 style="color: #fff; font-size: 18px; margin: 10px 0; font-weight: 600;">Evaluating Competition Indexes via Fragmented Supply Sources</h3>
-                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 15px;">
+                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.5;">
                         A low competition index score on an analytical platform doesn't always guarantee an easy scaling window. Serious data operations evaluate competition through fragmented supplier transparency. If a product is controlled by a single main factory cluster, supply lines are prone to abrupt pricing shifts.
                     </p>
                 </div>
@@ -164,36 +169,35 @@
 
         </div>
 
-        <!-- الباطون الاحترافي الجديد اللي كيدي لصفحة المقالات الأخرى -->
+        <!-- الزر الاحترافي مصحح 100% بالإنجليزية لصفحة المقالات الإضافية -->
         <div style="text-align: center; margin-top: 30px;">
-            <a href="blog.html" style="background-color: transparent; color: var(--accent-color); border: 2px solid var(--accent-color); padding: 12px 30px; border-radius: 6px; font-weight: bold; font-size: 15px; text-decoration: none; display: inline-block; transition: all 0.2s;" onmouseover="this.style.backgroundColor='var(--accent-color)'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--accent-color)';">
-                🔍 Mazid min lm3lomat (Read More Insights)
+            <a href="blog.html" id="btn-more-insights" data-i18n="btnMore" style="background-color: transparent; color: var(--accent-color); border: 2px solid var(--accent-color); padding: 12px 30px; border-radius: 6px; font-weight: bold; font-size: 15px; text-decoration: none; display: inline-block; transition: all 0.2s;" onmouseover="this.style.backgroundColor='var(--accent-color)'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--accent-color)';">
+                🔍 Read More Insights
             </a>
         </div>
     </section>
 
     <footer>
         <div class="footer-links">
-            <a onclick="openModal('privacyModal')">Privacy Policy</a>
-            <a onclick="openModal('termsModal')">Terms of Service</a>
-            <a onclick="openModal('contactModal')">Contact Us</a>
+            <a onclick="openModal('privacyModal')" data-i18n="footerPrivacy">Privacy Policy</a>
+            <a onclick="openModal('termsModal')" data-i18n="footerTerms">Terms of Service</a>
+            <a onclick="openModal('contactModal')" data-i18n="footerContact">Contact Us</a>
         </div>
-        <p>&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
+        <p data-i18n="footerRights">&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
     </footer>
 
-    <!-- Modals Templates -->
+    <!-- Modals -->
     <div id="analysisModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
             <h2 id="analysisTitle">Product Deep Analysis</h2>
-            <p id="analysisDesc">Here are the calculated algorithmic performance metrics extracted dynamically from worldwide marketplaces charts:</p>
             <div class="chart-box">
                 <div><p style="font-size:12px; color:var(--text-muted);">Demand Index</p><p class="chart-stat" id="statDemand">94.2%</p></div>
                 <div><p style="font-size:12px; color:var(--text-muted);">Competition</p><p class="chart-stat" id="statComp">Medium</p></div>
                 <div><p style="font-size:12px; color:var(--text-muted);">Margin Est.</p><p class="chart-stat" id="statMargin">+68%</p></div>
             </div>
             <h3>Market Saturation Insights</h3>
-            <p id="saturationText">This asset demonstrates high engagement rates across tier-1 countries with a low refund ratio.</p>
+            <p id="saturationText">Telemetry indicators update continuously.</p>
         </div>
     </div>
 

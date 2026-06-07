@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced E-Commerce Intelligence Reports | HoldingW</title>
+    
+    <!-- SEO Tags Essentials (زدت ليك هادو هنا باش غوغل يقرى السايت وأرشفه) -->
+    <meta name="description" content="Advanced algorithmic documentation, structural market shifts, and e-commerce research papers by HoldingW Analytics.">
+    <meta name="keywords" content="HoldingW, research papers, market analytics, e-commerce reports, HoldingW Analytics">
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,9 +22,10 @@
                 <li><a href="index.html" data-i18n="navDashboard">Intelligence Dashboard</a></li>
             </ul>
         </nav>
-        <!-- سيستم اللغات هنا كيعرف اشنو اختار المستخدم ف الصفحة لولا تلقائيا -->
+        
+        <!-- سيستم اللغات المحفوظ ف الـ LocalStorage -->
         <div style="display: flex; align-items: center; gap: 15px;">
-            <div style="font-size: 13px; font-weight: bold; background: #111827; padding: 5px 10px; border-radius: 4px; border: 1px solid #1e293b;">
+            <div style="font-size: 13px; font-weight: bold; background: #111827; padding: 5px 10px; border-radius: 4px; border: 1px solid #1e293b; user-select: none;">
                 <span id="lang-en" onclick="switchLang('en')" style="cursor:pointer;">EN</span> | 
                 <span id="lang-fr" onclick="switchLang('fr')" style="cursor:pointer;">FR</span>
             </div>
@@ -59,6 +66,7 @@
         <p data-i18n="footerRights">&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
     </footer>
 
-    <script src="app.js"></script>
+    <!-- عيطنا لملف الـ JavaScript مع وسم كسر الكاش لضمان التحديث الفوري -->
+    <script src="app.js?v=1.1"></script>
 </body>
 </html>

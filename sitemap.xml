@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-  <!-- الصفحة الرئيسية -->
+  <!-- Homepage -->
   <url>
     <loc>https://holdingw.com/</loc>
     <lastmod>2026-06-07</lastmod>
@@ -9,7 +9,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- صفحة المقالات (Read More) -->
+  <!-- Blog Page -->
   <url>
     <loc>https://holdingw.com/blog.html</loc>
     <lastmod>2026-06-07</lastmod>

@@ -12,45 +12,53 @@
         <div class="logo">Holding<span>W</span></div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Intelligence Dashboard</a></li>
+                <li><a href="index.html" data-i18n="navHome">Home</a></li>
+                <li><a href="index.html" data-i18n="navDashboard">Intelligence Dashboard</a></li>
             </ul>
         </nav>
-        <a href="index.html" class="btn-trial">Back to App</a>
+        <!-- سيستم اللغات هنا كيعرف اشنو اختار المستخدم ف الصفحة لولا تلقائيا -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="font-size: 13px; font-weight: bold; background: #111827; padding: 5px 10px; border-radius: 4px; border: 1px solid #1e293b;">
+                <span id="lang-en" onclick="switchLang('en')" style="cursor:pointer;">EN</span> | 
+                <span id="lang-fr" onclick="switchLang('fr')" style="cursor:pointer;">FR</span>
+            </div>
+            <a href="index.html" class="btn-trial" data-i18n="blogBackBtn">Back to App</a>
+        </div>
     </header>
 
     <section class="hero" style="padding: 40px 20px 20px 20px;">
-        <h1>Deep Analytics Reports & Research Papers</h1>
-        <p>Advanced algorithmic documentation regarding structural market shifts, scaling frameworks, and cross-border digital logistics.</p>
+        <h1 data-i18n="blogHeroTitle">Deep Analytics Reports & Research Papers</h1>
+        <p data-i18n="blogHeroDesc">Advanced algorithmic documentation regarding structural market shifts, scaling frameworks, and cross-border digital logistics.</p>
     </section>
 
     <main style="max-width: 800px; margin: 20px auto; padding: 0 20px;">
         
         <!-- Report 1 -->
         <article style="background-color: var(--card-bg); border: 1px solid #1e293b; border-radius: 12px; padding: 30px; margin-bottom: 25px;">
-            <span style="color: var(--accent-color); font-size: 12px; font-weight: bold; text-transform: uppercase;">Supply Chain Optimization</span>
-            <h2 style="color: #fff; font-size: 24px; margin: 10px 0 15px 0;">Mitigating Variable CPM Inflation through Product Bundle Architecture</h2>
-            <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">
+            <span data-i18n="blogArt1Cat" style="color: var(--accent-color); font-size: 12px; font-weight: bold; text-transform: uppercase;">Supply Chain Optimization</span>
+            <h2 data-i18n="blogArt1Title" style="color: #fff; font-size: 24px; margin: 10px 0 15px 0;">Mitigating Variable CPM Inflation through Product Bundle Architecture</h2>
+            <p data-i18n="blogArt1Desc" style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">
                 An institutional-grade resolution requires implementing dynamic cross-selling algorithms. By structuring high-perceived-value product bundles at the payment processing crossroad, operations elevate Average Order Value (AOV) by a calculated 34%. This buffers the underlying unit economics against fluctuating cost-per-thousand (CPM) parameters.
             </p>
-            <div style="margin-top: 20px; font-size: 13px; color: var(--text-muted);">June 2026 • Published by Technical Research Desk</div>
+            <div data-i18n="blogArt1Meta" style="margin-top: 20px; font-size: 13px; color: var(--text-muted);">June 2026 • Published by Technical Research Desk</div>
         </article>
 
         <!-- Report 2 -->
         <article style="background-color: var(--card-bg); border: 1px solid #1e293b; border-radius: 12px; padding: 30px; margin-bottom: 25px;">
-            <span style="color: var(--success); font-size: 12px; font-weight: bold; text-transform: uppercase;">Consumer Psychology</span>
-            <h2 style="color: #fff; font-size: 24px; margin: 10px 0 15px 0;">Algorithmic Filtering of Friction Points in Desktop vs Mobile Checkout Frameworks</h2>
-            <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">
+            <span data-i18n="blogArt2Cat" style="color: var(--success); font-size: 12px; font-weight: bold; text-transform: uppercase;">Consumer Psychology</span>
+            <h2 data-i18n="blogArt2Title" style="color: #fff; font-size: 24px; margin: 10px 0 15px 0;">Algorithmic Filtering of Friction Points in Desktop vs Mobile Checkout Frameworks</h2>
+            <p data-i18n="blogArt2Desc" style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">
                 Conversion rate telemetry demonstrates that mobile interface layouts generate high traffic volume while presenting distinct drop-off friction points. Reducing input validation steps and omitting external style dependencies guarantees a linear conversion trajectory.
             </p>
-            <div style="margin-top: 20px; font-size: 13px; color: var(--text-muted);">June 2026 • Published by Optimization Analytics Team</div>
+            <div data-i18n="blogArt2Meta" style="margin-top: 20px; font-size: 13px; color: var(--text-muted);">June 2026 • Published by Optimization Analytics Team</div>
         </article>
 
     </main>
 
     <footer style="margin-top: 40px;">
-        <p>&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
+        <p data-i18n="footerRights">&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
     </footer>
 
+    <script src="app.js"></script>
 </body>
 </html>

@@ -125,7 +125,7 @@
                 <li><a href="#">Trends</a></li>
             </ul>
         </nav>
-        <div class="btn-trial" onclick="openAnalysis('General Dashboard')">Live Dashboard</div>
+        <div class="btn-trial" onclick="openAnalysis('premium')">Live Dashboard</div>
     </header>
 
     <section class="hero">
@@ -135,7 +135,6 @@
 
     <div class="scanner-container">
         
-        <!-- 1. HUD Car Display -->
         <div class="products-grid">
             <div class="img-container">
                 <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=300&auto=format&fit=crop&q=80" alt="Universal Car HUD Dashboard">
@@ -151,7 +150,6 @@
             <div><button onclick="openAnalysis('hud')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 2. Ultimate 2026 Digital Planner -->
         <div class="products-grid">
             <div class="img-container">
                 <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&auto=format&fit=crop&q=80" alt="Digital Planner iPad">
@@ -167,7 +165,6 @@
             <div><button onclick="openAnalysis('planner')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 3. Refurbished iPhone 14 Pro Max -->
         <div class="products-grid">
             <div class="img-container">
                 <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=300&auto=format&fit=crop&q=80" alt="iPhone 14 Pro Max">
@@ -183,7 +180,6 @@
             <div><button onclick="openAnalysis('iphone')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 4. Orthopedic Knee Pillow -->
         <div class="products-grid">
             <div class="img-container">
                 <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=300&auto=format&fit=crop&q=80" alt="Orthopedic Knee Pillow">
@@ -199,7 +195,6 @@
             <div><button onclick="openAnalysis('pillow')" class="btn-link">Analyze Product</button></div>
         </div>
 
-        <!-- 5. Handmade Vintage Leather Journal Notebook -->
         <div class="products-grid">
             <div class="img-container">
                 <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=300&auto=format&fit=crop&q=80" alt="Leather Journal">
@@ -232,7 +227,6 @@
         <p>&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
     </footer>
 
-    <!-- Modals -->
     <div id="analysisModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
@@ -251,24 +245,51 @@
     </div>
 
     <div id="privacyModal" class="modal">
-        <div class="modal-content"><span class="close-modal" onclick="closeModal('privacyModal')">&times;</span><h2>Privacy Policy</h2><p>Privacy data rules apply.</p></div>
-    </div>
-    <div id="termsModal" class="modal">
-        <div class="modal-content"><span class="close-modal" onclick="closeModal('termsModal')">&times;</span><h2>Terms of Service</h2><p>Terms and conditions apply.</p></div>
-    </div>
-    <div id="contactModal" class="modal">
-        <div class="modal-content"><span class="close-modal" onclick="closeModal('contactModal')">&times;</span><h2>Contact Us</h2><p>📧 Support: contact@holdingw.com</p></div>
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
+            <h2>Privacy Policy</h2>
+            <p>At HoldingW Analytics, accessible from our main domain, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by HoldingW Analytics and how we use it.</p>
+            <h3>Log Files</h3>
+            <p>HoldingW Analytics follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this as part of hosting services' analytics. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks.</p>
+            <h3>Cookies and Web Beacons</h3>
+            <p>Like any other website, HoldingW Analytics uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+            <h3>Third Party Privacy Policies</h3>
+            <p>HoldingW Analytics's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
+        </div>
     </div>
 
-    <!-- السكريبت المطور لتبديل البيانات الذكية -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
+            <h2>Terms of Service</h2>
+            <h3>1. Terms</h3>
+            <p>By accessing the website at HoldingW Analytics, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
+            <h3>2. Use License</h3>
+            <p>Permission is granted to temporarily download one copy of the materials (information or software) on HoldingW Analytics' website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not modify or copy the materials, use the materials for any commercial purpose, or for any public display.</p>
+            <h3>3. Disclaimer</h3>
+            <p>The materials on HoldingW Analytics' website are provided on an 'as is' basis. HoldingW Analytics makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+            <h3>4. Limitations</h3>
+            <p>In no event shall HoldingW Analytics or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on HoldingW Analytics' website.</p>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
+            <h2>Contact Us</h2>
+            <p>If you have any questions about our analytical dashboards, data synchronization, or enterprise intelligence tools, feel free to reach out to our optimization team.</p>
+            <p style="margin-top: 15px;">📧 <strong>Official Email Support:</strong> contact@holdingw.com</p>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 10px;">Our data operation desk typically responds within 24-48 business hours.</p>
+        </div>
+    </div>
+
     <script>
-        // داتابيز صغيرة وسط الكود فيها معلومات كل منتج بوحدو
         const productData = {
             hud: {
                 title: "HUD GPS Speedometer - Performance Analysis",
                 demand: "91.4%",
                 comp: "Low",
-                compColor: "#10b981", // أخضر حيت الـ Competition هابطة
+                compColor: "#10b981",
                 margin: "+74%",
                 text: "Automotive niche signals extreme viral push on TikTok. Orders are mostly scaling across US, DE, and Australia with high saturation resistance."
             },
@@ -276,7 +297,7 @@
                 title: "Ultimate 2026 Digital Planner - Performance Analysis",
                 demand: "96.8%",
                 comp: "High",
-                compColor: "#ef4444", // أحمر حيت الـ Competition طالعة
+                compColor: "#ef4444",
                 margin: "+88%",
                 text: "Etsy digital downloads are hitting record-high margins. Zero shipping costs allow massive ROI for scalable digital arbitrage campaigns."
             },
@@ -284,7 +305,7 @@
                 title: "Refurbished iPhone 14 Pro Max - Performance Analysis",
                 demand: "88.2%",
                 comp: "Medium",
-                compColor: "#f59e0b", // ليموني حيت متوسطة
+                compColor: "#f59e0b",
                 margin: "+35%",
                 text: "High-ticket volume trend steady on eBay. Tech category has high conversion rates but requires strict customer trust patterns."
             },
@@ -317,14 +338,12 @@
         function openAnalysis(prodKey) {
             const data = productData[prodKey];
             if (data) {
-                // تبديل الداتا ديناميكياً وسط الـ Modal
                 document.getElementById('analysisTitle').innerText = data.title;
                 document.getElementById('statDemand').innerText = data.demand;
                 document.getElementById('statComp').innerText = data.comp;
                 document.getElementById('statComp').style.color = data.compColor;
                 document.getElementById('statMargin').innerText = data.margin;
                 document.getElementById('saturationText').innerText = data.text;
-                
                 document.getElementById('analysisModal').style.display = "flex";
             }
         }

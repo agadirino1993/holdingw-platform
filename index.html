@@ -19,7 +19,6 @@
             </ul>
         </nav>
         
-        <!-- سوتش اللغات الاحترافي ف الـ Navbar المخزن ف الـ LocalStorage -->
         <div style="display: flex; align-items: center; gap: 15px;">
             <div style="font-size: 13px; font-weight: bold; background: #111827; padding: 5px 10px; border-radius: 4px; border: 1px solid #1e293b; user-select: none;">
                 <span id="lang-en" onclick="switchLang('en')" style="cursor:pointer; color:#3b82f6;">EN</span> | 
@@ -35,7 +34,6 @@
     </section>
 
     <div class="scanner-container">
-        
         <!-- 1. HUD Car Display -->
         <div class="products-grid">
             <div class="img-container">
@@ -122,7 +120,6 @@
             <p data-i18n="cpaDesc">Our platform scans live e-commerce API metrics every 6 hours to structure demand charts, competition indexes, and growth rates.</p>
             <button class="btn-unlock" onclick="openAnalysis('premium')" data-i18n="cpaBtn">🚀 View Market Overview</button>
         </div>
-
     </div>
 
     <!-- ================= SECTION ARTICLES ================= -->
@@ -130,7 +127,6 @@
         <h2 data-i18n="secTitle" style="color: #fff; font-size: 26px; margin-bottom: 25px; border-bottom: 2px solid #1e293b; padding-bottom: 10px;">📊 E-Commerce Intelligence & Data Insights</h2>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-            
             <!-- Article 1 -->
             <article style="background-color: var(--card-bg); border: 1px solid #1e293b; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
@@ -166,7 +162,6 @@
                 </div>
                 <div data-i18n="art3Meta" style="margin-top: 15px; font-size: 12px; color: var(--text-muted);">May 2026 • By Analytics Team</div>
             </article>
-
         </div>
 
         <div style="text-align: center; margin-top: 30px;">
@@ -176,17 +171,9 @@
         </div>
     </section>
 
-    <!-- ================= SECTION ABOUT US ================= -->
-    <section id="about-us" style="max-width: 1000px; margin: 60px auto; padding: 40px 20px; text-align: center; border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b; background-color: rgba(30, 41, 59, 0.2); border-radius: 8px;">
-        <h2 data-i18n="aboutTitle" style="color: #fff; font-size: 26px; margin-bottom: 15px; font-weight: 600;">About HoldingW</h2>
-        <p data-i18n="aboutDesc" style="max-width: 800px; margin: 0 auto; line-height: 1.6; color: var(--text-muted); font-size: 15px;">
-            Welcome to <strong>HoldingW Platforms</strong>. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions. Our mission is to empower professionals and creators with the analytical tools and strategic frameworks needed to optimize their digital assets and scale operations effectively in today's dynamic markets.
-        </p>
-    </section>
-
     <footer>
         <div class="footer-links">
-            <a href="#about-us" data-i18n="footerAbout">About Us</a>
+            <a onclick="openModal('aboutModal')" data-i18n="footerAbout" style="cursor: pointer;">About Us</a>
             <a onclick="openModal('privacyModal')" data-i18n="footerPrivacy" style="cursor: pointer;">Privacy Policy</a>
             <a onclick="openModal('termsModal')" data-i18n="footerTerms" style="cursor: pointer;">Terms of Service</a>
             <a onclick="openModal('contactModal')" data-i18n="footerContact" style="cursor: pointer;">Contact Us</a>
@@ -196,7 +183,15 @@
 
     <!-- ================= MODALS SECTION ================= -->
     
-    <!-- الـ Modal المطور الخاص بالتحليلات القابل للترجمة الفورية -->
+    <!-- About Us Modal (الجديد اللي طلبيه) -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('aboutModal')">&times;</span>
+            <h2 data-i18n="aboutTitle">About HoldingW</h2>
+            <p data-i18n="aboutDesc">Welcome to HoldingW Platforms. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions. Our mission is to empower professionals and creators with the analytical tools and strategic frameworks needed to optimize their digital assets and scale operations effectively in today's dynamic markets.</p>
+        </div>
+    </div>
+
     <div id="analysisModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>

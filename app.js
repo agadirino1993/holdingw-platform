@@ -59,10 +59,14 @@ const translations = {
         
         btnMore: "🔍 Read More Insights",
         
-        footerRights: "© 2026 HoldingW Platforms Inc. All rights reserved.",
+        // ترجمات الـ Footer والـ Modal الجديد الخاص بـ About Us (EN)
+        footerAbout: "About Us",
         footerPrivacy: "Privacy Policy",
         footerTerms: "Terms of Service",
         footerContact: "Contact Us",
+        footerRights: "© 2026 HoldingW Platforms Inc. All rights reserved.",
+        aboutTitle: "About HoldingW",
+        aboutDesc: "Welcome to HoldingW Platforms. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions. Our mission is to empower professionals and creators with the analytical tools and strategic frameworks needed to optimize their digital assets and scale operations effectively in today's dynamic markets.",
 
         // تيرجمات صفحة الـ Blog
         blogHeroTitle: "Deep Analytics Reports & Research Papers",
@@ -143,10 +147,14 @@ const translations = {
         
         btnMore: "🔍 Lire Plus d'Articles",
         
-        footerRights: "© 2026 HoldingW Platforms Inc. Tous droits réservés.",
+        // ترجمات الـ Footer والـ Modal الجديد الخاص بـ About Us (FR)
+        footerAbout: "À Propos",
         footerPrivacy: "Politique de Confidentialité",
         footerTerms: "Conditions d'Utilisation",
         footerContact: "Contactez-nous",
+        footerRights: "© 2026 HoldingW Platforms Inc. Tous droits réservés.",
+        aboutTitle: "À propos de HoldingW",
+        aboutDesc: "Bienvenue sur HoldingW Platforms. Nous sommes un pôle digital de premier plan dédié à la fourniture d'études de marché de pointe, d'analyses techniques avancées et de solutions de données automatisées. Notre mission est de donner aux professionnels et aux créateurs les outils analytiques et les cadres stratégiques nécessaires pour optimiser leurs actifs numériques et développer leurs opérations de manière efficace sur les marchés dynamiques d'aujourd'hui.",
 
         // ترجمات صفحة الـ Blog بالفرنسية
         blogHeroTitle: "Rapports d'Analyse Approfondie & Documents de Recherche",

@@ -59,14 +59,25 @@ const translations = {
         
         btnMore: "🔍 Read More Insights",
         
-        // ترجمات الـ Footer والـ Modal الجديد الخاص بـ About Us (EN)
+        // ترجمات الـ Footer والـ Modals القانونية (EN)
         footerAbout: "About Us",
         footerPrivacy: "Privacy Policy",
         footerTerms: "Terms of Service",
         footerContact: "Contact Us",
         footerRights: "© 2026 HoldingW Platforms Inc. All rights reserved.",
+        
         aboutTitle: "About HoldingW",
         aboutDesc: "Welcome to HoldingW Platforms. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions. Our mission is to empower professionals and creators with the analytical tools and strategic frameworks needed to optimize their digital assets and scale operations effectively in today's dynamic markets.",
+
+        contactTitle: "Contact Us",
+        contactDesc: "If you have any questions about our analytical dashboards, data synchronization, or enterprise intelligence tools, feel free to reach out to our optimization team.",
+        contactEmailLbl: "Official Email Support:",
+
+        termsTitle: "Terms of Service",
+        termsContent: "Welcome to HoldingW Analytics.\n\n1. Acceptance of Terms\nBy accessing this website, you agree to be bound by these Terms of Service, all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws.\n\n2. Use License\nPermission is granted to temporarily view the data insights on HoldingW Analytics for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title.\n\n3. Disclaimer\nThe materials on HoldingW Analytics are provided on an 'as is' basis. HoldingW Analytics makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, or fitness for a particular purpose.\n\n4. Limitations\nIn no event shall HoldingW Analytics or its suppliers be liable for any damages arising out of the use or inability to use the analytical tools, even if notified orally or in writing of the possibility of such damage.",
+
+        privacyTitle: "Privacy Policy",
+        privacyContent: "At HoldingW Analytics, accessible from our main domain, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by HoldingW Analytics and how we use it.\n\n1. Log Files\nHoldingW Analytics follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, and referring/exit pages.\n\n2. Cookies and Web Beacons\nLike any other website, HoldingW Analytics uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited.\n\n3. Google DoubleClick DART Cookie\nGoogle is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to our platform and other sites on the internet. Visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy.\n\n4. Third Party Privacy Policies\nHoldingW Analytics's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. You can choose to disable cookies through your individual browser options.",
 
         // تيرجمات صفحة الـ Blog
         blogHeroTitle: "Deep Analytics Reports & Research Papers",
@@ -147,14 +158,25 @@ const translations = {
         
         btnMore: "🔍 Lire Plus d'Articles",
         
-        // ترجمات الـ Footer والـ Modal الجديد الخاص بـ About Us (FR)
+        // ترجمات الـ Footer والـ Modals القانونية (FR)
         footerAbout: "À Propos",
         footerPrivacy: "Politique de Confidentialité",
         footerTerms: "Conditions d'Utilisation",
         footerContact: "Contactez-nous",
         footerRights: "© 2026 HoldingW Platforms Inc. Tous droits réservés.",
+        
         aboutTitle: "À propos de HoldingW",
         aboutDesc: "Bienvenue sur HoldingW Platforms. Nous sommes un pôle digital de premier plan dédié à la fourniture d'études de marché de pointe, d'analyses techniques avancées et de solutions de données automatisées. Notre mission est de donner aux professionnels et aux créateurs les outils analytiques et les cadres stratégiques nécessaires pour optimiser leurs actifs numériques et développer leurs opérations de manière efficace sur les marchés dynamiques d'aujourd'hui.",
+
+        contactTitle: "Contactez-nous",
+        contactDesc: "Si vous avez des questions concernant nos tableaux de bord analytiques, la synchronisation des données ou nos outils d'intelligence d'entreprise, n'hésitez pas à contacter notre équipe d'optimisation.",
+        contactEmailLbl: "Support Email Officiel :",
+
+        termsTitle: "Conditions d'Utilisation",
+        termsContent: "Bienvenue sur HoldingW Analytics.\n\n1. Acceptation des Conditions\nEn accédant à ce site, vous acceptez d'être lié par ces Conditions d'Utilisation, toutes les lois et réglementations applicables, et vous reconnaissez que vous êtes responsable du respect des lois locales applicables.\n\n2. Licence d'Utilisation\nIl est permis de consulter temporairement les données et analyses sur HoldingW Analytics pour un usage personnel et non commercial uniquement. Il s'agit de l'octroi d'une licence, non d'un transfert de propriété.\n\n3. Clause de Non-Responsabilité\nLes informations sur HoldingW Analytics sont fournies 'telles quelles'. HoldingW Analytics ne garantit pas l'exactitude absolue ou la fiabilité des données fournies.\n\n4. Limitations\nEn aucun cas, HoldingW Analytics ou ses fournisseurs ne pourront être tenus responsables des dommages résultant de l'utilisation ou de l'impossibilité d'utiliser nos outils analytiques.",
+
+        privacyTitle: "Politique de Confidentialité",
+        privacyContent: "Chez HoldingW Analytics, accessible depuis notre domaine principal, l'une de nos principales priorités est la confidentialité de nos visiteurs. Ce document contient les types d'informations collectées et enregistrées par HoldingW Analytics et leur utilisation.\n\n1. Fichiers Journaux\nHoldingW Analytics suit une procédure standard d'utilisation des fichiers journaux. Ces fichiers enregistrent les visiteurs lorsqu'ils visitent des sites Web. Les informations collectées comprennent les adresses IP, le type de navigateur, le fournisseur d'accès Internet (FAI), et l'horodatage.\n\n2. Cookies et Balises Web\nComme tout autre site, HoldingW Analytics utilise des 'cookies' pour stocker des informations, y compris les préférences des visiteurs et les pages consultées sur le site.\n\n3. Cookie Google DoubleClick DART\nGoogle est un fournisseur tiers sur notre site. Il utilise des cookies, appelés cookies DART, pour diffuser des annonces aux visiteurs de notre site en fonction de leur navigation. Vous pouvez choisir de refuser l'utilisation des cookies DART en visitant la politique de confidentialité du réseau publicitaire de Google.\n\n4. Tiers\nLa politique de confidentialité de HoldingW Analytics ne s'applique pas aux autres annonceurs ou sites Web. Nous vous conseillons de consulter les politiques de confidentialité de ces serveurs publicitaires tiers pour des informations plus détaillées.",
 
         // ترجمات صفحة الـ Blog بالفرنسية
         blogHeroTitle: "Rapports d'Analyse Approfondie & Documents de Recherche",
@@ -227,7 +249,12 @@ function switchLang(lang) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang][key]) {
-            element.innerText = translations[lang][key];
+            // معالجة النصوص التي تحتوي على أسطر جديدة \n لعرضها بشكل منسق
+            if (element.tagName === "P" && (key === "privacyContent" || key === "termsContent")) {
+                element.innerHTML = translations[lang][key].replace(/\n/g, "<br>");
+            } else {
+                element.innerText = translations[lang][key];
+            }
         }
     });
 

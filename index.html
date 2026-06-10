@@ -183,15 +183,16 @@
 
     <!-- ================= MODALS SECTION ================= -->
     
-    <!-- About Us Modal (الجديد اللي طلبيه) -->
+    <!-- About Us Modal -->
     <div id="aboutModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-height: 75vh; overflow-y: auto;">
             <span class="close-modal" onclick="closeModal('aboutModal')">&times;</span>
             <h2 data-i18n="aboutTitle">About HoldingW</h2>
-            <p data-i18n="aboutDesc">Welcome to HoldingW Platforms. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions. Our mission is to empower professionals and creators with the analytical tools and strategic frameworks needed to optimize their digital assets and scale operations effectively in today's dynamic markets.</p>
+            <p data-i18n="aboutDesc" style="margin-top: 15px; line-height: 1.6; color: var(--text-muted); font-size: 14px; text-align: left; white-space: pre-line;"></p>
         </div>
     </div>
 
+    <!-- Product Analysis Modal -->
     <div id="analysisModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
@@ -206,31 +207,37 @@
         </div>
     </div>
 
+    <!-- Privacy Policy Modal -->
     <div id="privacyModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-height: 75vh; overflow-y: auto;">
             <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
-            <h2>Privacy Policy</h2>
-            <p>At HoldingW Analytics, accessible from our main domain, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by HoldingW Analytics and how we use it.</p>
+            <h2 data-i18n="privacyTitle">Privacy Policy</h2>
+            <p data-i18n="privacyContent" style="margin-top: 15px; line-height: 1.6; color: var(--text-muted); font-size: 14px; text-align: left; white-space: pre-line;"></p>
         </div>
     </div>
 
+    <!-- Terms of Service Modal -->
     <div id="termsModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-height: 75vh; overflow-y: auto;">
             <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
-            <h2>Terms of Service</h2>
-            <p>By accessing the website at HoldingW Analytics, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p>
+            <h2 data-i18n="termsTitle">Terms of Service</h2>
+            <p data-i18n="termsContent" style="margin-top: 15px; line-height: 1.6; color: var(--text-muted); font-size: 14px; text-align: left; white-space: pre-line;"></p>
         </div>
     </div>
 
+    <!-- Contact Us Modal -->
     <div id="contactModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-height: 75vh; overflow-y: auto;">
             <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
-            <h2>Contact Us</h2>
-            <p>If you have any questions about our analytical dashboards, data synchronization, or enterprise intelligence tools, feel free to reach out to our optimization team.</p>
-            <p style="margin-top: 15px;">📧 <strong>Official Email Support:</strong> contact@holdingw.com</p>
+            <h2 data-i18n="contactTitle">Contact Us</h2>
+            <p data-i18n="contactDesc" style="margin-top: 15px; line-height: 1.6; color: var(--text-muted); font-size: 14px; text-align: left;"></p>
+            <p style="margin-top: 20px; font-size: 15px; border-top: 1px solid #1e293b; padding-top: 15px;">
+                📧 <span data-i18n="contactEmailLbl" style="font-weight: bold; color: #fff;">Official Email Support:</span> 
+                <a href="mailto:contact@holdingw.com" style="color: var(--accent-color); text-decoration: none; font-weight: bold;">contact@holdingw.com</a>
+            </p>
         </div>
     </div>
 
-    <script src="app.js?v=1.1"></script>
+    <script src="app.js?v=1.2"></script>
 </body>
 </html>

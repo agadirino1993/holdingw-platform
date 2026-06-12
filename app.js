@@ -63,6 +63,7 @@ const translations = {
         footerPrivacy: "Privacy Policy",
         footerTerms: "Terms of Service",
         footerContact: "Contact Us",
+        footerAbout: "About Us",
 
         // تيرجمات صفحة الـ Blog
         blogHeroTitle: "Deep Analytics Reports & Research Papers",
@@ -82,7 +83,17 @@ const translations = {
         modalComp: "Competition",
         modalMargin: "Margin Est.",
         modalSatTitle: "Market Saturation Insights",
-        modalSatText: "Telemetry indicators update continuously."
+        modalSatText: "Telemetry indicators update continuously.",
+
+        // ================= نصوص المودالات القانونية الطويلة (EN) =================
+        aboutTitle: "About HoldingW Platforms",
+        aboutDesc: "HoldingW Platforms Inc. is a leading independent data-driven research entity specializing in predictive e-commerce intelligence, market telemetry, and cross-border digital logistics asset mapping.\n\nFounded in 2016, our distributed technical desks compile fragmented data streams from enterprise APIs, global marketplaces, and digital consumer trends to render structured market overviews, unit economics documentation, and operational scaling frameworks.\n\nWe empower e-commerce practitioners, digital asset aggregators, and marketing operations with institutional-grade analytical insights designed to reduce customer acquisition costs (CAC) and secure highly sustainable commercial scaling windows before saturation thresholds are reached across digital product verticals.",
+
+        privacyTitle: "Data Privacy & Cookie Policy",
+        privacyContent: "1. DATA COLLECTION & TELEMETRY DEFINITIONS\nHoldingW Platforms Inc. ('we', 'us', or 'our') operates advanced e-commerce analytical models. This Data Privacy document clarifies our practices regarding information tracking, processing, and cookie telemetry across our platform domains. We strictly process non-personally identifiable operational parameters, marketplace scraping caches, and high-level behavioral browser distributions.\n\n2. ANALYTICAL COOKIES & LOGGING UTILITIES\nOur web architecture deploys essential analytical cookies and persistent local storage variables to record user language configurations, application preferences, and operational navigation trajectories. These identifiers are anonymized, containing no direct connection to identifiable personal records. Third-party advertising networks or contextual partners (such as Google AdSense) may inject tracking cookies to compile contextual interest maps for ad delivering frameworks. Users retain structural control to suppress or erase browser cookies via their native hardware configuration parameters.\n\n3. THIRD-PARTY DISCLOSURE LIMITATIONS\nOur underlying data infrastructure does not distribute, trade, or transfer technical telemetry or communication logs to unaccountable external entities. Compiled datasets are strictly utilized for rendering competition indexing algorithms, product trend metrics, and predictive forecasting tables. Data shares are exclusively restricted to regulatory compliance enforcement or structured legal processing mandates.\n\n4. SECURITY PROTOCOLS & REVISIONS\nWe enforce industry-standard security architectures (including SSL encryptions and network perimeter isolation firewalls) to safeguard localized session logs. We reserve the absolute legal mandate to adapt or revise this documentation. Continued interactions with our analytical dashboards implies proactive verification and statutory agreement with all updated privacy terms.",
+
+        termsTitle: "Terms of Service & Operational Disclaimer",
+        termsContent: "1. INTELLECTUAL PROPERTY & COMPLIANCE RULES\nBy accessing HoldingW Platforms, you agree to comply with all operational boundaries detailed in these Terms of Service. All programmatic frameworks, custom web code, structural translation arrays, and calculated analytical trend indexes published on this site are the exclusive proprietary property of HoldingW Platforms Inc. Unauthorized continuous automated parsing, structural duplication, or commercial redistribution of these data fields without explicit authorization is strictly prohibited.\n\n2. GENERAL USE LIABILITY LIMITS & MARKET DISCLAIMER\nAll data pipelines, e-commerce scoring grids, product margin estimations, and predictive saturation reports are supplied strictly on an 'as-is' and 'as-available' institutional basis. HoldingW Platforms Inc. completely disclaims all legal warranties regarding commercial accuracy, transactional profitability, or operational success. E-commerce metrics undergo highly volatile shifts based on supply logistics and platform algorithm modifications. Users bear autonomous corporate and financial liability for any business execution or ad budget investments deployed based on these informational telemetry projections.\n\n3. ADVERTISING PARTNERSHIPS & CONTEXTUAL REDIRECTS\nOur services integrate contextually tailored promotional modules and third-party monetization systems (including Google AdSense). These integrations may deploy tracking parameters and redirect mechanisms to independent third-party platforms. We assume zero corporate liability, governance, or operational monitoring duties over the external content structures, service conditions, or business activities managed on those target networks.\n\n4. ADJUDICATION VENUE & TERMINATION CLAUSES\nAny legal disputes, structural claims, or breach of service procedures linked to our platform domains shall be governed and resolved exclusively under standard international corporate frameworks. We maintain the absolute operational right to restrict, filter, or terminate user access to our intelligence dashboards immediately, without prior notification, for any actions violating these terms."
     },
     fr: {
         navHome: "Accueil",
@@ -147,6 +158,7 @@ const translations = {
         footerPrivacy: "Politique de Confidentialité",
         footerTerms: "Conditions d'Utilisation",
         footerContact: "Contactez-nous",
+        footerAbout: "À Propos",
 
         // ترجمات صفحة الـ Blog بالفرنسية
         blogHeroTitle: "Rapports d'Analyse Approfondie & Documents de Recherche",
@@ -166,7 +178,17 @@ const translations = {
         modalComp: "Concurrence",
         modalMargin: "Marge Est.",
         modalSatTitle: "Perspectives de Saturation du Marché",
-        modalSatText: "Les indicateurs de télémétrie se mettent à jour en continu."
+        modalSatText: "Les indicateurs de télémétrie se mettent à jour en continu.",
+
+        // ================= نصوص المودالات القانونية الطويلة (FR) =================
+        aboutTitle: "À Propos de HoldingW Platforms",
+        aboutDesc: "HoldingW Platforms Inc. est une entité de recherche indépendante spécialisée dans l'intelligence prédictive du commerce électronique, la télémétrie des marchés et la cartographie des flux logistiques numériques.\n\nFondés en 2016, nos bureaux techniques compilent des flux de données fragmentés provenant d'API d'entreprise et de marchés mondiaux pour restituer des analyses structurelles et des cadres d'optimisation opérationnelle.\n\nNous fournissons aux professionnels du e-commerce des informations analytiques de niveau institutionnel conçues pour optimiser les coûts d'acquisition client (CAC) et sécuriser des fenêtres de croissance commerciale durables avant l'atteinte des seuils de saturation.",
+
+        privacyTitle: "Politique de Confidentialité et Cookies",
+        privacyContent: "1. COLLECTE DE DONNÉES ET TÉLÉMÉTRIE\nHoldingW Platforms Inc. ('nous', 'notre') exploite des modèles analytiques avancés. Ce document clarifie nos pratiques de traitement des données et de télémétrie par cookies. Nous traitons strictement des paramètres opérationnels non identifiables personnellement, des caches de scraping de places de marché et des distributions comportementales de navigateurs.\n\n2. COOKIES ANALYTIQUES ET PARAMÈTRES\nNotre architecture déploie des cookies essentiels et des variables de stockage local pour enregistrer la langue et les préférences de navigation. Ces identifiants sont anonymisés. Des partenaires publicitaires tiers (comme Google AdSense) peuvent injecter des cookies de suivi pour compiler des cartes d'intérêt contextuelles. Les utilisateurs conservent le contrôle pour supprimer ces cookies via les options de leur navigateur.\n\n3. LIMITATIONS DE DIVULGATION\nNotre infrastructure ne distribue, ne vend ni ne transfère de journaux de communication à des tiers non autorisés. Les ensembles de données compilés sont strictement utilisés pour alimenter nos algorithmes de prédiction. Le partage est restreint aux obligations légales et exigences réglementaires.\n\n4. PROTOCOLES DE SÉCURITÉ ET RÉVISIONS\nNous appliquons des architectures de sécurité conformes aux normes de l'industrie (chiffrement SSL, pare-feu) pour protéger les sessions locales. Nous nous réservons le droit de réviser ce document. L'utilisation continue de nos tableaux de bord implique l'acceptation proactive des termes mis à jour.",
+
+        termsTitle: "Conditions d'Utilisation et Avis de Non-Responsabilité",
+        termsContent: "1. PROPRIÉTÉ INTELLECTUELLE ET CONFORMITÉ\nEn accédant à HoldingW Platforms, vous acceptez de vous conformer aux règles des présentes Conditions d'Utilisation. Tous les codes, frameworks et indices analytiques publiés sur ce site sont la propriété exclusive de HoldingW Platforms Inc. Toute duplication automatisée ou redistribution commerciale non autorisée de ces données est strictement interdite.\n\n2. LIMITES DE RESPONSABILITÉ ET EXCLUSION\nToutes les grilles d'évaluation, estimations de marge et rapports de saturation sont fournis 'en l'état'. HoldingW Platforms Inc. décline toute responsabilité quant à l'exactitude commerciale ou au succès financier des campagnes publicitaires des utilisateurs. Les métriques e-commerce varient rapidement. L'utilisateur assume l'entière responsabilité financière de ses décisions basées sur nos données.\n\n3. PARTENARIATS PUBLICITAIRES ET LIENS TIERS\nNos services intègrent des modules promotionnels tiers (notamment Google AdSense) pouvant déployer des traceurs et rediriger vers des plateformes indépendantes. Nous n'assumons aucune responsabilité quant au contenu, politiques ou activités gérés sur ces réseaux externes.\n\n4. JURIDICTION ET RÉSILIATION\nTout litige lié à nos services sera régi et résolu exclusivement selon les lois et cadres corporatifs internationaux. Nous nous réservons le droit de restreindre ou de résilier l'accès d'un utilisateur à nos tableaux de bord immédiatement et sans préavis en cas de violation des présentes conditions."
     }
 };
 
@@ -218,8 +240,13 @@ function switchLang(lang) {
     // ترجمة كل العناصر الحاملة للوسم المخصص
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-            element.innerText = translations[lang][key];
+        if (translations[lang][key] !== undefined) {
+            // معالجة النصوص التي تحتوي على أسطر متعددة (white-space) مثل السياسات
+            if (key.endsWith('Content') || key.endsWith('Desc')) {
+                element.textContent = translations[lang][key];
+            } else {
+                element.innerText = translations[lang][key];
+            }
         }
     });
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced E-Commerce Intelligence Reports | HoldingW</title>
     
-    <!-- SEO Tags Essentials (زدت ليك هادو هنا باش غوغل يقرى السايت وأرشفه) -->
+    <!-- SEO Tags Essentials -->
     <meta name="description" content="Advanced algorithmic documentation, structural market shifts, and e-commerce research papers by HoldingW Analytics.">
     <meta name="keywords" content="HoldingW, research papers, market analytics, e-commerce reports, HoldingW Analytics">
     <meta name="robots" content="index, follow">
@@ -62,9 +62,34 @@
 
     </main>
 
+    <!-- الفوتر المطور لضمان معايير AdSense ف هاد الصفحة -->
     <footer style="margin-top: 40px;">
+        <div class="footer-links" style="margin-bottom: 15px;">
+            <a onclick="openModal('privacyModal')" data-i18n="footerPrivacy" style="cursor: pointer; margin: 0 10px;">Privacy Policy</a>
+            <a onclick="openModal('termsModal')" data-i18n="footerTerms" style="cursor: pointer; margin: 0 10px;">Terms of Service</a>
+        </div>
         <p data-i18n="footerRights">&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
     </footer>
+
+    <!-- ================= MODALS SECTION (السياسات المطولة مدمجة هنا ديناميكياً) ================= -->
+    
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
+            <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
+            <h2 data-i18n="privacyTitle" style="color: #fff; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 10px;">Privacy Policy</h2>
+            <div data-i18n="privacyContent" style="color: var(--text-muted); line-height: 1.7; font-size: 14px; white-space: pre-line;"></div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
+            <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
+            <h2 data-i18n="termsTitle" style="color: #fff; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 10px;">Terms of Service</h2>
+            <div data-i18n="termsContent" style="color: var(--text-muted); line-height: 1.7; font-size: 14px; white-space: pre-line;"></div>
+        </div>
+    </div>
 
     <!-- عيطنا لملف الـ JavaScript مع وسم كسر الكاش لضمان التحديث الفوري -->
     <script src="app.js?v=1.1"></script>

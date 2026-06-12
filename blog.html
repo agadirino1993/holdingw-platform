@@ -23,7 +23,6 @@
             </ul>
         </nav>
         
-        <!-- سيستم اللغات المحفوظ ف الـ LocalStorage -->
         <div style="display: flex; align-items: center; gap: 15px;">
             <div style="font-size: 13px; font-weight: bold; background: #111827; padding: 5px 10px; border-radius: 4px; border: 1px solid #1e293b; user-select: none;">
                 <span id="lang-en" onclick="switchLang('en')" style="cursor:pointer;">EN</span> | 
@@ -39,7 +38,6 @@
     </section>
 
     <main style="max-width: 800px; margin: 20px auto; padding: 0 20px;">
-        
         <!-- Report 1 -->
         <article style="background-color: var(--card-bg); border: 1px solid #1e293b; border-radius: 12px; padding: 30px; margin-bottom: 25px;">
             <span data-i18n="blogArt1Cat" style="color: var(--accent-color); font-size: 12px; font-weight: bold; text-transform: uppercase;">Supply Chain Optimization</span>
@@ -59,20 +57,29 @@
             </p>
             <div data-i18n="blogArt2Meta" style="margin-top: 20px; font-size: 13px; color: var(--text-muted);">June 2026 • Published by Optimization Analytics Team</div>
         </article>
-
     </main>
 
-    <!-- الفوتر المطور لضمان معايير AdSense ف هاد الصفحة -->
-    <footer style="margin-top: 40px;">
-        <div class="footer-links" style="margin-bottom: 15px;">
+    <footer>
+        <div class="footer-links" style="margin-bottom: 15px; text-align: center;">
+            <a onclick="openModal('aboutModal')" data-i18n="footerAbout" style="cursor: pointer; margin: 0 10px;">About Us</a>
             <a onclick="openModal('privacyModal')" data-i18n="footerPrivacy" style="cursor: pointer; margin: 0 10px;">Privacy Policy</a>
             <a onclick="openModal('termsModal')" data-i18n="footerTerms" style="cursor: pointer; margin: 0 10px;">Terms of Service</a>
+            <a onclick="openModal('contactModal')" data-i18n="footerContact" style="cursor: pointer; margin: 0 10px;">Contact Us</a>
         </div>
         <p data-i18n="footerRights">&copy; 2026 HoldingW Platforms Inc. All rights reserved.</p>
     </footer>
 
-    <!-- ================= MODALS SECTION (السياسات المطولة مدمجة هنا ديناميكياً) ================= -->
-    
+    <!-- ================= MODALS INTERFACE ================= -->
+
+    <!-- About Us Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
+            <span class="close-modal" onclick="closeModal('aboutModal')">&times;</span>
+            <h2 data-i18n="aboutTitle" style="color: #fff; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 10px;">About Us</h2>
+            <div data-i18n="aboutDesc" style="color: var(--text-muted); line-height: 1.7; font-size: 14px; white-space: pre-line;"></div>
+        </div>
+    </div>
+
     <!-- Privacy Policy Modal -->
     <div id="privacyModal" class="modal">
         <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
@@ -91,7 +98,16 @@
         </div>
     </div>
 
-    <!-- عيطنا لملف الـ JavaScript مع وسم كسر الكاش لضمان التحديث الفوري -->
-    <script src="app.js?v=1.1"></script>
+    <!-- Contact Us Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content" style="text-align: left; padding: 30px;">
+            <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
+            <h2 data-i18n="footerContact" style="color: #fff; margin-bottom: 15px;">Contact Us</h2>
+            <p data-i18n="contactDesc" style="color: var(--text-muted); line-height: 1.6; font-size: 14px;">If you have any questions about our analytical dashboards, data synchronization, or enterprise intelligence tools, feel free to reach out to our optimization team.</p>
+            <p style="margin-top: 20px; color: #fff; font-size: 14px;"><span data-i18n="contactEmailLbl">📧 Official Email Support:</span> <strong>contact@holdingw.com</strong></p>
+        </div>
+    </div>
+
+    <script src="app.js?v=1.2"></script>
 </body>
 </html>

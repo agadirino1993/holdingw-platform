@@ -183,15 +183,16 @@
 
     <!-- ================= MODALS SECTION ================= -->
     
-    <!-- About Us Modal (الجديد اللي طلبيه) -->
+    <!-- About Us Modal -->
     <div id="aboutModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
             <span class="close-modal" onclick="closeModal('aboutModal')">&times;</span>
-            <h2 data-i18n="aboutTitle">About HoldingW</h2>
-            <p data-i18n="aboutDesc">Welcome to HoldingW Platforms. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions. Our mission is to empower professionals and creators with the analytical tools and strategic frameworks needed to optimize their digital assets and scale operations effectively in today's dynamic markets.</p>
+            <h2 data-i18n="aboutTitle" style="color: #fff; margin-bottom: 15px;">About HoldingW</h2>
+            <p data-i18n="aboutDesc" style="color: var(--text-muted); line-height: 1.6; font-size: 15px;">Welcome to HoldingW Platforms. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions. Our mission is to empower professionals and creators with the analytical tools and strategic frameworks needed to optimize their digital assets and scale operations effectively in today's dynamic markets.</p>
         </div>
     </div>
 
+    <!-- Product Deep Analysis Modal -->
     <div id="analysisModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
@@ -206,22 +207,25 @@
         </div>
     </div>
 
+    <!-- Privacy Policy Modal (الآن ديناميكي ومرتبط بالنصوص الطويلة) -->
     <div id="privacyModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
             <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
-            <h2>Privacy Policy</h2>
-            <p>At HoldingW Analytics, accessible from our main domain, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by HoldingW Analytics and how we use it.</p>
+            <h2 data-i18n="privacyTitle" style="color: #fff; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 10px;">Privacy Policy</h2>
+            <div data-i18n="privacyContent" style="color: var(--text-muted); line-height: 1.7; font-size: 14px; white-space: pre-line;"></div>
         </div>
     </div>
 
+    <!-- Terms of Service Modal (الآن ديناميكي ومرتبط بالنصوص الطويلة) -->
     <div id="termsModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
             <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
-            <h2>Terms of Service</h2>
-            <p>By accessing the website at HoldingW Analytics, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p>
+            <h2 data-i18n="termsTitle" style="color: #fff; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 10px;">Terms of Service</h2>
+            <div data-i18n="termsContent" style="color: var(--text-muted); line-height: 1.7; font-size: 14px; white-space: pre-line;"></div>
         </div>
     </div>
 
+    <!-- Contact Us Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>

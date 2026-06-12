@@ -65,6 +65,10 @@ const translations = {
         footerContact: "Contact Us",
         footerAbout: "About Us",
 
+        // ترجمة كونتّاكت بالإنجليزية
+        contactDesc: "If you have any questions about our analytical dashboards, data synchronization, or enterprise intelligence tools, feel free to reach out to our optimization team.",
+        contactEmailLbl: "📧 Official Email Support:",
+
         // تيرجمات صفحة الـ Blog
         blogHeroTitle: "Deep Analytics Reports & Research Papers",
         blogHeroDesc: "Advanced algorithmic documentation regarding structural market shifts, scaling frameworks, and cross-border digital logistics.",
@@ -85,7 +89,7 @@ const translations = {
         modalSatTitle: "Market Saturation Insights",
         modalSatText: "Telemetry indicators update continuously.",
 
-        // ================= نصوص المودالات القانونية الطويلة (EN) =================
+        // نصوص المودالات القانونية الطويلة (EN)
         aboutTitle: "About HoldingW Platforms",
         aboutDesc: "HoldingW Platforms Inc. is a leading independent data-driven research entity specializing in predictive e-commerce intelligence, market telemetry, and cross-border digital logistics asset mapping.\n\nFounded in 2016, our distributed technical desks compile fragmented data streams from enterprise APIs, global marketplaces, and digital consumer trends to render structured market overviews, unit economics documentation, and operational scaling frameworks.\n\nWe empower e-commerce practitioners, digital asset aggregators, and marketing operations with institutional-grade analytical insights designed to reduce customer acquisition costs (CAC) and secure highly sustainable commercial scaling windows before saturation thresholds are reached across digital product verticals.",
 
@@ -160,6 +164,10 @@ const translations = {
         footerContact: "Contactez-nous",
         footerAbout: "À Propos",
 
+        // ترجمة كونتّاكت بالفرنسية
+        contactDesc: "Si vous avez des questions concernant nos tableaux de bord analytiques, la synchronisation des données ou nos outils de business intelligence, n'hésitez pas à contacter notre équipe d'optimisation.",
+        contactEmailLbl: "📧 Support Client Officiel :",
+
         // ترجمات صفحة الـ Blog بالفرنسية
         blogHeroTitle: "Rapports d'Analyse Approfondie & Documents de Recherche",
         blogHeroDesc: "Documentation algorithmique avancée concernant les changements structurels du marché, les cadres de mise à l'échelle et la logistique numérique transfrontalière.",
@@ -173,14 +181,14 @@ const translations = {
         blogArt2Meta: "Juin 2026 • Publié par l'Équipe d'Optimisation des Analyses",
         blogBackBtn: "Retour à l'App",
 
-        // تراجم الـ Modals بالفرنسية
+        // trajuom lmodals bfrançais
         modalDemand: "Indice de Demande",
         modalComp: "Concurrence",
         modalMargin: "Marge Est.",
         modalSatTitle: "Perspectives de Saturation du Marché",
         modalSatText: "Les indicateurs de télémétrie se mettent à jour en continu.",
 
-        // ================= نصوص المودالات القانونية الطويلة (FR) =================
+        // نصوص المودالات القانونية الطويلة (FR)
         aboutTitle: "À Propos de HoldingW Platforms",
         aboutDesc: "HoldingW Platforms Inc. est une entité de recherche indépendante spécialisée dans l'intelligence prédictive du commerce électronique, la télémétrie des marchés et la cartographie des flux logistiques numériques.\n\nFondés en 2016, nos bureaux techniques compilent des flux de données fragmentés provenant d'API d'entreprise et de marchés mondiaux pour restituer des analyses structurelles et des cadres d'optimisation opérationnelle.\n\nNous fournissons aux professionnels du e-commerce des informations analytiques de niveau institutionnel conçues pour optimiser les coûts d'acquisition client (CAC) et sécuriser des fenêtres de croissance commerciale durables avant l'atteinte des seuils de saturation.",
 
@@ -241,7 +249,7 @@ function switchLang(lang) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang][key] !== undefined) {
-            // معالجة النصوص التي تحتوي على أسطر متعددة (white-space) مثل السياسات
+            // معالجة النصوص التي تحتوي على أسطر متعددة (white-space) مثل السياسات والكونتاكت ديسك
             if (key.endsWith('Content') || key.endsWith('Desc')) {
                 element.textContent = translations[lang][key];
             } else {

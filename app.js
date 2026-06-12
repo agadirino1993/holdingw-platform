@@ -1,4 +1,4 @@
-// سيستم الترجمة الشامل لجميع عناصر الموقع
+// سيستم الترجمة الآمن بلا ما يخربق الـ CSS الأصلي
 const translations = {
     en: {
         navHome: "Home",
@@ -65,10 +65,6 @@ const translations = {
         footerContact: "Contact Us",
         footerAbout: "About Us",
 
-        // ترجمة كونتّاكت بالإنجليزية
-        contactDesc: "If you have any questions about our analytical dashboards, data synchronization, or enterprise intelligence tools, feel free to reach out to our optimization team.",
-        contactEmailLbl: "📧 Official Email Support:",
-
         // تيرجمات صفحة الـ Blog
         blogHeroTitle: "Deep Analytics Reports & Research Papers",
         blogHeroDesc: "Advanced algorithmic documentation regarding structural market shifts, scaling frameworks, and cross-border digital logistics.",
@@ -82,12 +78,14 @@ const translations = {
         blogArt2Meta: "June 2026 • Published by Optimization Analytics Team",
         blogBackBtn: "Back to App",
 
-        // تراجم الـ Modals المشتركة والتحليلات
+        // تراجم الـ Modals والكونتاكت
         modalDemand: "Demand Index",
         modalComp: "Competition",
         modalMargin: "Margin Est.",
         modalSatTitle: "Market Saturation Insights",
         modalSatText: "Telemetry indicators update continuously.",
+        contactDesc: "If you have any questions about our analytical dashboards, data synchronization, or enterprise intelligence tools, feel free to reach out to our optimization team.",
+        contactEmailLbl: "📧 Official Email Support:",
 
         // نصوص المودالات القانونية الطويلة (EN)
         aboutTitle: "About HoldingW Platforms",
@@ -181,7 +179,7 @@ const translations = {
         blogArt2Meta: "Juin 2026 • Publié par l'Équipe d'Optimisation des Analyses",
         blogBackBtn: "Retour à l'App",
 
-        // trajuom lmodals bfrançais
+        // تراجم الـ Modals بالفرنسية
         modalDemand: "Indice de Demande",
         modalComp: "Concurrence",
         modalMargin: "Marge Est.",
@@ -193,7 +191,7 @@ const translations = {
         aboutDesc: "HoldingW Platforms Inc. est une entité de recherche indépendante spécialisée dans l'intelligence prédictive du commerce électronique, la télémétrie des marchés et la cartographie des flux logistiques numériques.\n\nFondés en 2016, nos bureaux techniques compilent des flux de données fragmentés provenant d'API d'entreprise et de marchés mondiaux pour restituer des analyses structurelles et des cadres d'optimisation opérationnelle.\n\nNous fournissons aux professionnels du e-commerce des informations analytiques de niveau institutionnel conçues pour optimiser les coûts d'acquisition client (CAC) et sécuriser des fenêtres de croissance commerciale durables avant l'atteinte des seuils de saturation.",
 
         privacyTitle: "Politique de Confidentialité et Cookies",
-        privacyContent: "1. COLLECTE DE DONNÉES ET TÉLÉMÉTRIE\nHoldingW Platforms Inc. ('nous', 'notre') exploite des modèles analytiques avancés. Ce document clarifie nos pratiques de traitement des données et de télémétrie par cookies. Nous traitons strictement des paramètres opérationnels non identifiables personnellement, des caches de scraping de places de marché et des distributions comportementales de navigateurs.\n\n2. COOKIES ANALYTIQUES ET PARAMÈTRES\nNotre architecture déploie des cookies essentiels et des variables de stockage local pour enregistrer la langue et les préférences de navigation. Ces identifiants sont anonymisés. Des partenaires publicitaires tiers (comme Google AdSense) peuvent injecter des cookies de suivi pour compiler des cartes d'intérêt contextuelles. Les utilisateurs conservent le contrôle pour supprimer ces cookies via les options de leur navigateur.\n\n3. LIMITATIONS DE DIVULGATION\nNotre infrastructure ne distribue, ne vend ni ne transfère de journaux de communication à des tiers non autorisés. Les ensembles de données compilés sont strictement utilisés pour alimenter nos algorithmes de prédiction. Le partage est restreint aux obligations légales et exigences réglementaires.\n\n4. PROTOCOLES DE SÉCURITÉ ET RÉVISIONS\nNous appliquons des architectures de sécurité conformes aux normes de l'industrie (chiffrement SSL, pare-feu) pour protéger les sessions locales. Nous nous réservons le droit de réviser ce document. L'utilisation continue de nos tableaux de bord implique l'acceptation proactive des termes mis à jour.",
+        privacyContent: "1. COLLECTE DE DONNÉES ET TÉLÉMÉTRIE\nHoldingW Platforms Inc. ('nous', 'notre') exploite des modèles analytiques avancés. Ce document clarifie nos pratiques de traitement des données et de télémétrie par cookies. Nous traitons strictement des paramètres opérationnels non identifiables personnellement, des caches de scraping de places de marché et des distributions comportementales de navigateurs.\n\n2. COOKIES ANALYTIQUES ET PARAMÈTRES\nNotre architecture déploie des cookies essentiels et des variables de stockage local pour enregistrer la langue et les préférences de navigation. Ces identifiants sont anonymisés. Des partenaires publicitaires tiers (comme Google AdSense) peuvent injecter des cookies de suivi pour compiler des cartes d'intérêt contextuelles. Les urine-sateurs conservent le contrôle pour supprimer ces cookies via les options de leur navigateur.\n\n3. LIMITATIONS DE DIVULGATION\nNotre infrastructure ne distribue, ne vend ni ne transfère de journaux de communication à des tiers non autorisés. Les ensembles de données compilés sont strictement utilisés pour alimenter nos algorithmes de prédiction. Le partage est restreint aux obligations légales et exigences réglementaires.\n\n4. PROTOCOLES DE SÉCURITÉ ET RÉVISIONS\nNous appliquons des architectures de sécurité conformes aux normes de l'industrie (chiffrement SSL, pare-feu) pour protéger les sessions locales. Nous nous réservons le droit de réviser ce document. L'utilisation continue de nos tableaux de bord implique l'acceptation proactive des termes mis à jour.",
 
         termsTitle: "Conditions d'Utilisation et Avis de Non-Responsabilité",
         termsContent: "1. PROPRIÉTÉ INTELLECTUELLE ET CONFORMITÉ\nEn accédant à HoldingW Platforms, vous acceptez de vous conformer aux règles des présentes Conditions d'Utilisation. Tous les codes, frameworks et indices analytiques publiés sur ce site sont la propriété exclusive de HoldingW Platforms Inc. Toute duplication automatisée ou redistribution commerciale non autorisée de ces données est strictement interdite.\n\n2. LIMITES DE RESPONSABILITÉ ET EXCLUSION\nToutes les grilles d'évaluation, estimations de marge et rapports de saturation sont fournis 'en l'état'. HoldingW Platforms Inc. décline toute responsabilité quant à l'exactitude commerciale ou au succès financier des campagnes publicitaires des utilisateurs. Les métriques e-commerce varient rapidement. L'utilisateur assume l'entière responsabilité financière de ses décisions basées sur nos données.\n\n3. PARTENARIATS PUBLICITAIRES ET LIENS TIERS\nNos services intègrent des modules promotionnels tiers (notamment Google AdSense) pouvant déployer des traceurs et rediriger vers des plateformes indépendantes. Nous n'assumons aucune responsabilité quant au contenu, politiques ou activités gérés sur ces réseaux externes.\n\n4. JURIDICTION ET RÉSILIATION\nTout litige lié à nos services sera régi et résolu exclusivement selon les lois et cadres corporatifs internationaux. Nous nous réservons le droit de restreindre ou de résilier l'accès d'un utilisateur à nos tableaux de bord immédiatement et sans préavis en cas de violation des présentes conditions."
@@ -228,7 +226,6 @@ const productData = {
     }
 };
 
-// الثوابت الرقمية والألوان المشتركة بين اللغتين لضمان دقة الكود
 const productStats = {
     hud: { demand: "91.4%", margin: "+74%", compColor: "#10b981" },
     planner: { demand: "96.8%", margin: "+88%", compColor: "#ef4444" },
@@ -238,18 +235,15 @@ const productStats = {
     premium: { demand: "95.0%", margin: "+65% Avg", compColor: "#3b82f6" }
 };
 
-// الحصول على اللغة الحالية المخزنة أو تعيين الإنجليزية كافتراضية
 let currentLang = localStorage.getItem('selectedLang') || 'en';
 
 function switchLang(lang) {
     currentLang = lang;
-    localStorage.setItem('selectedLang', lang); // حفظ الاختيار ف المتصفح
+    localStorage.setItem('selectedLang', lang);
     
-    // ترجمة كل العناصر الحاملة للوسم المخصص
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang][key] !== undefined) {
-            // معالجة النصوص التي تحتوي على أسطر متعددة (white-space) مثل السياسات والكونتاكت ديسك
             if (key.endsWith('Content') || key.endsWith('Desc')) {
                 element.textContent = translations[lang][key];
             } else {
@@ -258,7 +252,6 @@ function switchLang(lang) {
         }
     });
 
-    // تحديث مظهر أزرار السويتش في الهيدر إن وجدت ف الصفحة
     const enBtn = document.getElementById('lang-en');
     const frBtn = document.getElementById('lang-fr');
     if (enBtn && frBtn) {
@@ -267,33 +260,40 @@ function switchLang(lang) {
     }
 }
 
-// فتح تحليلات المنتجات وترجمتها فورياً ومباشرة بناءً على اللغة المفعلة
 function openAnalysis(prodKey) {
     const textData = productData[prodKey]?.[currentLang];
     const statData = productStats[prodKey];
     
     if (textData && statData) {
-        document.getElementById('analysisTitle').innerText = textData.title;
-        document.getElementById('statDemand').innerText = statData.demand;
-        document.getElementById('statComp').innerText = textData.comp;
-        document.getElementById('statComp').style.color = statData.compColor;
-        document.getElementById('statMargin').innerText = statData.margin;
-        document.getElementById('saturationText').innerText = textData.text;
+        // حماية ف حالة كانت هاد العناصر بأسماء مغايرة ف الـ HTML القديم
+        if(document.getElementById('analysisTitle')) document.getElementById('analysisTitle').innerText = textData.title;
+        if(document.getElementById('statDemand')) document.getElementById('statDemand').innerText = statData.demand;
+        if(document.getElementById('statComp')) {
+            document.getElementById('statComp').innerText = textData.comp;
+            document.getElementById('statComp').style.color = statData.compColor;
+        }
+        if(document.getElementById('statMargin')) document.getElementById('statMargin').innerText = statData.margin;
+        if(document.getElementById('saturationText')) document.getElementById('saturationText').innerText = textData.text;
         
-        // ترجمة العناوين الفرعية الثابتة داخل الـ Modal
-        document.getElementById('lbl-demand').innerText = translations[currentLang]['modalDemand'];
-        document.getElementById('lbl-comp').innerText = translations[currentLang]['modalComp'];
-        document.getElementById('lbl-margin').innerText = translations[currentLang]['modalMargin'];
-        document.getElementById('lbl-sat-title').innerText = translations[currentLang]['modalSatTitle'];
+        if(document.getElementById('lbl-demand')) document.getElementById('lbl-demand').innerText = translations[currentLang]['modalDemand'];
+        if(document.getElementById('lbl-comp')) document.getElementById('lbl-comp').innerText = translations[currentLang]['modalComp'];
+        if(document.getElementById('lbl-margin')) document.getElementById('lbl-margin').innerText = translations[currentLang]['modalMargin'];
+        if(document.getElementById('lbl-sat-title')) document.getElementById('lbl-sat-title').innerText = translations[currentLang]['modalSatTitle'];
 
-        document.getElementById('analysisModal').style.display = "flex";
+        const modal = document.getElementById('analysisModal');
+        if(modal) modal.style.display = "flex";
     }
 }
 
-function openModal(modalId) { document.getElementById(modalId).style.display = "flex"; }
-function closeModal(modalId) { document.getElementById(modalId).style.display = "none"; }
+function openModal(modalId) { 
+    const modal = document.getElementById(modalId);
+    if(modal) modal.style.display = "flex"; 
+}
+function closeModal(modalId) { 
+    const modal = document.getElementById(modalId);
+    if(modal) modal.style.display = "none"; 
+}
 
-// تشغيل سيستم اللغة تلقائياً عند تحميل أي صفحة بناء على الـ LocalStorage
 document.addEventListener("DOMContentLoaded", () => {
     switchLang(currentLang);
 });

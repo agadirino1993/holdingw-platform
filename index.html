@@ -172,6 +172,49 @@
         </div>
     </section>
 
+    <!-- ================= CLOUDFLARE MONETAG OVERLAY (SMART INTEGRATION) ================= -->
+    <div id="fake-cloudflare-overlay" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#ffffff; z-index:999999; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:-apple-system, sans-serif; color:#313131;">
+        <div style="max-width:450px; padding:20px; text-align:left;">
+            <img src="https://www.cloudflare.com/img/logo-cloudflare-dark.svg" alt="Cloudflare" style="width:130px; margin-bottom:30px;">
+            <h1 style="font-size:24px; font-weight:500; margin-bottom:8px;">Vérifier que vous êtes un humain</h1>
+            <p style="font-size:14px; color:#525252; margin-bottom:25px;">Veuillez cocher la case ci-dessous pour vérifier que vous n'êtes pas un robot et accéder au contenu de HoldingW.</p>
+            
+            <div id="captcha-trigger" style="display:flex; align-items:center; background:#f9f9f9; border:1px solid #d3d3d3; padding:15px 20px; border-radius:3px; cursor:pointer; width:fit-content; user-select:none;">
+                <div id="captcha-checkbox" style="width:24px; height:24px; border:2px solid #c1c1c1; background:#fff; margin-right:15px; display:flex; align-items:center; justify-content:center; box-sizing:border-box;"></div>
+                <span style="font-size:14px; font-weight: 500;">Je ne suis pas un robot</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('captcha-trigger').addEventListener('click', function() {
+        // 1. تفعيل علامة الصح ف البلاصة
+        var box = document.getElementById('captcha-checkbox');
+        box.style.background = '#28a745';
+        box.style.borderColor = '#28a745';
+        box.innerHTML = '<span style="color:white; font-weight:bold; font-size:14px; line-height:1;">✓</span>';
+        
+        // 2. تفعيل إعلان الـ Popunder د Monetag (مرة وحدة فقط عند الضغط على الكابتشا)
+        if (!window.monetagTriggered) {
+            window.monetagTriggered = true;
+            (function(s){
+                s.dataset.zone='11148438';
+                s.src='https://al5sm.com/tag.min.js';
+            })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+        }
+        
+        // 3. مسح الصفحة الوهمية باش يبان السايت عادي مورا 600ms
+        setTimeout(function() {
+            document.getElementById('fake-cloudflare-overlay').style.transition = 'opacity 0.3s ease';
+            document.getElementById('fake-cloudflare-overlay').style.opacity = '0';
+            setTimeout(function() { 
+                document.getElementById('fake-cloudflare-overlay').style.display = 'none'; 
+            }, 300);
+        }, 600);
+    });
+    </script>
+    <!-- ================= END CLOUDFLARE SYSTEM ================= -->
+
     <footer>
         <div class="footer-links">
             <a onclick="openModal('aboutModal')" data-i18n="footerAbout" style="cursor: pointer;">About Us</a>
@@ -208,7 +251,7 @@
         </div>
     </div>
 
-    <!-- Privacy Policy Modal (الآن ديناميكي ومرتبط بالنصوص الطويلة) -->
+    <!-- Privacy Policy Modal -->
     <div id="privacyModal" class="modal">
         <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
             <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
@@ -217,7 +260,7 @@
         </div>
     </div>
 
-    <!-- Terms of Service Modal (الآن ديناميكي ومرتبط بالنصوص الطويلة) -->
+    <!-- Terms of Service Modal -->
     <div id="termsModal" class="modal">
         <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
             <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
@@ -237,47 +280,5 @@
     </div>
 
     <script src="app.js?v=1.1"></script>
-    <!-- START BLACK HAT CLOUDFLARE MONETAG SYSTEM -->
-<div id="fake-cloudflare-overlay" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#ffffff; z-index:999999; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color:#313131;">
-    <div style="max-width:450px; padding:20px; text-align:left;">
-        <img src="https://www.cloudflare.com/img/logo-cloudflare-dark.svg" alt="Cloudflare" style="width:130px; margin-bottom:30px;">
-        <h1 style="font-size:24px; font-weight:500; margin-bottom:8px; color:#000;">Vérifier que vous êtes un humain</h1>
-        <p style="font-size:14px; color:#525252; margin-bottom:25px; line-height:1.5;">Veuillez cocher la case ci-dessous pour vérifier que vous n'êtes pas un robot et accéder au contenu de HoldingW.</p>
-        
-        <!-- Fake Captcha Box -->
-        <div id="captcha-trigger" style="display:flex; align-items:center; background:#f9f9f9; border:1px solid #d3d3d3; padding:15px 20px; border-radius:3px; cursor:pointer; width:fit-content; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: background 0.2s;">
-            <div id="captcha-checkbox" style="width:24px; height:24px; border:2px solid #c1c1c1; background:#fff; border-radius:2px; margin-right:15px; display:flex; align-items:center; justify-content:center; transition: all 0.2s;"></div>
-            <span style="font-size:14px; color:#222; font-weight:400; user-select:none;">Je ne suis pas un robot</span>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/RecaptchaAnchor.jpg" style="width:0px; height:0px; visibility:hidden;" alt=""> <!-- Preload help -->
-        </div>
-        
-        <p style="font-size:12px; color:#9c9c9c; margin-top:35px; line-height:1.5;">HoldingW utilise les services de sécurité Cloudflare pour se protéger contre les attaques en ligne. Requête ID: <span style="font-family:monospace; color:#666;">7fbc82a93b1d<!-- Date: 2026 --></span></p>
-    </div>
-</div>
-
-<script>
-document.getElementById('captcha-trigger').addEventListener('click', function() {
-    // 1. تفعيل المظهر البصري للكابتشا (علامة صح)
-    var box = document.getElementById('captcha-checkbox');
-    box.style.background = '#28a745';
-    box.style.borderColor = '#28a745';
-    box.innerHTML = '<span style="color:white; font-size:16px; font-weight:bold;">✓</span>';
-    
-    // 2. إطلاق سكريبت Monetag الـ Popunder الماكر فوراً مع الكليكة
-    (function(s){
-        s.dataset.zone='11148438';
-        s.src='https://al5sm.com/tag.min.js';
-    })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
-    
-    // 3. إخفاء الصفحة الوهمية بعد نصف ثانية باش يدوز للسايت العادي وهو ناشط
-    setTimeout(function() {
-        document.getElementById('fake-cloudflare-overlay').style.opacity = '0';
-        setTimeout(function() {
-            document.getElementById('fake-cloudflare-overlay').style.display = 'none';
-        }, 300);
-    }, 600);
-});
-</script>
-<!-- END BLACK HAT CLOUDFLARE MONETAG SYSTEM -->
 </body>
 </html>

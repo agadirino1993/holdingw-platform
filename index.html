@@ -7,28 +7,41 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/w.png">
 
-    <!-- 🌟 الستايل الخاص بالمربعات الإعلانية المعدل والمنظم 🌟 -->
+    <!-- 🌟 الستايل الإعلاني المطور: 3 خانات متناسقة والـ Refresh أوتوماتيك 🌟 -->
     <style>
-        /* المربع الإعلاني الرئيسي وسط الصفحة (مساحة نظيفة بدون إطارات مزعجة) */
-        .mid-page-ad {
+        /* حاوية الإعلانات الثلاثة (الوسط) لترتيبهم جنباً إلى جنب */
+        .ad-triple-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 15px;
             width: 100%;
-            max-width: 336px; 
-            height: 280px;
-            margin: 25px auto;
-            background: transparent;
+        }
+
+        /* ستايل كل خانة إعلانية وسط السطر */
+        .mid-page-ad-box {
+            flex: 1;
+            min-width: 280px;
+            max-width: 320px;
+            height: 250px;
+            background: rgba(17, 24, 39, 0.6);
+            border: 1px dashed #1e293b;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
         }
 
-        /* الإعلانات الصغار اللاصقة فـ الجنب لليمين لتحت مع زر الإغلاق */
+        /* الإعلان الصغير اللاصق فـ الجنب لليمين لتحت مع زر الإغلاق */
         .sticky-bottom-ad {
             position: fixed;
             bottom: 10px;
             right: 10px; 
             width: 320px;
-            height: 50px;
+            height: 60px;
             background: #111827;
             border: 1px solid #1e293b;
             border-radius: 4px;
@@ -44,13 +57,13 @@
             position: absolute;
             top: -8px;
             right: -8px;
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             background: #ef4444;
             color: #ffffff;
             border-radius: 50%;
             text-align: center;
-            line-height: 18px;
+            line-height: 20px;
             font-family: Arial, sans-serif;
             font-size: 14px;
             font-weight: bold;
@@ -60,8 +73,17 @@
             z-index: 10000;
         }
 
-        /* تعديل للموبايل باش يجي الإعلان الصغير ف الوسط لتحت وميغطيش الكونتنت */
-        @media (max-width: 480px) {
+        /* تجاوب كامل مع الموبايل: الإعلانات تولي تحت بعضياتها بشكل نقي */
+        @media (max-width: 768px) {
+            .ad-triple-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .mid-page-ad-box {
+                width: 100%;
+                max-width: 320px;
+            }
             .sticky-bottom-ad {
                 left: 50%;
                 right: auto;
@@ -100,9 +122,22 @@
         <p data-i18n="heroDesc">Real-time updates filtered from Amazon, eBay, and Etsy Top Charts. Access premium digital and physical assets insights instantly.</p>
     </section>
 
-    <!-- 🌟 المربع الإعلاني الوسطاني (واجد ومفتوح دابا تحط فيه كود الـ Banner 300x250 د Monetag) 🌟 -->
-    <div class="mid-page-ad">
-        <!-- حط كود الـ Banner 300x250 ديال Monetag هنا ديريكت -->
+    <!-- 🌟 الـ 3 الخانات الإعلانية مستفين وحدة حدا وحدة (Inside 1, 2, 3) 🌟 -->
+    <div class="ad-triple-container">
+        <!-- الخانة الأولى (اليسار / الفوق ف الموبايل) -->
+        <div class="mid-page-ad-box" id="ad-box-1">
+            <script>(function(s){s.dataset.zone='11157724',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+        </div>
+        
+        <!-- الخانة الثانية (الوسط) -->
+        <div class="mid-page-ad-box" id="ad-box-2">
+            <script>(function(s){s.dataset.zone='11157773',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+        </div>
+        
+        <!-- الخانة الثالثة (اليمين / التحت ف الموبايل) -->
+        <div class="mid-page-ad-box" id="ad-box-3">
+            <script>(function(s){s.dataset.zone='11157780',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+        </div>
     </div>
 
     <div class="scanner-container">
@@ -307,11 +342,33 @@
        </div>
     </div>
 
-    <!-- 🌟 الإعلان الصغير اللاصق فـ الجنب لتحت (Sticky Banner) مع زر الإغلاق 🌟 -->
+    <!-- 🌟 الإعلان الصغير اللاصق فـ الجنب لتحت (Sticky Bottom) مع زر الإغلاق 🌟 -->
     <div class="sticky-bottom-ad" id="monetagStickyAd">
         <div class="close-ad-btn" onclick="document.getElementById('monetagStickyAd').style.display='none'">×</div>
-        <!-- حط كود الـ Native Banner 320x50 ديال Monetag هنا ديريكت -->
+        <!-- كود الـ Sticky Bottom من Monetag -->
+        <script>(function(s){s.dataset.zone='11157785',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
     </div>
+
+    <!-- ================= AUTO-REFRESH LOGIC (EVERY 30 SECONDS) ================= -->
+    <script>
+        // سكريبت لتحديث الإعلانات كل 30 ثانية أوتوماتيكياً لزيادة الـ Impressions والأرباح
+        setInterval(function() {
+            const zones = ['11157724', '11157773', '11157780', '11157785'];
+            zones.forEach(zoneId => {
+                // البحث عن السكريبت القديم الخاص بالمنطقة وحذفه لإعادة تحميله بجلب إعلان جديد
+                const oldScripts = document.querySelectorAll(`script[data-zone="${zoneId}"]`);
+                oldScripts.forEach(scr => scr.remove());
+
+                // إنشاء سكريبت جديد وتمريره للـ DOM لتنشيط ظهور إعلان جديد
+                const newScript = document.createElement('script');
+                newScript.dataset.zone = zoneId;
+                newScript.src = 'https://nap5k.com/tag.min.js';
+                newScript.async = true;
+                document.body.appendChild(newScript);
+            });
+            console.log('Ads refreshed successfully for tracking optimization.');
+        }, 30000); // 30000 مللي ثانية تعني 30 ثانية بـ المليان
+    </script>
 
     <script src="app.js?v=1.1"></script>
 </body>

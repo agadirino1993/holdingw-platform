@@ -32,6 +32,19 @@ const translations = {
         lblComp: "Competition",
         lblMargin: "Margin Est.",
         lblSatTitle: "Market Saturation Insights",
+        // Articles Section
+        art1Category: "Predictive Analytics",
+        art1Title: "How Data Telemetry Identifies Micro-Trends Before Saturation",
+        art1Desc: "The traditional method of sourcing winning products relies heavily on historical order volume. However, by the time an asset hits peak volume figures on centralized marketplaces, the customer acquisition cost (CAC) has often scaled beyond sustainable margins. Moving early allows for optimized product mapping and clean scaling windows before market saturation hits the vertical.",
+        art1Meta: "March 2026 • By HoldingW Research",
+        art2Category: "Digital Arbitrage",
+        art2Title: "The Unit Economics of Scaling Digital Assets on High-Margin Platforms",
+        art2Desc: "Physical dropshipping carries structural liabilities: fluctuating freight rates, logistics bottlenecks, and variable return percentages. This is why high-volume digital arbitrage is seeing rapid institutional adoption. Assets like structured planners, programmatic templates, and design files feature near-zero cost of goods sold (COGS).",
+        art2Meta: "April 2026 • By Technical Sourcing Desk",
+        art3Category: "Market Mechanics",
+        art3Title: "Evaluating Competition Indexes via Fragmented Supply Sources",
+        art3Desc: "A low competition index score on an analytical platform doesn't always guarantee an easy scaling window. Serious data operations evaluate competition through fragmented supplier transparency. If a product is controlled by a single main factory cluster, supply lines are prone to abrupt pricing shifts.",
+        art3Meta: "May 2026 • By Analytics Team",
         // Product Specific Data
         hudTitle: "Universal Heads-Up Display (HUD) GPS Speedometer",
         hudSat: "Demand is heavily scaling across US automotive sub-niches. Competitor density is currently medium-low, optimizing current ad spend margins.",
@@ -67,9 +80,9 @@ const translations = {
         footerContact: "Contactez-nous",
         footerRights: "© 2026 HoldingW Platforms Inc. Tous droits réservés.",
         aboutTitle: "À Propos de HoldingW Platforms",
-        aboutDesc: "HoldingW Platforms est un réseau d'intelligence décentralisé de premier plan fournissant des flux de données de haute fidélité pour les opérations de commerce électronique mondiales. En structurant l'informatique en nuage distribuée et des scanners de télémétrie exclusifs, nous capturons la vitesse du marché en temps réel à travers les principaux verticaux d'actifs numériques et physiques. Notre mission est de démocratiser les métriques d'arbitrage institutionnel à barrière élevée, en offrant aux développeurs autodidactes, aux dropshippers indépendants et aux entreprises en pleine croissance les cadres d'exécution requis pour établir une part de marché durable. Opérant à l'intersection de l'analyse de marché programmatique et de la télémétrie prédictive des flux de consommateurs, HoldingW comble le fossé structurel entre les courbes de demande de détail volatiles et les systèmes de gestion des stocks d'entreprise.",
+        aboutDesc: "HoldingW Platforms est un réseau d'intelligence décentralisé de premier plan fournissant des flux de données de haute fidélité pour les opérations de commerce électronique mondiales. En structurant l'informatique en nuage distribuée et des scanners de télémétrie exclusifs, nous capturons la vitesse du marché en temps réel à travers les principaux verticaux d'actifs numériques et physiques. Notre mission est de démocratiser les métriques d'arbitrage institutionnel à barrière élevée, en offrant aux développeurs autodidactes, aux dropshippers indépendants et aux entreprises en pleine croissance les cadres d'exécution requis pour établir une part de marché durable. Opérant à l'intersection de l'analyse de marché programmatique et de la télémétrie prédictive des flux de consommateurs, HoldingW comble le fossé structure l'écart entre les courbes de demande de détail volatiles et les systèmes de gestion des stocks d'entreprise.",
         privacyTitle: "Télémétrie des Données & Politique de Confidentialité",
-        privacyContent: "1. ARCHITECTURE DE COLLECTE DE DONNÉES ET CAPTURE TÉLÉMÉTRIQUE\nHoldingW Analytics exploite un cadre de télémétrie de données non persistant hautement optimisé conçu pour évaluer les métriques de mouvement du marché agrégées sans compromettre la persistance de l'identité de l'utilisateur. Lors de l'accès à notre réseau de nœuds distribués, nos systèmes capturent les propriétés techniques de base non identifiables, y compris les configurations de navigateur localisées, la télémétrie régionale géographique généralisée (résolution au niveau du pays) et les horodatages d'interaction en temps réel. Nous ne conservons, ne sérialisons ni n'écrivons dans aucun stockage permanent des identifiants d'identité bruts, des configurations financières personnelles ou des clés de base de données utilisateur privées.\n\n2. PARTENARIATS PUBLICITAIRES AVANCÉS ET TÉLÉMÉTRIE COMPORTEMENTALE\nPour maintenir notre infrastructure sans barrières de coûts opérationnels, cette plateforme implémente des interfaces de monétisation avancées fournies par des bourses publicitaires programmatiques vérifiées, y compris Monetag (nœuds du réseau PropellerAds). Ces modules de réseau tiers utilisent des scripts de suivi de données asynchrones localisés, une infrastructure de cookies opérationnelle et des balises de suivi décentralisées pour afficher dynamiquement des publicités algorithmiques pertinentes basées sur des profils programmatiques agrégés. Les utilisateurs possèdent l'autorité technique absolue pour limiter le suivi de la télémétrie comportementale en utilisant des restrictions de script côté client, des systèmes de blocage de contenu ou des configurations de navigateur spécialisées. HoldingW n'exerce aucune gouvernance administrative directe sur la logique de script externe exécutée par les plateformes publicitaires tierces.\n\n3. INTÉGRITÉ DES DONNÉES CRYPTOGRAPHIQUES ET CLAUSES DE SÉCURITÉ\nTout paramètre analytique, sélection de préférence localisée ou cache de session d'interface généré lors d'une connectivité active à l'infrastructure est protégé via les protocoles standard Transport Layer Security (TLS 1.3). Bien que notre logique de base de données structurelle garantisse que les tableaux de bord opérationnels sont isolés des vecteurs d'attaque systémiques, aucun déploiement Web distribué ne fournit une garantie absolue de sécurité numérique. Les utilisateurs se connectent en pleine connaissance des risques de réseau décentralisés inhérents aux protocoles Internet ouverts.\n\n4. AMENDEMENTS DE CONFORMITÉ PROGRESSIVE ET MISES À JOUR LÉGALES\nHoldingW conserve le droit opérationnel illimité de modifier, reconstruire ou compresser des sections de cette politique de confidentialité télémétrique à tout moment et sans notification préalable de l'interface. L'utilisation continue de notre scanner de sourcing automatisé valide implicitement l'alignement absolu de l'utilisateur avec nos cadres de conformité actifs. Pour toute autre demande de transparence réglementaire ou opérationnelle, contactez notre bureau de surveillance juridique.",
+        privacyContent: "1. ARCHITECTURE DE COLLECTE DE DONNÉES ET CAPTURE TÉLÉMÉTRIQUE\nHoldingW Analytics exploite un cadre de télémétrie de données non persistant hautement optimisé conçu pour évaluer les métriques de mouvement du marché agrégées sans compromettre la persistance de l'identité de l'utilisateur. Lors de l'accès à notre réseau de nœuds distribués, nos systèmes capturent les propriétés techniques de base non identifiables, y compris les configurations de navigateur localisées, la télémétrie régionale géographique généralisée (résolution au niveau du pays) et les horodatages d'interaction en temps réel. Nous ne conservons, ne sérialisons ni n'écrivons dans aucun stockage permanent des identifiants d'identité bruts, des configurations financières personnelles ou des clés de base de données utilisateur privées.\n\n2. PARTENARIATS PUBLICITAIRES AVANCÉS ET TÉLÉMÉTRIE COMPORTEMENTALE\nPour maintenir notre infrastructure sans barrières de coûts opérationnels, cette plateforme implémente des interfaces de monétisation avancées fournies par des bourses publicitaires programmatiques vérifiées, y compris Monetag (nœuds du réseau PropellerAds). Ces modules de réseau tiers utilisent des scripts de suivi de données asynchrones localisés, une infrastructure de cookies opérationnelle et des balises de suivi décentralisées pour afficher dynamiquement des publicités algorithmiques pertinentes basées sur des profils programmatiques agrégés. Les utilisateurs possèdent l'autorité technique absolue pour limiter le suivi de la télémétrie comportementale en utilisant des restrictions de script côté client, des systèmes de blocage de contenu ou des configurations de navigateur spécialisées. HoldingW n'exerce aucune gouvernance administrative directe sur la logique de script externe exécutée par les plateformes publicitaires tierces.\n\n3. INTÉGRITÉ DES DONNÉES CRYPTOGRAPHIQUES ET CLAUSES DE SÉCURITÉ\nTout paramètre analytique, sélection de préférence localisée ou cache de session d'interface généré lors d'une connectivité active à l'infrastructure est protégé via les protocole standard Transport Layer Security (TLS 1.3). Bien que notre logique de base de données structurelle garantisse que les tableaux de bord opérationnels sont isolés des vecteurs d'attaque systémiques, aucun déploiement Web distribué ne fournit une garantie absolue de sécurité numérique. Les utilisateurs se connectent en pleine connaissance des risques de réseau décentralisés inhérents aux protocoles Internet ouverts.\n\n4. AMENDEMENTS DE CONFORMITÉ PROGRESSIVE ET MISES À JOUR LÉGALES\nHoldingW conserve le droit opérationnel illimité de modifier, reconstruire ou compresser des sections de cette politique de confidentialité télémétrique à tout moment et sans notification préalable de l'interface. L'utilisation continue de notre scanner de sourcing automatisé valide implicitement l'alignement absolu de l'utilisateur avec nos cadres de conformité actifs. Pour toute autre demande de transparence réglementaire ou opérationnelle, contactez notre bureau de surveillance juridique.",
         termsTitle: "Conditions d'Utilisation & Accord d'Infrastructure",
         termsContent: "1. RECONNAISSANCE DES RISQUES DISTRIBUÉS ÉMANANT DES DONNÉES\nEn établissant une connexion websocket ou HTTP avec HoldingW Platforms, vous acceptez expressément que tous les tableaux de données, pourcentages de croissance, graphiques de demande et matrices d'analyse de produits rendus via notre interface sont purement des indicateurs informatifs. HoldingW décline explicitement toute responsabilité fonctionnelle pour les pertes de capital financier, les erreurs de stocks ou les erreurs d'exécution stratégique subies par les utilisateurs utilisant nos modèles d'analyse prédictive. Ce cadre ne constitue pas un conseil financier, des recommandations commerciales institutionnelles ou un conseil juridique en commerce électronique.\n\n2. LIMITES DE L'INFRASTRUCTURE OPÉRATIONNELLE ET UTILISATION ACCEPTABLE\nLes utilisateurs se voient accorder une licence d'interface temporaire, non exclusive et non transférable pour afficher les actifs de commerce électronique scannés. L'extraction programmatique de nos pipelines d'intelligence via des scrapers automatisés sans tête, une infrastructure de bots spécialisés ou des intercepteurs d'API non sanctionnés sans le consentement architectural écrit de nos administrateurs système est strictement interdite et constitue une violation directe de cet accord d'infrastructure. Nous nous réservons le droit technique complet de déployer des pare-feu automatisés pour bloquer les adresses IP incriminées ou les nœuds de réseau présentant des requêtes anormales.\n\n3. ABSENCE DE RESPONSABILITÉ ET ISOLATION DES RÉSULTATS\nHoldingW Platforms, ses développeurs, fournisseurs de données et partenaires opérationnels ne seront en aucun cas tenus légalement ou financièrement responsables des dommages opérationnels indirects, accessoires, punitifs ou consécutifs découlant d'indisponibilités systémiques de la plateforme, de latences temporaires de livraison du cache ou d'ajustements programmatiques des métriques. Vous opérez dans notre environnement entièrement à vos propres risques.\n\n4. PROPRIÉTÉ INTELLECTUELLE ET PROTECTION DE LA MARQUE\nL'infrastructure UI/UX, les configurations de marque spécifiques, les styles d'indicateurs personnalisés et les algorithmes d'agrégation de télémétrie propriétaires intégrés au sein de HoldingW sont la propriété intellectuelle exclusive de HoldingW Platforms Inc. Toute refonte, duplication ou redistribution non autorisée de ces structures Web est strictement protégée par la loi.",
         contactDesc: "Si vous avez des questions, n'hésitez pas à contacter notre équipe d'optimisation.",
@@ -79,6 +92,19 @@ const translations = {
         lblComp: "Compétition",
         lblMargin: "Marge Est.",
         lblSatTitle: "Insights sur la Saturation du Marché",
+        // Articles Section
+        art1Category: "Analyse Prédictive",
+        art1Title: "Comment la télémétrie des données identifie les micro-tendances avant la saturation",
+        art1Desc: "La méthode traditionnelle de sourcing de produits gagnants repose largement sur le volume historique des commandes. Cependant, au moment où un actif atteint des chiffres de volume de pointe sur des marchés centralisés, le coût d'acquisition client (CAC) a souvent grimpé au-delà des marges durables. Agir tôt permet une cartographie optimisée des produits et des fenêtres de mise à l'échelle propres avant que la saturation du marché ne frappe le vertical.",
+        art1Meta: "Mars 2026 • Par HoldingW Research",
+        art2Category: "Arbitrage Numérique",
+        art2Title: "L'économie unitaire de la mise à l'échelle des actifs numériques sur des plateformes à forte marge",
+        art2Desc: "Le dropshipping physique comporte des passifs structurels : taux de fret fluctuants, goulots d'étranglement logistiques et pourcentages de retour variables. C'est pourquoi l'arbitrage numérique à volume élevé connaît une adoption institutionnelle rapide. Les actifs tels que les planificateurs structurés, les modèles programmatiques et les fichiers de conception présentent un coût des marchandises vendues (COGS) proche de zéro.",
+        art2Meta: "Avril 2026 • Par Technical Sourcing Desk",
+        art3Category: "Mécanique du Marché",
+        art3Title: "Évaluation des indices de concurrence via des sources d'approvisionnement fragmentées",
+        art3Desc: "Un faible score d'indice de concurrence sur une plateforme analytique ne garantit pas toujours une fenêtre de mise à l'échelle facile. Les opérations de données sérieuses évaluent la concurrence par la transparence fragmentée des fournisseurs. Si un produit est contrôlé par un seul cluster d'usines principal, les lignes d'approvisionnement sont sujettes à des changements de prix abrupts.",
+        art3Meta: "Mai 2026 • Par Analytics Team",
         // Product Specific Data
         hudTitle: "Affichage Tête Haute Universel (HUD) Tachymètre GPS",
         hudSat: "La demande augmente fortement dans les sous-niches automobiles aux États-Unis. Densité concurrentielle moyenne-basse.",
@@ -99,8 +125,6 @@ const translations = {
 let currentLang = 'en';
 
 // ==================== MODAL & ANALYSIS LOGIC ====================
-
-// هاد الـ Function بقات كيفما هي فـ ملفك الأصلي، معقمة من أي Redirect تلقائي
 function openAnalysis(product) {
     const modal = document.getElementById('analysisModal');
     const title = document.getElementById('analysisTitle');
@@ -165,7 +189,6 @@ function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';
 }
 
-// إغلاق المودال عند الضغط خارج الإطار الخاص به
 window.onclick = function(event) {
     const modals = ['aboutModal', 'analysisModal', 'privacyModal', 'termsModal', 'contactModal'];
     modals.forEach(id => {
@@ -180,7 +203,6 @@ window.onclick = function(event) {
 function switchLang(lang) {
     currentLang = lang;
     
-    // تحديث ألوان أزرار اختيار اللغة للإشارة إلى اللغة النشطة
     if (lang === 'en') {
         document.getElementById('lang-en').style.color = '#3b82f6';
         document.getElementById('lang-fr').style.color = '#9ca3af';
@@ -189,7 +211,6 @@ function switchLang(lang) {
         document.getElementById('lang-fr').style.color = '#3b82f6';
     }
 
-    // ترجمة جميع العناصر التي تحتوي على الـ attribute "data-i18n"
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang][key]) {
@@ -200,7 +221,6 @@ function switchLang(lang) {
     });
 }
 
-// تشغيل التهيئة عند تحميل الصفحة بالكامل لتثبيت نصوص السياسات والخصوصية
 document.addEventListener("DOMContentLoaded", function() {
     switchLang('en');
 });

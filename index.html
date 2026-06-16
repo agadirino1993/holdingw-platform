@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/w.png">
 
+    <!-- 🌟 الستايل الخاص بالمربعات الإعلانية بلا ما نخسرو الديزاين الأصلي 🌟 -->
     <style>
-        /* ستايل المربع الإعلاني وسط السيت (كياخد حوالي 20% لـ 25% من الشاشة) */
+        /* المربع الإعلاني الرئيسي (كياخد من 20% لـ 25% من الصفحة وسط السيت والـ background واضحة) */
         .mid-page-ad {
             width: 100%;
-            max-width: 336px; 
+            max-width: 336px; /* مقاس عالمي مربح للإعلانات المربعة */
             height: 280px;
             margin: 25px auto;
             background: #111827;
@@ -24,7 +25,7 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        /* ستايل الإعلان الصغير اللاصق ف الجنب لتحت */
+        /* الإعلانات الصغار اللاصقة فـ الجنب لليمين لتحت (Sticky Banner) */
         .sticky-bottom-ad {
             position: fixed;
             bottom: 10px;
@@ -42,6 +43,7 @@
             overflow: hidden;
         }
 
+        /* تعديل للموبايل باش يجي الإعلان الصغير ف الوسط لتحت وميغطيش الكونتنت */
         @media (max-width: 480px) {
             .sticky-bottom-ad {
                 left: 50%;
@@ -81,7 +83,7 @@
         <p data-i18n="heroDesc">Real-time updates filtered from Amazon, eBay, and Etsy Top Charts. Access premium digital and physical assets insights instantly.</p>
     </section>
 
-    <!-- 🌟 المربع الإعلاني الرئيسي (20%-25% من الصفحة) الخلفية واضحة 🌟 -->
+    <!-- 🌟 المربع الإعلاني الوسطاني (20%-25%) اللي كيتشاف ديريكت مورا الـ Hero 🌟 -->
     <div class="mid-page-ad">
         <!-- حط كود الـ Banner 300x250 ديال Monetag هنا -->
         <div style="color: #6b7280; font-size: 12px; text-align: center;">
@@ -239,14 +241,17 @@
     </footer>
 
     <!-- ================= MODALS SECTION ================= -->
+    
+    <!-- About Us Modal -->
     <div id="aboutModal" class="modal">
         <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
             <span class="close-modal" onclick="closeModal('aboutModal')">&times;</span>
             <h2 data-i18n="aboutTitle" style="color: #fff; margin-bottom: 15px;">About HoldingW</h2>
-            <p data-i18n="aboutDesc" style="color: var(--text-muted); line-height: 1.6; font-size: 15px;">Welcome to HoldingW Platforms. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions.</p>
+            <p data-i18n="aboutDesc" style="color: var(--text-muted); line-height: 1.6; font-size: 15px;">Welcome to HoldingW Platforms. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions. Our mission is to empower professionals and creators with the analytical tools and strategic frameworks needed to optimize their digital assets and scale operations effectively in today's dynamic markets.</p>
         </div>
     </div>
 
+    <!-- Product Deep Analysis Modal -->
     <div id="analysisModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
@@ -261,6 +266,7 @@
         </div>
     </div>
 
+    <!-- Privacy Policy Modal -->
     <div id="privacyModal" class="modal">
         <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
             <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
@@ -269,6 +275,7 @@
         </div>
     </div>
 
+    <!-- Terms of Service Modal -->
     <div id="termsModal" class="modal">
         <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
             <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
@@ -277,6 +284,7 @@
         </div>
     </div>
 
+    <!-- Contact Us Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
@@ -286,7 +294,7 @@
        </div>
     </div>
 
-    <!-- 🌟 الإعلان الصغير اللاصق ف الجنب لتحت (Sticky Banner) 🌟 -->
+    <!-- 🌟 الإعلان الصغير اللاصق فـ الجنب لتحت (Sticky Banner) 🌟 -->
     <div class="sticky-bottom-ad">
         <!-- حط كود الـ Native Banner 320x50 ديال Monetag هنا -->
         <div style="color: #6b7280; font-size: 10px; text-align: center;">

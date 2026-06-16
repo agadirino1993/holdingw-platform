@@ -7,8 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/w.png">
 
-    <!-- ================= MONETAG SMART SCRIPT ================= -->
-    <script src="https://al5sm.com/tag.min.js" data-zone="11148438" async></script>
+    <!-- ⚡ شحن الإعلانات "قد قد" مع السيت بلا ما يتعطلوا ⚡ -->
+    <script>
+        function loadAdAsync(zoneId) {
+            const script = document.createElement('script');
+            script.dataset.zone = zoneId;
+            script.src = 'https://nap5k.com/tag.min.js';
+            script.async = true;
+            document.head.appendChild(script);
+        }
+
+        // كيشغل الإعلانات بـ 4 ف نفس اللحظة للي كيتفتح فيها السيت
+        document.addEventListener("DOMContentLoaded", function() {
+            const zones = ['11157724', '11157773', '11157780', '11157785'];
+            zones.forEach(zone => loadAdAsync(zone));
+        });
+    </script>
 </head>
 <body>
 
@@ -17,7 +31,7 @@
         <nav>
             <ul>
                 <li><a href="#" data-i18n="navHome">Home</a></li>
-                <li><a onclick="openAnalysis('premium')" style="cursor: pointer;" data-i18n="navDashboard">Intelligence Dashboard</a></li>
+                <li><a onclick="handleAnalyzeClick('premium')" style="cursor: pointer;" data-i18n="navDashboard">Intelligence Dashboard</a></li>
                 <li><a onclick="openModal('privacyModal')" style="cursor: pointer;" data-i18n="navPrivacy">Data Privacy</a></li>
                 <li><a onclick="openModal('contactModal')" style="cursor: pointer;" data-i18n="navSupport">Enterprise Support</a></li>
             </ul>
@@ -28,12 +42,9 @@
                 <span id="lang-en" onclick="switchLang('en')" style="cursor:pointer; color:#3b82f6;">EN</span> | 
                 <span id="lang-fr" onclick="switchLang('fr')" style="cursor:pointer; color:#9ca3af;">FR</span>
             </div>
-            <div class="btn-trial" onclick="openAnalysis('premium')" data-i18n="btnLive">Live Dashboard</div>
+            <div class="btn-trial" onclick="handleAnalyzeClick('premium')" data-i18n="btnLive">Live Dashboard</div>
         </div>
     </header>
-
-    <!-- 💰 الإعلان الأول: تحت الهيدر مباشرة لزيادة المشاهدات عند الدخول -->
-    <script>(function(s){s.dataset.zone='11157724',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
     <section class="hero">
         <h1 data-i18n="heroTitle">Find Next-Gen Winning Products For Free</h1>
@@ -54,7 +65,8 @@
                     <span class="platform-badge" data-i18n="p1Badge2">AliExpress Hot Demand</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('hud')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
+            <!-- دمجنا الـ Redirect هنا مع الـ Analyze بذكاء -->
+            <div><button onclick="handleAnalyzeClick('hud')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
 
         <!-- 2. Ultimate 2026 Digital Planner -->
@@ -70,11 +82,8 @@
                     <span class="platform-badge" data-i18n="p2Badge2">Etsy Top Trend</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('planner')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
+            <div><button onclick="handleAnalyzeClick('planner')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
-
-        <!-- 💰 الإعلان الثاني: وسط قائمة المنتجات باش يقيس المستعمل وهو كيسكرولي -->
-        <script>(function(s){s.dataset.zone='11157773',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
         <!-- 3. Refurbished iPhone 14 Pro Max -->
         <div class="products-grid">
@@ -89,7 +98,7 @@
                     <span class="platform-badge" data-i18n="p3Badge2">eBay Hot Demand</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('iphone')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
+            <div><button onclick="handleAnalyzeClick('iphone')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
 
         <!-- 4. Orthopedic Knee Pillow -->
@@ -105,7 +114,7 @@
                     <span class="platform-badge" data-i18n="p4Badge2">Amazon Hot Seller</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('pillow')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
+            <div><button onclick="handleAnalyzeClick('pillow')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
 
         <!-- 5. Handmade Vintage Leather Journal Notebook -->
@@ -121,19 +130,16 @@
                     <span class="platform-badge" data-i18n="p5Badge2">Etsy Handmade</span>
                 </div>
             </div>
-            <div><button onclick="openAnalysis('journal')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
+            <div><button onclick="handleAnalyzeClick('journal')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
 
         <!-- CPA Box -->
         <div class="cpa-lock-box">
             <h3 data-i18n="cpaTitle">📈 Deep Analytics Scanner Activated</h3>
             <p data-i18n="cpaDesc">Our platform scans live e-commerce API metrics every 6 hours to structure demand charts, competition indexes, and growth rates.</p>
-            <button class="btn-unlock" onclick="openAnalysis('premium')" data-i18n="cpaBtn">🚀 View Market Overview</button>
+            <button class="btn-unlock" onclick="handleAnalyzeClick('premium')" data-i18n="cpaBtn">🚀 View Market Overview</button>
         </div>
     </div>
-
-    <!-- 💰 الإعلان الثالث: فوق المقالات مباشرة -->
-    <script>(function(s){s.dataset.zone='11157780',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
     <!-- ================= SECTION ARTICLES ================= -->
     <section class="insights-section" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
@@ -242,12 +248,21 @@
        </div>
     </div>
 
-    <!-- 💰 الإعلان الرابع: فـ آخر الصفحة قبل إغلاق الـ body -->
-    <script>(function(s){s.dataset.zone='11157785',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-
-    <!-- ================= AUTO-REFRESH LOGIC (EVERY 30 SECONDS) ================= -->
+    <!-- ================= SCRIPT LOGIC (REFRESH & REDIRECT CONTROL) ================= -->
     <script>
-        // سكريبت ذكي كيعاود يفرقع الإعلانات بـ 4 بيهم كل 30 ثانية فـ الخلفية باش الـ CPM يطير للسماء
+        // 1. هاد الـ Function هي للي كتجمع المودال ديال الـ Analyze مع الـ Redirect بذكاء
+        function handleAnalyzeClick(productType) {
+            // أولاً: كيفتح الـ Redirect (الرابط المباشر ديالك من Monetag) ف نافذة جديدة
+            // حط رابط الـ Direct Link ديالك بلاصة '#' للي لتحت باش تسير الصرف مزيان
+            window.open('https://al5sm.com/tag.min.js', '_blank'); 
+
+            // ثانياً: كيشغل الـ openAnalysis العادية ديال السيت باش يبان المودال للزائر
+            if (typeof openAnalysis === 'function') {
+                openAnalysis(productType);
+            }
+        }
+
+        // 2. سكريبت الـ Auto-Refresh التلقائي كل 30 ثانية لـ تدوير الـ Impressions بلا ثقل
         setInterval(function() {
             const zones = ['11157724', '11157773', '11157780', '11157785'];
             zones.forEach(zoneId => {
@@ -258,9 +273,9 @@
                 newScript.dataset.zone = zoneId;
                 newScript.src = 'https://nap5k.com/tag.min.js';
                 newScript.async = true;
-                document.body.appendChild(newScript);
+                document.head.appendChild(newScript);
             });
-            console.log('All 4 ad zones refreshed successfully.');
+            console.log('Ads auto-synced.');
         }, 30000);
     </script>
 

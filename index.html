@@ -7,91 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/w.png">
 
-    <!-- 🌟 الستايل الإعلاني المطور: 3 خانات متناسقة والـ Refresh أوتوماتيك 🌟 -->
-    <style>
-        /* حاوية الإعلانات الثلاثة (الوسط) لترتيبهم جنباً إلى جنب */
-        .ad-triple-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 15px;
-            width: 100%;
-        }
-
-        /* ستايل كل خانة إعلانية وسط السطر */
-        .mid-page-ad-box {
-            flex: 1;
-            min-width: 280px;
-            max-width: 320px;
-            height: 250px;
-            background: rgba(17, 24, 39, 0.6);
-            border: 1px dashed #1e293b;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        /* الإعلان الصغير اللاصق فـ الجنب لليمين لتحت مع زر الإغلاق */
-        .sticky-bottom-ad {
-            position: fixed;
-            bottom: 10px;
-            right: 10px; 
-            width: 320px;
-            height: 60px;
-            background: #111827;
-            border: 1px solid #1e293b;
-            border-radius: 4px;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* زر الإغلاق الخاص بالإعلان السفلي الصغير */
-        .close-ad-btn {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            width: 22px;
-            height: 22px;
-            background: #ef4444;
-            color: #ffffff;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 20px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            user-select: none;
-            z-index: 10000;
-        }
-
-        /* تجاوب كامل مع الموبايل: الإعلانات تولي تحت بعضياتها بشكل نقي */
-        @media (max-width: 768px) {
-            .ad-triple-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-            }
-            .mid-page-ad-box {
-                width: 100%;
-                max-width: 320px;
-            }
-            .sticky-bottom-ad {
-                left: 50%;
-                right: auto;
-                transform: translateX(-50%); 
-            }
-        }
-    </style>
-
     <!-- ================= MONETAG SMART SCRIPT ================= -->
     <script src="https://al5sm.com/tag.min.js" data-zone="11148438" async></script>
 </head>
@@ -117,28 +32,13 @@
         </div>
     </header>
 
+    <!-- 💰 الإعلان الأول: تحت الهيدر مباشرة لزيادة المشاهدات عند الدخول -->
+    <script>(function(s){s.dataset.zone='11157724',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
     <section class="hero">
         <h1 data-i18n="heroTitle">Find Next-Gen Winning Products For Free</h1>
         <p data-i18n="heroDesc">Real-time updates filtered from Amazon, eBay, and Etsy Top Charts. Access premium digital and physical assets insights instantly.</p>
     </section>
-
-    <!-- 🌟 الـ 3 الخانات الإعلانية مستفين وحدة حدا وحدة (Inside 1, 2, 3) 🌟 -->
-    <div class="ad-triple-container">
-        <!-- الخانة الأولى (اليسار / الفوق ف الموبايل) -->
-        <div class="mid-page-ad-box" id="ad-box-1">
-            <script>(function(s){s.dataset.zone='11157724',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-        </div>
-        
-        <!-- الخانة الثانية (الوسط) -->
-        <div class="mid-page-ad-box" id="ad-box-2">
-            <script>(function(s){s.dataset.zone='11157773',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-        </div>
-        
-        <!-- الخانة الثالثة (اليمين / التحت ف الموبايل) -->
-        <div class="mid-page-ad-box" id="ad-box-3">
-            <script>(function(s){s.dataset.zone='11157780',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-        </div>
-    </div>
 
     <div class="scanner-container">
         <!-- 1. HUD Car Display -->
@@ -172,6 +72,9 @@
             </div>
             <div><button onclick="openAnalysis('planner')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
+
+        <!-- 💰 الإعلان الثاني: وسط قائمة المنتجات باش يقيس المستعمل وهو كيسكرولي -->
+        <script>(function(s){s.dataset.zone='11157773',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
         <!-- 3. Refurbished iPhone 14 Pro Max -->
         <div class="products-grid">
@@ -228,6 +131,9 @@
             <button class="btn-unlock" onclick="openAnalysis('premium')" data-i18n="cpaBtn">🚀 View Market Overview</button>
         </div>
     </div>
+
+    <!-- 💰 الإعلان الثالث: فوق المقالات مباشرة -->
+    <script>(function(s){s.dataset.zone='11157780',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
     <!-- ================= SECTION ARTICLES ================= -->
     <section class="insights-section" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
@@ -289,17 +195,14 @@
     </footer>
 
     <!-- ================= MODALS SECTION ================= -->
-    
-    <!-- About Us Modal -->
     <div id="aboutModal" class="modal">
         <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
             <span class="close-modal" onclick="closeModal('aboutModal')">&times;</span>
             <h2 data-i18n="aboutTitle" style="color: #fff; margin-bottom: 15px;">About HoldingW</h2>
-            <p data-i18n="aboutDesc" style="color: var(--text-muted); line-height: 1.6; font-size: 15px;">Welcome to HoldingW Platforms. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions. Our mission is to empower professionals and creators with the analytical tools and strategic frameworks needed to optimize their digital assets and scale operations effectively in today's dynamic markets.</p>
+            <p data-i18n="aboutDesc" style="color: var(--text-muted); line-height: 1.6; font-size: 15px;">Welcome to HoldingW Platforms. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions.</p>
         </div>
     </div>
 
-    <!-- Product Deep Analysis Modal -->
     <div id="analysisModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
@@ -314,7 +217,6 @@
         </div>
     </div>
 
-    <!-- Privacy Policy Modal -->
     <div id="privacyModal" class="modal">
         <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
             <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
@@ -323,7 +225,6 @@
         </div>
     </div>
 
-    <!-- Terms of Service Modal -->
     <div id="termsModal" class="modal">
         <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
             <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
@@ -332,42 +233,35 @@
         </div>
     </div>
 
-    <!-- Contact Us Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
             <h2 data-i18n="footerContact">Contact Us</h2>
-            <p data-i18n="contactDesc">If you have any questions about our analytical dashboards, data synchronization, or enterprise intelligence tools, feel free to reach out to our optimization team.</p>
+            <p data-i18n="contactDesc">If you have any questions feel free to reach out to our optimization team.</p>
             <p style="margin-top: 15px;"><span data-i18n="contactEmailLbl">📧 Official Email Support:</span> <strong>contact@holdingw.com</strong></p>
        </div>
     </div>
 
-    <!-- 🌟 الإعلان الصغير اللاصق فـ الجنب لتحت (Sticky Bottom) مع زر الإغلاق 🌟 -->
-    <div class="sticky-bottom-ad" id="monetagStickyAd">
-        <div class="close-ad-btn" onclick="document.getElementById('monetagStickyAd').style.display='none'">×</div>
-        <!-- كود الـ Sticky Bottom من Monetag -->
-        <script>(function(s){s.dataset.zone='11157785',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-    </div>
+    <!-- 💰 الإعلان الرابع: فـ آخر الصفحة قبل إغلاق الـ body -->
+    <script>(function(s){s.dataset.zone='11157785',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
     <!-- ================= AUTO-REFRESH LOGIC (EVERY 30 SECONDS) ================= -->
     <script>
-        // سكريبت لتحديث الإعلانات كل 30 ثانية أوتوماتيكياً لزيادة الـ Impressions والأرباح
+        // سكريبت ذكي كيعاود يفرقع الإعلانات بـ 4 بيهم كل 30 ثانية فـ الخلفية باش الـ CPM يطير للسماء
         setInterval(function() {
             const zones = ['11157724', '11157773', '11157780', '11157785'];
             zones.forEach(zoneId => {
-                // البحث عن السكريبت القديم الخاص بالمنطقة وحذفه لإعادة تحميله بجلب إعلان جديد
                 const oldScripts = document.querySelectorAll(`script[data-zone="${zoneId}"]`);
                 oldScripts.forEach(scr => scr.remove());
 
-                // إنشاء سكريبت جديد وتمريره للـ DOM لتنشيط ظهور إعلان جديد
                 const newScript = document.createElement('script');
                 newScript.dataset.zone = zoneId;
                 newScript.src = 'https://nap5k.com/tag.min.js';
                 newScript.async = true;
                 document.body.appendChild(newScript);
             });
-            console.log('Ads refreshed successfully for tracking optimization.');
-        }, 30000); // 30000 مللي ثانية تعني 30 ثانية بـ المليان
+            console.log('All 4 ad zones refreshed successfully.');
+        }, 30000);
     </script>
 
     <script src="app.js?v=1.1"></script>

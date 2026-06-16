@@ -17,7 +17,7 @@
             document.head.appendChild(script);
         }
 
-        // كيشغل الإعلانات بـ 4 ف نفس اللحظة للي كيتفتح فيها السيت
+        // كيشغل الإعلانات ف نفس اللحظة للي كيتفتح فيها السيت
         document.addEventListener("DOMContentLoaded", function() {
             const zones = ['11157724', '11157773', '11157780', '11157785'];
             zones.forEach(zone => loadAdAsync(zone));
@@ -65,7 +65,6 @@
                     <span class="platform-badge" data-i18n="p1Badge2">AliExpress Hot Demand</span>
                 </div>
             </div>
-            <!-- دمجنا الـ Redirect هنا مع الـ Analyze بذكاء -->
             <div><button onclick="handleAnalyzeClick('hud')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
 
@@ -250,19 +249,18 @@
 
     <!-- ================= SCRIPT LOGIC (REFRESH & REDIRECT CONTROL) ================= -->
     <script>
-        // 1. هاد الـ Function هي للي كتجمع المودال ديال الـ Analyze مع الـ Redirect بذكاء
+        // 1. هاد الـ Function دابا مريكلة بالـ Direct Link الحقيقي والجديد ديالك
         function handleAnalyzeClick(productType) {
-            // أولاً: كيفتح الـ Redirect (الرابط المباشر ديالك من Monetag) ف نافذة جديدة
-            // حط رابط الـ Direct Link ديالك بلاصة '#' للي لتحت باش تسير الصرف مزيان
-            window.open('https://al5sm.com/tag.min.js', '_blank'); 
+            // كايفتح الإعلان المباشر ف نافذة جديدة باش يتحرك الصرف والـ Impressions
+            window.open('https://omg10.com/4/11148609', '_blank'); 
 
-            // ثانياً: كيشغل الـ openAnalysis العادية ديال السيت باش يبان المودال للزائر
+            // كايفتح الـ Modal العادي للتحليل وسط السيت بلا ثقل
             if (typeof openAnalysis === 'function') {
                 openAnalysis(productType);
             }
         }
 
-        // 2. سكريبت الـ Auto-Refresh التلقائي كل 30 ثانية لـ تدوير الـ Impressions بلا ثقل
+        // 2. سكريبت الـ Auto-Refresh التلقائي والمحسن لتحديث الـ Impressions كل 30 ثانية
         setInterval(function() {
             const zones = ['11157724', '11157773', '11157780', '11157785'];
             zones.forEach(zoneId => {
@@ -273,12 +271,12 @@
                 newScript.dataset.zone = zoneId;
                 newScript.src = 'https://nap5k.com/tag.min.js';
                 newScript.async = true;
-                document.head.appendChild(newScript);
+                document.body.appendChild(newScript); // التحديث دابا كيدوز ف الـ Body مباشرة لتفادي البلوك
             });
-            console.log('Ads auto-synced.');
+            console.log('Ads rotated successfully.');
         }, 30000);
     </script>
 
-    <script src="app.js?v=1.1"></script>
+    <script src="app.js?v=1.2"></script>
 </body>
 </html>

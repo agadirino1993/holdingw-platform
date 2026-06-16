@@ -7,21 +7,25 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/w.png">
 
-    <!-- ⚡ شحن الإعلانات "قد قد" مع السيت بلا ما يتعطلوا ⚡ -->
+    <!-- ⚡ شحن إعلانات Monetag فوري وبأعلى أولوية بلا ما يتسنى دقيقة ⚡ -->
     <script>
-        function loadAdAsync(zoneId) {
+        function loadAdFast(zoneId) {
             const script = document.createElement('script');
             script.dataset.zone = zoneId;
             script.src = 'https://nap5k.com/tag.min.js';
-            script.async = true;
+            script.fetchPriority = 'high'; // أولوية قصوى للشحن الفوري
             document.head.appendChild(script);
         }
 
-        // كيشغل الإعلانات ف نفس اللحظة للي كيتفتح فيها السيت
-        document.addEventListener("DOMContentLoaded", function() {
-            const zones = ['11157724', '11157773', '11157780', '11157785'];
-            zones.forEach(zone => loadAdAsync(zone));
-        });
+        // تشغيل الإعلانات نيشان مع فتح السيت
+        const zones = ['11157724', '11157773', '11157780', '11157785'];
+        zones.forEach(zone => loadAdFast(zone));
+    </script>
+
+    <!-- 📥 [مكان إعلانات الشركات الأخرى - هيدر] 📥 -->
+    <!-- إذا عطاتك الشركة الأخرى (بحال Adsterra) كود يتحط ف الـ <head>، حطو هنا لتحت نيشان: -->
+    <script>
+        // كود الشركة الثانية (إلى كاين) كيتزاد هنا
     </script>
 </head>
 <body>
@@ -50,6 +54,12 @@
         <h1 data-i18n="heroTitle">Find Next-Gen Winning Products For Free</h1>
         <p data-i18n="heroDesc">Real-time updates filtered from Amazon, eBay, and Etsy Top Charts. Access premium digital and physical assets insights instantly.</p>
     </section>
+
+    <!-- 📥 [مكان إعلان بانر علوي - شركة أخرى] 📥 -->
+    <!-- تقدر تحط هنا بانر كبير 728x90 ديال Adsterra مثلاً باش يبان تحت الـ Hero نيشان -->
+    <div style="text-align: center; margin: 10px auto; max-width: 1000px;">
+        <!-- حط كود البانر هنا -->
+    </div>
 
     <div class="scanner-container">
         <!-- 1. HUD Car Display -->
@@ -82,6 +92,12 @@
                 </div>
             </div>
             <div><button onclick="handleAnalyzeClick('planner')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
+        </div>
+
+        <!-- 📥 [مكان إعلان وسط المنتجات - شركة أخرى] 📥 -->
+        <!-- بلاصة استراتيجية لبانر 300x250 أو ناتيف ناضي وسط الـ Scanner -->
+        <div style="text-align: center; margin: 15px auto;">
+            <!-- كود إعلان الشركة الأخرى هنا -->
         </div>
 
         <!-- 3. Refurbished iPhone 14 Pro Max -->
@@ -249,18 +265,16 @@
 
     <!-- ================= SCRIPT LOGIC (REFRESH & REDIRECT CONTROL) ================= -->
     <script>
-        // 1. هاد الـ Function دابا مريكلة بالـ Direct Link الحقيقي والجديد ديالك
+        // فتح الرابط الإعلاني المباشر (Direct Link) فورا عند كبس الزر
         function handleAnalyzeClick(productType) {
-            // كايفتح الإعلان المباشر ف نافذة جديدة باش يتحرك الصرف والـ Impressions
             window.open('https://omg10.com/4/11148609', '_blank'); 
 
-            // كايفتح الـ Modal العادي للتحليل وسط السيت بلا ثقل
             if (typeof openAnalysis === 'function') {
                 openAnalysis(productType);
             }
         }
 
-        // 2. سكريبت الـ Auto-Refresh التلقائي والمحسن لتحديث الـ Impressions كل 30 ثانية ف الـ Body
+        // سكريبت تدوير وتحديث الإعلانات السريع لـ Monetag كل 30 ثانية ف الـ Body
         setInterval(function() {
             const zones = ['11157724', '11157773', '11157780', '11157785'];
             zones.forEach(zoneId => {
@@ -270,13 +284,13 @@
                 const newScript = document.createElement('script');
                 newScript.dataset.zone = zoneId;
                 newScript.src = 'https://nap5k.com/tag.min.js';
-                newScript.async = true;
+                newScript.fetchPriority = 'high'; // شحن سريع دائما
                 document.body.appendChild(newScript); 
             });
-            console.log('Ads rotated successfully.');
+            console.log('Ads rotated instantly.');
         }, 30000);
     </script>
 
-    <script src="app.js?v=1.3"></script>
+    <script src="app.js?v=1.4"></script>
 </body>
 </html>

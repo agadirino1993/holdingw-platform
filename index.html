@@ -8,12 +8,12 @@
     <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/w.png">
 
     <style>
-        /* ستايل ديال المربع الإعلاني اللي فـ وسط السيت */
+        /* ستايل المربع الإعلاني وسط السيت (كياخد حوالي 20% لـ 25% من الشاشة) */
         .mid-page-ad {
             width: 100%;
-            max-width: 336px; /* المقاس العالمي للإعلانات المربعة المربحة */
+            max-width: 336px; 
             height: 280px;
-            margin: 20px auto;
+            margin: 25px auto;
             background: #111827;
             border: 1px dashed #3b82f6;
             border-radius: 6px;
@@ -24,11 +24,11 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        /* ستايل ديال الإعلان الصغير اللاصق فـ الجنب لتحت */
+        /* ستايل الإعلان الصغير اللاصق ف الجنب لتحت */
         .sticky-bottom-ad {
             position: fixed;
             bottom: 10px;
-            right: 10px; /* لاصق فـ الجنب لليمين لتحت */
+            right: 10px; 
             width: 320px;
             height: 50px;
             background: #111827;
@@ -42,12 +42,11 @@
             overflow: hidden;
         }
 
-        /* تعديل بسيط على الموبايل باش ما يخسروش الديزاين */
         @media (max-width: 480px) {
             .sticky-bottom-ad {
                 left: 50%;
                 right: auto;
-                transform: translateX(-50%); /* يجي الوسط لتحت ف التليفون باش يسهل الكليك */
+                transform: translateX(-50%); 
             }
         }
     </style>
@@ -82,12 +81,11 @@
         <p data-i18n="heroDesc">Real-time updates filtered from Amazon, eBay, and Etsy Top Charts. Access premium digital and physical assets insights instantly.</p>
     </section>
 
-    <!-- 🌟 المربع الإعلاني الحقيقي (20%-25% من الصفحة) 🌟 -->
-    <!-- هاد المربع جا مورا الـ Hero ديريكت باش غير يدخل بنادم يلقاه قدام عينو والخلفية واضحة -->
+    <!-- 🌟 المربع الإعلاني الرئيسي (20%-25% من الصفحة) الخلفية واضحة 🌟 -->
     <div class="mid-page-ad">
-        <!-- الكود الوهمي (البلايplaceholder)، هنا حط كود الـ Banner 300x250 ديال Monetag -->
+        <!-- حط كود الـ Banner 300x250 ديال Monetag هنا -->
         <div style="color: #6b7280; font-size: 12px; text-align: center;">
-            <p>SPONSORED ADVERTISEMENT</p>
+            <p style="margin-bottom:5px;">SPONSORED ADVERTISEMENT</p>
             <img src="https://images.placeholders.dev/?width=300&height=250&text=Monetag+Banner+300x250&theme=dark" alt="Ad">
         </div>
     </div>
@@ -140,15 +138,95 @@
             </div>
             <div><button onclick="openAnalysis('iphone')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
         </div>
-    </div>
 
-    <!-- 🌟 الإعلان الصغير اللاصق فـ الجنب لتحت (Sticky Banner) 🌟 -->
-    <div class="sticky-bottom-ad">
-        <!-- الكود الوهمي، هنا حط كود الـ Native Banner 320x50 ديال Monetag -->
-        <div style="color: #6b7280; font-size: 10px; text-align: center;">
-            <img src="https://images.placeholders.dev/?width=320&height=50&text=Sticky+Ad+320x50&theme=dark" alt="Sticky Ad">
+        <!-- 4. Orthopedic Knee Pillow -->
+        <div class="products-grid">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=300&auto=format&fit=crop&q=80" alt="Orthopedic Knee Pillow">
+            </div>
+            <div class="product-details">
+                <h3 data-i18n="p4Title">Orthopedic Memory Foam Knee Pillow for Pain Relief</h3>
+                <p data-i18n="p4Target">Target: E-Com • Country: EU/US • Format: Physical Asset</p>
+                <div class="badge-container">
+                    <span class="trend-badge" data-i18n="p4Badge1">Growth +290%</span>
+                    <span class="platform-badge" data-i18n="p4Badge2">Amazon Hot Seller</span>
+                </div>
+            </div>
+            <div><button onclick="openAnalysis('pillow')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
+        </div>
+
+        <!-- 5. Handmade Vintage Leather Journal Notebook -->
+        <div class="products-grid">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=300&auto=format&fit=crop&q=80" alt="Leather Journal">
+            </div>
+            <div class="product-details">
+                <h3 data-i18n="p5Title">Handmade Vintage Leather Journal Notebook</h3>
+                <p data-i18n="p5Target">Target: Premium Gift • Country: US • Rating: 4.9 ⭐</p>
+                <div class="badge-container">
+                    <span class="trend-badge" data-i18n="p5Badge1">Growth +120%</span>
+                    <span class="platform-badge" data-i18n="p5Badge2">Etsy Handmade</span>
+                </div>
+            </div>
+            <div><button onclick="openAnalysis('journal')" class="btn-link" data-i18n="btnAnalyze">Analyze Product</button></div>
+        </div>
+
+        <!-- CPA Box -->
+        <div class="cpa-lock-box">
+            <h3 data-i18n="cpaTitle">📈 Deep Analytics Scanner Activated</h3>
+            <p data-i18n="cpaDesc">Our platform scans live e-commerce API metrics every 6 hours to structure demand charts, competition indexes, and growth rates.</p>
+            <button class="btn-unlock" onclick="openAnalysis('premium')" data-i18n="cpaBtn">🚀 View Market Overview</button>
         </div>
     </div>
+
+    <!-- ================= SECTION ARTICLES ================= -->
+    <section class="insights-section" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+        <h2 data-i18n="secTitle" style="color: #fff; font-size: 26px; margin-bottom: 25px; border-bottom: 2px solid #1e293b; padding-bottom: 10px;">📊 E-Commerce Intelligence & Data Insights</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+            <!-- Article 1 -->
+            <article style="background-color: var(--card-bg); border: 1px solid #1e293b; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <span data-i18n="art1Category" style="color: var(--accent-color); font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Predictive Analytics</span>
+                    <h3 data-i18n="art1Title" style="color: #fff; font-size: 18px; margin: 10px 0; font-weight: 600;">How Data Telemetry Identifies Micro-Trends Before Saturation</h3>
+                    <p data-i18n="art1Desc" style="color: var(--text-muted); font-size: 14px; line-height: 1.5;">
+                        The traditional method of sourcing winning products relies heavily on historical order volume. However, by the time an asset hits peak volume figures on centralized marketplaces, the customer acquisition cost (CAC) has often scaled beyond sustainable margins. Moving early allows for optimized product mapping and clean scaling windows before market saturation hits the vertical.
+                    </p>
+                </div>
+                <div data-i18n="art1Meta" style="margin-top: 15px; font-size: 12px; color: var(--text-muted);">March 2026 • By HoldingW Research</div>
+            </article>
+
+            <!-- Article 2 -->
+            <article style="background-color: var(--card-bg); border: 1px solid #1e293b; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <span data-i18n="art2Category" style="color: var(--success); font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Digital Arbitrage</span>
+                    <h3 data-i18n="art2Title" style="color: #fff; font-size: 18px; margin: 10px 0; font-weight: 600;">The Unit Economics of Scaling Digital Assets on High-Margin Platforms</h3>
+                    <p data-i18n="art2Desc" style="color: var(--text-muted); font-size: 14px; line-height: 1.5;">
+                        Physical dropshipping carries structural liabilities: fluctuating freight rates, logistics bottlenecks, and variable return percentages. This is why high-volume digital arbitrage is seeing rapid institutional adoption. Assets like structured planners, programmatic templates, and design files feature near-zero cost of goods sold (COGS).
+                    </p>
+                </div>
+                <div data-i18n="art2Meta" style="margin-top: 15px; font-size: 12px; color: var(--text-muted);">April 2026 • By Technical Sourcing Desk</div>
+            </article>
+
+            <!-- Article 3 -->
+            <article style="background-color: var(--card-bg); border: 1px solid #1e293b; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <span data-i18n="art3Category" style="color: var(--warning); font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Market Mechanics</span>
+                    <h3 data-i18n="art3Title" style="color: #fff; font-size: 18px; margin: 10px 0; font-weight: 600;">Evaluating Competition Indexes via Fragmented Supply Sources</h3>
+                    <p data-i18n="art3Desc" style="color: var(--text-muted); font-size: 14px; line-height: 1.5;">
+                        A low competition index score on an analytical platform doesn't always guarantee an easy scaling window. Serious data operations evaluate competition through fragmented supplier transparency. If a product is controlled by a single main factory cluster, supply lines are prone to abrupt pricing shifts.
+                    </p>
+                </div>
+                <div data-i18n="art3Meta" style="margin-top: 15px; font-size: 12px; color: var(--text-muted);">May 2026 • By Analytics Team</div>
+            </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="blog.html" id="btn-more-insights" data-i18n="btnMore" style="background-color: transparent; color: var(--accent-color); border: 2px solid var(--accent-color); padding: 12px 30px; border-radius: 6px; font-weight: bold; font-size: 15px; text-decoration: none; display: inline-block; transition: all 0.2s;" onmouseover="this.style.backgroundColor='var(--accent-color)'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--accent-color)';">
+                🔍 Read More Insights
+            </a>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-links">
@@ -161,9 +239,60 @@
     </footer>
 
     <!-- ================= MODALS SECTION ================= -->
-    <!-- (بقيت المودالات بقات كيمّا هي بلا تغيير باش ما نطولوش الكود) -->
-    <div id="aboutModal" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('aboutModal')">&times;</span><h2>About HoldingW</h2></div></div>
-    <div id="analysisModal" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('analysisModal')">&times;</span><h2>Product Deep Analysis</h2></div></div>
+    <div id="aboutModal" class="modal">
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
+            <span class="close-modal" onclick="closeModal('aboutModal')">&times;</span>
+            <h2 data-i18n="aboutTitle" style="color: #fff; margin-bottom: 15px;">About HoldingW</h2>
+            <p data-i18n="aboutDesc" style="color: var(--text-muted); line-height: 1.6; font-size: 15px;">Welcome to HoldingW Platforms. We are a premier digital hub dedicated to delivering cutting-edge market research, advanced technical insights, and automated data solutions.</p>
+        </div>
+    </div>
+
+    <div id="analysisModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('analysisModal')">&times;</span>
+            <h2 id="analysisTitle">Product Deep Analysis</h2>
+            <div class="chart-box">
+                <div><p style="font-size:12px; color:var(--text-muted);" id="lbl-demand">Demand Index</p><p class="chart-stat" id="statDemand">94.2%</p></div>
+                <div><p style="font-size:12px; color:var(--text-muted);" id="lbl-comp">Competition</p><p class="chart-stat" id="statComp">Medium</p></div>
+                <div><p style="font-size:12px; color:var(--text-muted);" id="lbl-margin">Margin Est.</p><p class="chart-stat" id="statMargin">+68%</p></div>
+            </div>
+            <h3 id="lbl-sat-title">Market Saturation Insights</h3>
+            <p id="saturationText">Telemetry indicators update continuously.</p>
+        </div>
+    </div>
+
+    <div id="privacyModal" class="modal">
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
+            <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
+            <h2 data-i18n="privacyTitle" style="color: #fff; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 10px;">Privacy Policy</h2>
+            <div data-i18n="privacyContent" style="color: var(--text-muted); line-height: 1.7; font-size: 14px; white-space: pre-line;"></div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
+            <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
+            <h2 data-i18n="termsTitle" style="color: #fff; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 10px;">Terms of Service</h2>
+            <div data-i18n="termsContent" style="color: var(--text-muted); line-height: 1.7; font-size: 14px; white-space: pre-line;"></div>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
+            <h2 data-i18n="footerContact">Contact Us</h2>
+            <p data-i18n="contactDesc">If you have any questions about our analytical dashboards, data synchronization, or enterprise intelligence tools, feel free to reach out to our optimization team.</p>
+            <p style="margin-top: 15px;"><span data-i18n="contactEmailLbl">📧 Official Email Support:</span> <strong>contact@holdingw.com</strong></p>
+       </div>
+    </div>
+
+    <!-- 🌟 الإعلان الصغير اللاصق ف الجنب لتحت (Sticky Banner) 🌟 -->
+    <div class="sticky-bottom-ad">
+        <!-- حط كود الـ Native Banner 320x50 ديال Monetag هنا -->
+        <div style="color: #6b7280; font-size: 10px; text-align: center;">
+            <img src="https://images.placeholders.dev/?width=320&height=50&text=Sticky+Ad+320x50&theme=dark" alt="Sticky Ad">
+        </div>
+    </div>
 
     <!-- ================= SMART REVERSE POPUNDER LOGIC ================= -->
     <script>

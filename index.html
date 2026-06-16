@@ -7,25 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/w.png">
 
-    <!-- 🌟 الستايل الخاص بالمربعات الإعلانية بلا ما نخسرو الديزاين الأصلي 🌟 -->
+    <!-- 🌟 الستايل الخاص بالمربعات الإعلانية المعدل والمنظم 🌟 -->
     <style>
-        /* المربع الإعلاني الرئيسي (كياخد من 20% لـ 25% من الصفحة وسط السيت والـ background واضحة) */
+        /* المربع الإعلاني الرئيسي وسط الصفحة (مساحة نظيفة بدون إطارات مزعجة) */
         .mid-page-ad {
             width: 100%;
-            max-width: 336px; /* مقاس عالمي مربح للإعلانات المربعة */
+            max-width: 336px; 
             height: 280px;
             margin: 25px auto;
-            background: #111827;
-            border: 1px dashed #3b82f6;
-            border-radius: 6px;
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        /* الإعلانات الصغار اللاصقة فـ الجنب لليمين لتحت (Sticky Banner) */
+        /* الإعلانات الصغار اللاصقة فـ الجنب لليمين لتحت مع زر الإغلاق */
         .sticky-bottom-ad {
             position: fixed;
             bottom: 10px;
@@ -40,7 +37,27 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+        }
+
+        /* زر الإغلاق الخاص بالإعلان السفلي الصغير */
+        .close-ad-btn {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 20px;
+            height: 20px;
+            background: #ef4444;
+            color: #ffffff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 18px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            user-select: none;
+            z-index: 10000;
         }
 
         /* تعديل للموبايل باش يجي الإعلان الصغير ف الوسط لتحت وميغطيش الكونتنت */
@@ -83,13 +100,9 @@
         <p data-i18n="heroDesc">Real-time updates filtered from Amazon, eBay, and Etsy Top Charts. Access premium digital and physical assets insights instantly.</p>
     </section>
 
-    <!-- 🌟 المربع الإعلاني الوسطاني (20%-25%) اللي كيتشاف ديريكت مورا الـ Hero 🌟 -->
+    <!-- 🌟 المربع الإعلاني الوسطاني (واجد ومفتوح دابا تحط فيه كود الـ Banner 300x250 د Monetag) 🌟 -->
     <div class="mid-page-ad">
-        <!-- حط كود الـ Banner 300x250 ديال Monetag هنا -->
-        <div style="color: #6b7280; font-size: 12px; text-align: center;">
-            <p style="margin-bottom:5px;">SPONSORED ADVERTISEMENT</p>
-            <img src="https://images.placeholders.dev/?width=300&height=250&text=Monetag+Banner+300x250&theme=dark" alt="Ad">
-        </div>
+        <!-- حط كود الـ Banner 300x250 ديال Monetag هنا ديريكت -->
     </div>
 
     <div class="scanner-container">
@@ -294,21 +307,11 @@
        </div>
     </div>
 
-    <!-- 🌟 الإعلان الصغير اللاصق فـ الجنب لتحت (Sticky Banner) 🌟 -->
-    <div class="sticky-bottom-ad">
-        <!-- حط كود الـ Native Banner 320x50 ديال Monetag هنا -->
-        <div style="color: #6b7280; font-size: 10px; text-align: center;">
-            <img src="https://images.placeholders.dev/?width=320&height=50&text=Sticky+Ad+320x50&theme=dark" alt="Sticky Ad">
-        </div>
+    <!-- 🌟 الإعلان الصغير اللاصق فـ الجنب لتحت (Sticky Banner) مع زر الإغلاق 🌟 -->
+    <div class="sticky-bottom-ad" id="monetagStickyAd">
+        <div class="close-ad-btn" onclick="document.getElementById('monetagStickyAd').style.display='none'">×</div>
+        <!-- حط كود الـ Native Banner 320x50 ديال Monetag هنا ديريكت -->
     </div>
-
-    <!-- ================= SMART REVERSE POPUNDER LOGIC ================= -->
-    <script>
-    document.addEventListener('click', function triggerPopunder() {
-        window.open('https://al5sm.com/tag.min.js?zone=11148438', '_blank');
-        document.removeEventListener('click', triggerPopunder);
-    });
-    </script>
 
     <script src="app.js?v=1.1"></script>
 </body>
